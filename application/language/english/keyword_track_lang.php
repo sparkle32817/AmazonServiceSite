@@ -1,0 +1,19 @@
+<?php
+$lang['add_new_product'] = 'Add New Product';
+$lang['currently_tracking_keywords'] = 'Currently Tracking Keywords';
+$lang['start'] = 'Start';
+$lang['overview'] = 'OVERVIEW';
+$lang['broad_search_volume'] = 'Broad Search Volume';
+$lang['trend'] = 'Trend';
+$lang['add_keyword'] = 'Add Keyword';
+$lang['copy_all_keyword'] = 'Copy all keywords to clipboard';
+$lang['go_to_page'] = 'Go to product page on Amazon';
+$lang['edit_keywords_list'] = 'Edit Keywords list';
+$lang['delete_history'] = 'Delete Product & Keyword History';
+$lang['keyword_history'] = 'Keyword History';
+$lang['view_rank_graph'] = 'View Rank Graph';
+$lang['delete_keyword'] = 'Delete Keyword';
+$lang['open_link'] = 'Open Link';
+$lang['add'] = 'Add';
+$lang['add_keywords_text'] = 'Please enter the keywords or key phrases you\'d like to track(One per line)';
+$lang['tracked_keywords'] = 'Tracked Keywords';

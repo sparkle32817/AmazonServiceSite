@@ -1,0 +1,24 @@
+<?php
+$lang['user_name'] = 'Username';
+$lang['password'] = 'Password';
+$lang['sign_in'] = 'Sign In';
+$lang['sign_up'] = 'Sign Up';
+$lang['welcome'] = 'Welcome';
+$lang['forgot_pass'] = 'Forgot Password?';
+$lang['remember_me'] = 'Remember me';
+$lang['account_yet'] = 'Don\'t have an account yet?';
+$lang['required_field'] = 'This field is required.';
+$lang['create_account'] = 'Enter your details to create your account';
+$lang['email'] = 'Email';
+$lang['full_name'] = 'Fullname';
+$lang['confirm_pass'] = 'Confirm Password';
+$lang['phone_number'] = 'Phone Number';
+$lang['market_place'] = 'Marketplace';
+$lang['amazon_id'] = 'Amazon Seller ID';
+$lang['invitation'] = 'Invitation Code';
+$lang['qq'] = 'QQ';
+$lang['cancel'] = 'Cancel';
+$lang['agree'] = 'I agree the ';
+$lang['term_cond'] = 'terms and conditions';
+$lang['pass_reset'] = 'Enter your email to reset your password';
+$lang['request'] = 'Request';

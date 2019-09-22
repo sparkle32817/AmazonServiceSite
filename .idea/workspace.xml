@@ -2,66 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03abc9f0-1f3f-4266-8615-37542f3f1104" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/employee/BigData.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/employee/BigData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/employee/KeyIndexChecker.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/employee/KeyIndexChecker.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/employee/KeywordTracking.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/employee/KeywordTracking.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/employee/MagnetKeySearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/employee/MagnetKeySearch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/employee/ReverseAsinSearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/employee/ReverseAsinSearch.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/employee/SearchTermOptimization.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/employee/SearchTermOptimization.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/user/Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/user/Home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/user/services/ImageHosting.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/user/services/ImageHosting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/user/services/KeywordRankTracking.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/user/services/KeywordRankTracking.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/language/english/big_data_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/english/big_data_lang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/language/english/image_hosting_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/english/image_hosting_lang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/language/english/key_index_checker_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/english/key_index_checker_lang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/language/english/keyword_track_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/english/keyword_track_lang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/language/english/listing_keyword_stuffer_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/english/listing_keyword_stuffer_lang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/language/english/magnet_search_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/english/magnet_search_lang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/language/english/reverse_search_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/english/reverse_search_lang.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/language/english/search_term_lang.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/language/english/search_term_lang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Employee_task_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Employee_task_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Service_keyword_track_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Service_keyword_track_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Service_reserve_search_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Service_reserve_search_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/view_service/advertising_result_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/view_service/advertising_result_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/view_service/category_result_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/view_service/category_result_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/view_service/keyword_index_checker_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/view_service/keyword_index_checker_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/view_service/keyword_optimization_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/view_service/keyword_optimization_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/view_service/keyword_result_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/view_service/keyword_result_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/view_service/product_result_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/view_service/product_result_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/common/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/common/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/common/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/common/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/home/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/home/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/services/big_data/advertising.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/big_data/advertising.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/services/big_data/advertising_result_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/big_data/advertising_result_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/services/big_data/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/big_data/category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/services/big_data/category_result_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/big_data/category_result_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/services/big_data/keyword.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/big_data/keyword.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/services/big_data/keyword_result_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/big_data/keyword_result_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/services/big_data/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/big_data/product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/services/big_data/product_result_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/big_data/product_result_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/services/image_hosting/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/image_hosting/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/services/image_hosting/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/image_hosting/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/services/keyword_rank_tracking.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/keyword_rank_tracking.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/services/listing_keyword_stuffer/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/listing_keyword_stuffer/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/services/listing_keyword_stuffer/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/listing_keyword_stuffer/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/services/product_keyword_index_checker/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/product_keyword_index_checker/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/services/product_keyword_index_checker/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/product_keyword_index_checker/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/services/reverse_asin_search/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/reverse_asin_search/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Service_keyword_optimization_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Service_keyword_optimization_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/employee/home/key_optimization.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/employee/home/key_optimization.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/user/services/search_term_optimization/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/search_term_optimization/main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/user/services/search_term_optimization/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/services/search_term_optimization/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/build/js/employee/tracking.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/build/js/employee/tracking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/build/js/user/service_big_data.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/build/js/user/service_big_data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/build/js/user/service_image_hosting.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/build/js/user/service_image_hosting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/build/js/user/service_keyword_tracking.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/build/js/user/service_keyword_tracking.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/vendors/jquery/src/.jshintrc" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vendors/jquery/src/.jshintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_export/AmzDataVault9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/csv_export/AmzDataVault9.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/test/test/test-MAIN.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/images/test/test/test-MAIN.JPEG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/test/test/test-PT01.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/images/test/test/test-PT01.JPEG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/test/test/test-SWATCH.JPEG" beforeDir="false" afterPath="$PROJECT_DIR$/images/test/test/test-SWATCH.JPEG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/build/js/employee/keyword_optimization.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/build/js/employee/keyword_optimization.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/build/js/user/service_keyword_optimization.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/build/js/user/service_keyword_optimization.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,66 +67,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/user/services/KeywordRankTracking.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="366" column="64" selection-start-line="366" selection-start-column="45" selection-end-line="366" selection-end-column="64" />
-              <folding>
-                <element signature="n#index#0;n#KeywordRankTracking#0;n#!!top" />
-                <element signature="n#createNewProduct#0;n#KeywordRankTracking#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Service_keyword_track_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="389" selection-start-line="389" selection-end-line="389" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/employee/KeywordTracking.php">
+        <entry file="file://$PROJECT_DIR$/application/views/employee/home/key_optimization.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="440" selection-start-line="440" selection-end-line="440" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/build/js/user/service_keyword_tracking.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="903" column="23" selection-start-line="903" selection-start-column="23" selection-end-line="903" selection-end-column="23" />
-              <folding>
-                <element signature="n#style#0;n#thead#0;n#table#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/user/services/keyword_rank_tracking.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="327" column="35" selection-start-line="327" selection-start-column="35" selection-end-line="327" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://aad82fbd-84e0-4f64-ae9e-ece89695f6be/schema/service/table/tbl_task">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+            <state relative-caret-position="555">
+              <caret line="150" column="230" selection-start-line="150" selection-start-column="230" selection-end-line="150" selection-end-column="230" />
             </state>
           </provider>
         </entry>
@@ -186,12 +80,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Big Data</find>
-      <find>Notice: Entering Too many criteria may return 0 or very few results.</find>
-      <find>date</find>
-      <find>PRODUCT&lt;/th&gt;</find>
-      <find>&lt;th&gt;SELLERS&lt;/th&gt;</find>
-      <find>&lt;th&gt;MONTHLY&lt;br&gt; SALES&lt;/th&gt;</find>
       <find>&lt;th&gt;&lt;?= $this-&gt;lang-&gt;line('big_data'); ?&gt;&lt;/th&gt;</find>
       <find>product as</find>
       <find>title=&quot;Download Result&quot;</find>
@@ -216,6 +104,12 @@
       <find>chart_view_rank</find>
       <find>line</find>
       <find>keywords #</find>
+      <find>insertCompleteData</find>
+      <find>port</find>
+      <find>getTaskDetailInfo</find>
+      <find>getInputData</find>
+      <find>talented_keywords</find>
+      <find>targeted_keywords</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;?= $this-&gt;lang-&gt;line('marketplace'); ?&gt;</replace>
@@ -256,12 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/language/chinese/keyword_track_lang.php" />
-        <option value="$PROJECT_DIR$/application/language/chinese/listing_keyword_stuffer_lang.php" />
-        <option value="$PROJECT_DIR$/application/language/chinese/login_lang.php" />
-        <option value="$PROJECT_DIR$/application/language/chinese/magnet_search_lang.php" />
-        <option value="$PROJECT_DIR$/application/language/chinese/profile_lang.php" />
-        <option value="$PROJECT_DIR$/application/language/chinese/reverse_search_lang.php" />
         <option value="$PROJECT_DIR$/application/language/chinese/search_term_lang.php" />
         <option value="$PROJECT_DIR$/application/language/chinese/url_generator_lang.php" />
         <option value="$PROJECT_DIR$/application/language/english/dashboard_lang.php" />
@@ -281,9 +169,6 @@
         <option value="$PROJECT_DIR$/application/language/english/key_index_checker_lang.php" />
         <option value="$PROJECT_DIR$/application/views/user/services/product_keyword_index_checker/main.php" />
         <option value="$PROJECT_DIR$/application/views/user/services/product_keyword_index_checker/view.php" />
-        <option value="$PROJECT_DIR$/application/views/user/services/search_term_optimization/main.php" />
-        <option value="$PROJECT_DIR$/application/language/english/search_term_lang.php" />
-        <option value="$PROJECT_DIR$/application/views/user/services/search_term_optimization/view.php" />
         <option value="$PROJECT_DIR$/application/views/user/services/listing_keyword_stuffer/main.php" />
         <option value="$PROJECT_DIR$/application/language/english/listing_keyword_stuffer_lang.php" />
         <option value="$PROJECT_DIR$/application/controllers/employee/BigData.php" />
@@ -307,6 +192,15 @@
         <option value="$PROJECT_DIR$/assets/build/js/user/service_keyword_tracking.js" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
         <option value="$PROJECT_DIR$/application/controllers/employee/KeywordTracking.php" />
+        <option value="$PROJECT_DIR$/assets/build/js/user/service_keyword_optimization.js" />
+        <option value="$PROJECT_DIR$/application/config/database.php" />
+        <option value="$PROJECT_DIR$/application/views/user/services/search_term_optimization/main.php" />
+        <option value="$PROJECT_DIR$/application/models/Service_keyword_optimization_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/employee/SearchTermOptimization.php" />
+        <option value="$PROJECT_DIR$/assets/build/js/employee/keyword_optimization.js" />
+        <option value="$PROJECT_DIR$/application/language/english/search_term_lang.php" />
+        <option value="$PROJECT_DIR$/application/views/user/services/search_term_optimization/view.php" />
+        <option value="$PROJECT_DIR$/application/views/employee/home/key_optimization.php" />
       </list>
     </option>
   </component>
@@ -335,6 +229,12 @@
               <item name="zhonghanr" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhonghanr" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhonghanr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhonghanr" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zhonghanr" type="b2602c69:ProjectViewProjectNode" />
@@ -387,6 +287,21 @@
               <item name="zhonghanr" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="employee" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhonghanr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhonghanr" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="employee" type="462c0819:PsiDirectoryNode" />
+              <item name="home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhonghanr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhonghanr" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -425,6 +340,15 @@
             <path>
               <item name="zhonghanr" type="b2602c69:ProjectViewProjectNode" />
               <item name="zhonghanr" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="search_term_optimization" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhonghanr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhonghanr" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -439,6 +363,14 @@
               <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="build" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zhonghanr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zhonghanr" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="employee" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="zhonghanr" type="b2602c69:ProjectViewProjectNode" />
@@ -498,12 +430,12 @@
       <workItem from="1568721466505" duration="8525000" />
       <workItem from="1568763944829" duration="2542000" />
       <workItem from="1568787455995" duration="5051000" />
-      <workItem from="1568805775879" duration="89774000" />
+      <workItem from="1568805775879" duration="99950000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105892000" />
+    <option name="totallyTimeSpent" value="116068000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -516,6 +448,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2196162" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -530,13 +463,13 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.39761648" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.33694476" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.23347548" />
+      <window_info anchor="right" id="Database" order="3" weight="0.2185501" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -587,154 +520,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="--Restore lost files--" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/Service_reserve_search_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="77" column="20" lean-forward="true" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/services/magnet_keyword_search/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="103" column="260" selection-start-line="103" selection-start-column="244" selection-end-line="103" selection-end-column="260" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/services/reverse_asin_search/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="73" column="134" selection-start-line="73" selection-start-column="134" selection-end-line="73" selection-end-column="134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/language/english/reverse_search_lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/build/js/admin/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="389" lean-forward="true" selection-start-line="389" selection-end-line="389" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="e#115#121#1" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="e#67#73#0" expanded="true" />
-            <element signature="e#73#79#0" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="e#152#158#0" expanded="true" />
-            <element signature="e#158#164#0" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="e#67#73#0" expanded="true" />
-            <element signature="e#73#79#0" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#small#0;n#label#0;n#div#4;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#small#0;n#label#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#small#0;n#label#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#small#0;n#label#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#small#0;n#label#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#small#0;n#label#0;n#div#3;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/build/js/user/service_image_hosting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="113" column="17" lean-forward="true" selection-start-line="113" selection-start-column="17" selection-end-line="113" selection-end-column="17" />
-          <folding>
-            <element signature="n#style#0;n#i#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="e#89#95#0" expanded="true" />
-            <element signature="e#95#101#0" expanded="true" />
-            <element signature="e#4502#5562#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/language/chinese/image_hosting_lang.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/user/services/ImageHosting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="194" column="24" lean-forward="true" selection-start-line="194" selection-start-column="24" selection-end-line="194" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://aad82fbd-84e0-4f64-ae9e-ece89695f6be/schema/service/table/tbl_service_image_hosting">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/services/image_hosting/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="115" selection-start-line="27" selection-start-column="115" selection-end-line="27" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/services/image_hosting/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="262" column="18" lean-forward="true" selection-start-line="262" selection-start-column="18" selection-end-line="262" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/language/english/image_hosting_lang.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -767,35 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1186">
           <caret line="195" column="140" selection-start-line="195" selection-start-column="140" selection-end-line="195" selection-end-column="140" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/services/search_term_optimization/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="152" column="113" selection-start-line="152" selection-start-column="113" selection-end-line="152" selection-end-column="113" />
-          <folding>
-            <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#4;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#div#0;n#div#5;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/services/search_term_optimization/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="54" column="91" selection-start-line="54" selection-start-column="38" selection-end-line="54" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/language/english/search_term_lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1674,20 +1430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Service_keyword_track_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="389" selection-start-line="389" selection-end-line="389" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/services/keyword_rank_tracking.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="327" column="35" selection-start-line="327" selection-start-column="35" selection-end-line="327" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/build/js/user/service_keyword_tracking.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
@@ -1709,6 +1451,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/employee/KeywordTracking.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="428" column="74" selection-start-line="428" selection-start-column="56" selection-end-line="428" selection-end-column="74" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Service_keyword_track_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="452" column="49" lean-forward="true" selection-start-line="452" selection-start-column="49" selection-end-line="452" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
     <entry file="das://aad82fbd-84e0-4f64-ae9e-ece89695f6be/schema/service/table/tbl_task">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1716,13 +1475,137 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/employee/KeywordTracking.php">
+    <entry file="file://$PROJECT_DIR$/application/views/user/services/keyword_rank_tracking.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="440" selection-start-line="440" selection-end-line="440" />
+        <state relative-caret-position="456">
+          <caret line="338" column="89" lean-forward="true" selection-start-line="338" selection-start-column="89" selection-end-line="338" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/build/js/user/service_key_index_checker.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6">
+          <caret line="5" column="32" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/services/search_term_optimization/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="128" column="88" selection-start-line="128" selection-start-column="88" selection-end-line="128" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://aad82fbd-84e0-4f64-ae9e-ece89695f6be/schema/service/table/tbl_service_optimization_data">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://aad82fbd-84e0-4f64-ae9e-ece89695f6be/schema/service/table/tbl_service_optimization_asin_data">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/user/services/SearchTermOptimization.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="42" column="71" selection-start-line="42" selection-start-column="59" selection-end-line="42" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/build/js/user/service_keyword_optimization.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="116" lean-forward="true" selection-start-line="114" selection-start-column="9" selection-end-line="116" />
+          <folding>
+            <element signature="e#120#1068#0" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="e#62#68#0" expanded="true" />
+            <element signature="e#68#74#0" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="e#1169#1888#0" />
+            <element signature="e#124#130#0" expanded="true" />
+            <element signature="e#130#136#0" expanded="true" />
+            <element signature="e#136#142#0" expanded="true" />
+            <element signature="e#142#148#0" expanded="true" />
+            <element signature="e#148#154#0" expanded="true" />
+            <element signature="e#154#160#0" expanded="true" />
+            <element signature="e#160#166#0" expanded="true" />
+            <element signature="e#166#172#0" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#249#255#0" expanded="true" />
+            <element signature="e#255#261#0" expanded="true" />
+            <element signature="e#261#267#0" expanded="true" />
+            <element signature="e#267#273#0" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#91#97#0" expanded="true" />
+            <element signature="e#97#103#0" expanded="true" />
+            <element signature="e#103#109#0" expanded="true" />
+            <element signature="e#109#115#0" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/build/js/employee/keyword_optimization.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="227" column="20" selection-start-line="227" selection-start-column="20" selection-end-line="227" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Service_keyword_optimization_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="101" column="88" selection-start-line="101" selection-start-column="88" selection-end-line="101" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/employee/SearchTermOptimization.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5055">
+          <caret line="97" column="31" selection-start-line="97" selection-start-column="31" selection-end-line="97" selection-end-column="31" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/services/search_term_optimization/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="152" column="130" lean-forward="true" selection-start-line="152" selection-start-column="130" selection-end-line="152" selection-end-column="130" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/language/english/search_term_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/employee/home/key_optimization.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="150" column="230" selection-start-line="150" selection-start-column="230" selection-end-line="150" selection-end-column="230" />
         </state>
       </provider>
     </entry>

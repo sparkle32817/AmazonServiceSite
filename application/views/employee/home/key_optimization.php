@@ -108,7 +108,7 @@
                                             <label class="control-label" for="name" style="float:right;">Search Term : </label>
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-xs-12">
-                                            <input type="text" class="input-optimization col-md-7 col-xs-12" id="key_optimization_search_term" autocomplete="off" required>
+                                            <input type="text" class="input-optimization col-md-7 col-xs-12" id="key_optimization_search_term" autocomplete="off" maxlength="250" placeholder="This box has a character limit of 250 bytes" required>
                                         </div>
                                     </div>
                                     <div class="item form-group col-md-12 col-sm-12 col-xs-12" style="margin-top: 15px;">
@@ -116,7 +116,7 @@
                                             <label class="control-label" for="name" style="float:right;">Subject Matter #1 : </label>
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-xs-12">
-                                            <input type="text" class="input-optimization col-md-7 col-xs-12" id="key_optimization_subject1" autocomplete="off" required>
+                                            <input type="text" class="input-optimization col-md-7 col-xs-12" id="key_optimization_subject1" autocomplete="off" maxlength="50" placeholder="This box has a character limit of 50 bytes" required>
                                         </div>
                                     </div>
                                     <div class="item form-group col-md-12 col-sm-12 col-xs-12" style="margin-top: 5px;">
@@ -124,7 +124,7 @@
                                             <label class="control-label" for="name" style="float:right;">Subject Matter #2 : </label>
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-xs-12">
-                                            <input type="text" class="input-optimization col-md-7 col-xs-12" id="key_optimization_subject2" autocomplete="off" required>
+                                            <input type="text" class="input-optimization col-md-7 col-xs-12" id="key_optimization_subject2" autocomplete="off" maxlength="50" placeholder="This box has a character limit of 50 bytes" required>
                                         </div>
                                     </div>
                                     <div class="item form-group col-md-12 col-sm-12 col-xs-12" style="margin-top: 5px;">
@@ -132,7 +132,7 @@
                                             <label class="control-label" for="name" style="float:right;">Subject Matter #3 : </label>
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-xs-12">
-                                            <input type="text" class="input-optimization col-md-7 col-xs-12" id="key_optimization_subject3" autocomplete="off" required>
+                                            <input type="text" class="input-optimization col-md-7 col-xs-12" id="key_optimization_subject3" autocomplete="off" maxlength="50" placeholder="This box has a character limit of 50 bytes" required>
                                         </div>
                                     </div>
                                     <div class="item form-group col-md-12 col-sm-12 col-xs-12" style="margin-top: 5px;">
@@ -140,7 +140,7 @@
                                             <label class="control-label" for="name" style="float:right;">Subject Matter #4 : </label>
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-xs-12">
-                                            <input type="text" class="input-optimization col-md-7 col-xs-12" id="key_optimization_subject4" autocomplete="off" required>
+                                            <input type="text" class="input-optimization col-md-7 col-xs-12" id="key_optimization_subject4" autocomplete="off" maxlength="50" placeholder="This box has a character limit of 50 bytes" required>
                                         </div>
                                     </div>
                                     <div class="item form-group col-md-12 col-sm-12 col-xs-12" style="margin-top: 5px;">
@@ -148,16 +148,16 @@
                                             <label class="control-label" for="name" style="float:right;">Subject Matter #5 : </label>
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-xs-12">
-                                            <input type="text" class="input-optimization col-md-7 col-xs-12" id="key_optimization_subject5" autocomplete="off" required>
+                                            <input type="text" class="input-optimization col-md-7 col-xs-12" id="key_optimization_subject5" autocomplete="off" maxlength="50" placeholder="This box has a character limit of 50 bytes" required>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-5 col-sm-12 col-xs-12" style="padding-left: 50px;">
                                     <div class="item form-group col-md-12 col-sm-12 col-xs-12">
                                         <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-                                            <label class="control-label">Our Suggested Targeted Keywords</label>
+                                            <label class="control-label" id="key_optimization_area_label"></label>
                                         </div>
-                                        <textarea id="key_optimization_textarea" required></textarea>
+                                        <textarea id="key_optimization_textarea"></textarea>
                                     </div>
                                 </div>
                             </div>

@@ -99,7 +99,7 @@ class Service_keyword_optimization_model extends CI_Model
 
     public function getInputData($task_id)
     {
-        $str_query = 'SELECT b.market_place as market, a.asin, a.keywords
+        $str_query = 'SELECT b.market_place as market, a.asin, a.keywords, a.search_type
 						FROM `tbl_service_optimization_asin_data` a
 						JOIN `tbl_view_all_task` b ON b.related_task_id=a.id
 						WHERE b.id = '.$task_id;

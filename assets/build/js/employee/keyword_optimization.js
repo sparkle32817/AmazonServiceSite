@@ -40,6 +40,14 @@ $(document).ready(function () {
 
 	$('#table_pending_optimization tbody').on('click', 'tr', function () {
 
+        $('#key_optimization_search_term').val('');
+        $('#key_optimization_subject1').val('');
+        $('#key_optimization_subject2').val('');
+        $('#key_optimization_subject3').val('');
+        $('#key_optimization_subject4').val('');
+        $('#key_optimization_subject5').val('');
+        $('#key_optimization_textarea').val('');
+
 		var totalRecords =$("#table_pending_optimization").DataTable().page.info().recordsTotal;
 		if (totalRecords!==0) {
 
@@ -51,7 +59,6 @@ $(document).ready(function () {
 			$('#task_id_optimization').val(task_id);
 			$('#task_id_optimization').text(task_id);
 
-			$('#service_name_optimization').text(data['service']);
 			$('#after_time_optimization').text('Time since submitted : ' + data[3]);
 			$('#title_status_optimization').text('( ' + data['status'] + ' )');
 
@@ -79,9 +86,8 @@ $(document).ready(function () {
 			var data = table_complete_optimization.row(this).data();
 			var task_id = data['id'];
 
-			$('#service_name').text(data['service']);
-			$('#after_time').text('Completed during : ' + data[3]);
-			$('#title_status').text('( ' + data['status'] + ' )');
+			$('#after_time_optimization').text('Completed during : ' + data[3]);
+			$('#title_status_optimization').text('( ' + data['status'] + ' )');
 
 			$('#table_complete_optimization tr.odd').css('background-color', '#f9f9f9');
 			$('#table_complete_optimization tr.even').css('background-color', 'White');
@@ -137,6 +143,20 @@ $(document).ready(function () {
                     {
                         $('#btn_start_working_optimization').attr('style', 'display: none');
                         $('#div_btn_complete_optimization').attr('style', 'display: none');
+                    }
+
+                    if (data['search_type'] == 1)
+                    {
+                        $('#key_optimization_area_label').text('Keywords Not used:');
+                        $('#service_name_optimization').text('Search Term Optimization: Auto');
+                        $("#key_optimization_textarea").prop('required', false);
+
+                    }
+                    else
+                    {
+                        $('#key_optimization_area_label').text('Targeted Keywords:');
+                        $('#service_name_optimization').text('Search Term Optimization: Manual');
+                        $("#key_optimization_textarea").prop('required', true);
                     }
 
                     $('#after_time_optimization').text(data['time']);
@@ -198,8 +218,12 @@ $(document).ready(function () {
             || txt_subject2 == ''
             || txt_subject3 == ''
             || txt_subject4 == ''
-            || txt_subject5 == ''
-            || txt_keywords == '')
+            || txt_subject5 == '')
+        {
+            return ;
+        }
+		
+		if ($('#key_optimization_textarea').prop('required') && txt_keywords == '')
         {
             return ;
         }

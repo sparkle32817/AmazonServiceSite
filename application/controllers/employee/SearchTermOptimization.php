@@ -93,7 +93,10 @@ class SearchTermOptimization extends CI_Controller
             $returnVal['time'] = 'Time since submitted : '.$this->getCorrectTime1($after_time->format('%a %H:%I:%S'));
         }
 
-        $returnVal['content'] = $this->getContentNormalFromKeyOptimization($task_id);
+        $result1 = $this->Optimization_model->getInputData((int)str_replace('Ticket', '', $task_id));
+
+        $returnVal['search_type'] = $result1['search_type'];
+        $returnVal['content'] = $this->getContentNormalFromKeyOptimization($result1);
 
         if ( $result['status']=='working' && $this->session->userdata['employee_logged_in']!=$result['employee_name'] )
             $returnVal['own']='other';
@@ -248,10 +251,8 @@ class SearchTermOptimization extends CI_Controller
     }
 
     //Process about BigDataCategory
-    public function getContentNormalFromKeyOptimization($task_id)
+    public function getContentNormalFromKeyOptimization($result)
     {
-        $result = $this->Optimization_model->getInputData((int)str_replace('Ticket', '', $task_id));
-
         $key_str = '';
         $keywords = explode(",", $result['keywords']);
         foreach ($keywords as  $keyword)
@@ -264,7 +265,7 @@ class SearchTermOptimization extends CI_Controller
 								<div class="item form-group">
 									<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px;">
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-											<label class="control-label"><?= $this->lang->line('marketplace'); ?></label>
+											<label class="control-label">Marketplace</label>
 										</div>
 										<div class="col-md-10 col-sm-10 col-xs-12" style="padding: 0px;">
 											<input type="text" class="input-optimization" value="'.$result['market'].'" readonly>
@@ -315,7 +316,18 @@ class SearchTermOptimization extends CI_Controller
             $str_textarea = '<div class="col-md-5 col-sm-12 col-xs-12" style="padding-left: 50px;">
                                 <div class="item form-group col-md-12 col-sm-12 col-xs-12">
                                     <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-                                        <label class="control-label">Our Suggested Targeted Keywords</label>
+                                        <label class="control-label">Targeted Keywords: </label>
+                                    </div>
+                                    <textarea id="key_checker_textarea" readonly>'.$key_str.'</textarea>
+                                </div>
+                            </div>';
+        }
+        else if ($key_str != '')
+        {
+            $str_textarea = '<div class="col-md-5 col-sm-12 col-xs-12" style="padding-left: 50px;">
+                                <div class="item form-group col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
+                                        <label class="control-label">Keywords Not used: </label>
                                     </div>
                                     <textarea id="key_checker_textarea" readonly>'.$key_str.'</textarea>
                                 </div>

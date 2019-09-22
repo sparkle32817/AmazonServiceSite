@@ -126,7 +126,7 @@
                                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
                                                     <label class="control-label"><?= $this->lang->line('keywords'); ?></label>
                                                 </div>
-                                                <textarea id="key_optimization_textarea" required="required" maxlength="5000" placeholder="<?= $this->lang->line('area_txt'); ?>"></textarea>
+                                                <textarea id="key_optimization_textarea" placeholder="<?= $this->lang->line('area_txt'); ?>"></textarea>
                                                 <div>
                                                     <div style="float:right;color: #000; font-weight: 500;"><?= $this->lang->line('limit_20_lines'); ?></div>
                                                 </div>

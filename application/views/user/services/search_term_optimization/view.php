@@ -147,21 +147,21 @@
                                     </div>
                                 </div>
                                 <div class="col-md-5 col-sm-12 col-xs-12" style="padding-left: 50px;">
-                                    <?php if ($searched_result['search_type'] == 2){ ?>
-                                    <div class="item form-group col-md-12 col-sm-12 col-xs-12">
-                                        <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-                                            <label class="control-label"><?= $this->lang->line('talented_keywords') ?></label>
+                                    <?php if ($searched_result['search_type'] == 1 && !empty($searched_result['keywords'])){ ?>
+                                        <div class="item form-group col-md-12 col-sm-12 col-xs-12">
+                                            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
+                                                <label class="control-label"><?= $this->lang->line('not_used_keywords') ?></label>
+                                            </div>
+                                            <textarea readonly><?php $keywords = explode(",", $searched_result['keywords']); foreach ($keywords as  $keyword){ echo $keyword.'&#13;&#10;'; } ?></textarea>
                                         </div>
-                                        <textarea id="key_checker_textarea" readonly><?php
-                                            $keywords = explode(",", $searched_result['keywords']);
-
-                                            foreach ($keywords as  $keyword)
-                                            {
-                                                echo $keyword.'&#13;&#10;';
-                                            }
-                                            ?>
-                                        </textarea>
-                                    </div>
+                                    <?php } ?>
+                                    <?php if ($searched_result['search_type'] == 2){ ?>
+                                        <div class="item form-group col-md-12 col-sm-12 col-xs-12">
+                                            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
+                                                <label class="control-label"><?= $this->lang->line('targeted_keywords') ?></label>
+                                            </div>
+                                            <textarea readonly><?php $keywords = explode(",", $searched_result['keywords']); foreach ($keywords as  $keyword){ echo $keyword.'&#13;&#10;'; } ?></textarea>
+                                        </div>
                                     <?php } ?>
                                 </div>
                             </div>

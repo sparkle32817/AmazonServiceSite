@@ -5,4 +5,5 @@ $lang['credit_50'] = 'Submit (50 Credit)';
 $lang['our_suggestion'] = 'Our Suggestion';
 $lang['search_term'] = 'Search Term';
 $lang['subject_matter'] = 'Subject Matter';
-$lang['talented_keywords'] = 'Our Suggested Targeted Keywords';
+$lang['targeted_keywords'] = 'Our Suggested Targeted Keywords:';
+$lang['not_used_keywords'] = 'Keywords Not used:';

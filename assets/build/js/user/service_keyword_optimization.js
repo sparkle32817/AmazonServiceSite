@@ -83,7 +83,7 @@ $(document).ready(function () {
 		var product_asin = $('#key_optimization_product_asin').val();
 		var txt_keywords = $('#key_optimization_textarea').val();
 
-		if (market_id==='' || market_id==null || product_asin=='' || txt_keywords=='')
+		if (market_id==='' || market_id==null || product_asin=='')
 		{
 			$("#key_optimization_form").submit();
 
@@ -108,7 +108,22 @@ $(document).ready(function () {
 
 		var type = 1;
 		if ($(this).attr("value") == "special")
+		{
 			type = 2;
+		}
+		else
+		{
+			$("#key_optimization_textarea").prop('required',true);
+
+			if (txt_keywords=='')
+			{
+				$("#key_optimization_form").submit();
+
+				return false;
+			}
+		}
+
+		$("#key_optimization_textarea").prop('required',false);
 
 		var dataArr = {
 			market_id: market_id,

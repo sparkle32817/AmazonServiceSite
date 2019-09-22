@@ -23,9 +23,6 @@ class KeywordTracking extends CI_Controller
 		$service_arr = array('AMZ Product Keyword Index Checker');
 		$result_index_checker = $this->Employee_task->getAllTaskForEmployee($this->Employee_task->getEmployeeID($emp_name), $service_arr, 1);
 
-		$service_arr = array('Keyword Rank Tracking');
-		$result_key_tracking = $this->Employee_task->getAllTaskForEmployee($this->Employee_task->getEmployeeID($emp_name), $service_arr, 1);
-
         $service_arr = array('Magnet Related Keyword Search');
         $magnet_key_search = $this->Employee_task->getAllTaskForEmployee($this->Employee_task->getEmployeeID($emp_name), $service_arr, 1);
 
@@ -35,7 +32,7 @@ class KeywordTracking extends CI_Controller
         $service_arr = array('Reverse ASIN Search');
         $result_key_optimization = $this->Employee_task->getAllTaskForEmployee($this->Employee_task->getEmployeeID($emp_name), $service_arr, 1);
 
-        $header_data['key_tracking'] = '('.sizeof($result_key_tracking).')';
+        $header_data['key_tracking'] = '('.$this->Employee_task->getKeyTrackingPendingTaskNum($this->Employee_task->getEmployeeID($emp_name)).')';
         $header_data['big_data'] = '('.sizeof($result_big_data).')';
         $header_data['key_index_checker'] = '('.sizeof($result_index_checker).')';
         $header_data['magnet_key_search'] = '('.sizeof($magnet_key_search).')';
@@ -101,10 +98,18 @@ class KeywordTracking extends CI_Controller
             $returnVal['content'] = '<div class="form-group">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <div class="col-md-4 col-sm-12 col-xs-12" style="margin-top: 5px;">
+                                                <label class="control-label" style="float:right;"> Marketplace : </label>
+                                            </div>
+                                            <div class="col-md-7 col-sm-12 col-xs-12" style="padding: 0px;">
+                                                <input type="text" class="input-category" value="'.$asin_info['market_url'].'" style="width: 65%;" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;">
+                                            <div class="col-md-4 col-sm-12 col-xs-12" style="margin-top: 5px;">
                                                 <label class="control-label" style="float:right;"> Deleted ASIN : </label>
                                             </div>
                                             <div class="col-md-7 col-sm-12 col-xs-12" style="padding: 0px;">
-                                                <input type="text" class="input-category" value="'.$asin_info['asin_num'].'" readonly>
+                                                <input type="text" class="input-category" value="'.$asin_info['asin_num'].'" style="width: 65%;" readonly>
                                             </div>
                                         </div>
                                     </div>
@@ -295,9 +300,20 @@ class KeywordTracking extends CI_Controller
 	{
 		$result = $this->KeyTracking_model->getAsinDataInfo($id);
 
+		$str_market = '<div class="form-group">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="col-md-4 col-sm-12 col-xs-12" style="margin-top: 5px;">
+                                    <label class="control-label" style="float:right;">Marketplace : </label>
+                                </div>
+                                <div class="col-md-7 col-sm-12 col-xs-12" style="padding: 0px;">
+                                    <input type="text" class="input-category" value="'.$result['market_url'].'" readonly>
+                                </div>
+                            </div>
+                        </div>';
+
 		if ($status == 'pending')
         {
-            $str_content = $this->getActionContent($result['asin_num'], $this->KeyTracking_model->getPendingKeywords($id));
+            $str_content = $str_market . $this->getActionContent($result['asin_num'], $this->KeyTracking_model->getPendingKeywords($id));
             return '<div class="col-md-6 col-sm-12">'.$str_content.'</div>';
         }
 		else if ($status == 'working')
@@ -306,7 +322,7 @@ class KeywordTracking extends CI_Controller
             $str_added = $this->getActionContent($result['asin_num'], $this->KeyTracking_model->getAddedKeywords($id), 1);
             $str_deleted = $this->getActionContent($result['asin_num'], $this->KeyTracking_model->getDeletedKeywords($id), 2);
 
-            $str_content = '<div class="col-md-6 col-sm-12">'.$str_main.'</div>';
+            $str_content = '<div class="col-md-6 col-sm-12">'.$str_market .$str_main.'</div>';
             $str_content .= '<div class="col-md-6 col-sm-12">';
             if (!empty($str_added))
                 $str_content .= '<div class="col-md-12 col-sm-12" style="margin-bottom: 30px;">'.$str_added.'</div>';
@@ -316,7 +332,7 @@ class KeywordTracking extends CI_Controller
         }
 
         $str_content = $this->getActionContent($result['asin_num'], $this->KeyTracking_model->getCompletedKeywords($id));
-		return '<div class="col-md-6 col-sm-12">'.$str_content.'</div>';
+		return '<div class="col-md-6 col-sm-12">'.$str_market .$str_content.'</div>';
 	}
 
 	function getActionContent($asin_num, $keywords, $type='')
@@ -393,16 +409,25 @@ class KeywordTracking extends CI_Controller
                 fgetcsv($file_data);        //Pop up Header.
 
                 while (($content = fgetcsv($file_data)) !== FALSE) {
+
+                    $updated_date = $content['6'];
+                    if ($this->is_date($updated_date))
+                    {
+                        $updated_date = date_format(date_create($content[6]),"Y-m-d H:i:s");
+//                        var_dump(($updated_date)); echo '<br>';
+                    }
+
                     $arr = array(
                         'keyword' => $content[1],
                         'exact_search_volume' => $content[2],
                         'broad_search_volume' => $content[3],
                         'competing_product' => $content[4],
                         'rank' => $content[7],
-                        'date_last_updated' => date('Y-m-d H:i:s')
+                        'date_last_updated' => $updated_date
                     );
 
-                    $this->KeyTracking_model->insertCompleteData($task_id, $arr);
+                    $result = $this->KeyTracking_model->insertCompleteData($task_id, $arr);
+//                    echo $result.'<br>';
                 }
 
                 $this->Employee_task->completeTask($this->session->userdata['employee_logged_in'], $task_id);
@@ -435,14 +460,35 @@ class KeywordTracking extends CI_Controller
             if (strlen($content_arr[0])!=10)
                 return 'ASIN length('.strlen($content_arr[0]).') error in row '.$cnt;
 
-            if (!$this->KeyTracking_model->checkKeyword($task_id, $content_arr[0], $content_arr[1], $content_arr[5]))
-                return 'Keyword or marketplace is not matched correctly in row '.$cnt;
-//                return $this->KeyTracking_model->checkKeyword($task_id, $content_arr[1], $content_arr[2], $content_arr[6]);
+            $result = $this->KeyTracking_model->checkKeyword($task_id, $content_arr[1]);
+
+            if ($result && $result['asin_num'] != $content_arr[0])
+            {
+                return 'ASIN is not matched correctly in row '.$cnt;
+            }
+
+            if (!$result)
+            {
+                return 'Keyword is not matched correctly in row '.$cnt;
+            }
+
+            if (strtolower('www.'.$result['market_url']) != strtolower($content_arr[5]))
+            {
+                return 'Marketplace is not matched correctly in row '.$cnt;
+            }
 
             for ($i=2; $i<5; $i++)
-                if (empty($content_arr[$i]) || !is_numeric($content_arr[$i]) && $content_arr[$i]!='-')
-                    return $header_arr[$i].'('.$content_arr[$i].') must be number or \'-\' in row '.$cnt;
+            {
+                if (empty($content_arr[$i]) || (!is_numeric($content_arr[$i]) && $content_arr[$i]!='-'))
+                {
+                    return $header_arr[$i] . '(' . $content_arr[$i] . ') must be number or \'-\' in row ' . $cnt;
+                }
+            }
 
+            if (!$this->is_date($content_arr[6]) && $content_arr[6]!='-')
+            {
+                return $header_arr[$i] . '(' . $content_arr[$i] . ') must be number or \'-\' in row ' . $cnt;
+            }
 //            if ($content_arr[7]<1)
 //                return 'Organic Rank::'.$content_arr[7].','.$cnt;
         }
@@ -452,6 +498,21 @@ class KeywordTracking extends CI_Controller
 
         return 'Success';
 	}
+
+	function is_date($date)
+    {
+        if (DateTime::createFromFormat('m/d/Y H:i', $date) !== FALSE)
+        {
+            return true;
+        }
+
+        if (DateTime::createFromFormat('m/d/Y H:i:s', $date) !== FALSE)
+        {
+            return true;
+        }
+
+        return false;
+    }
 
 	public function exportKeywordTrackingTaskCSVFile()
     {

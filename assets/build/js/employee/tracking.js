@@ -182,7 +182,7 @@ $(document).ready(function () {
                     if (data=='success')
                     {
                         $('#btn_start_key_track').attr('style', 'display: none');
-                        $('#div_btn_complete').attr('style', 'display: block');
+                        $('#div_btn_complete').attr('style', 'display: block; margin-top: 20px;');
 
                         popUpToast(data, 'Working started!');
                     }

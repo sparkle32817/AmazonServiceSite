@@ -9,3 +9,4 @@ $lang['additional_images'] = 'Additional Images ';
 $lang['swatch_image'] = 'Swatch Image';
 $lang['only_one'] = 'Only one image';
 $lang['maximum_images'] = 'Maximum 8 images';
+$lang['drag_drop'] = 'Drop files here or click to upload.';

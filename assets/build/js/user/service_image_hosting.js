@@ -1,8 +1,5 @@
 $(document).ready(function () {
 
-	/*
-	* Category***
-	* */
 	var key_id = $('#view_keyword_id').val();		//For client view
 
 	var table_history = $('#table_image_hosting_history').DataTable( {
@@ -79,37 +76,50 @@ $(document).ready(function () {
 	}
 
 	if (isRealValue($('form#image_additional'))) {
+
+		// $("#image_additional").sortable({
+		// 	items: '.dz-preview',
+		// 	cursor: 'move',
+		// 	opacity: 0.5,
+		// 	containment: '#image_additional',
+		// 	distance: 20,
+		// 	tolerance: 'pointer',
+		// });
+
+		// $("#image_additional").disableSelection();
+
 		var image_additional = new Dropzone('form#image_additional', {
-			maxFiles: 6,
+			maxFiles: 8,
 			addRemoveLinks: true,
 			acceptedFiles: 'image/jpeg',
 			removedfile: function (file) {
-
-				fileDelete('10-' + file.name);
-
-				// var _ref;
-				// return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
 
 				var _ref = file.previewElement;
 				if (_ref != null)
 				{
 					_ref.parentNode.removeChild(file.previewElement);
 
-					$('.dz-preview').each(function (index) {
-						$(this).children().first().text('Additional Image#'+(index+1));
+					fileDelete('10-' + file.previewElement.children[0].innerText+'.jpg');
+
+					$('#image_additional .dz-preview').each(function (index) {
+						var old_name = $(this).children().first().text();
+						var new_name = 'Additional Image#'+(index+1);
+						if (old_name != new_name)
+						{
+							fileRename('10-' + old_name +'.jpg', '10-' + new_name +'.jpg');
+							$(this).children().first().text('Additional Image#'+(index+1));
+						}
+
 					});
 				}
+			},
+			renameFile: function (file) {
+				var preview = document.getElementsByClassName('dz-preview');
+				var this_num = preview.length;
 
+				return 'Additional Image#'+(this_num+1)+'.jpg';
 			},
 			init: function () {
-				this.on("sending", function(file, xhr, formData) {
-					var preview = document.getElementsByClassName('dz-preview');
-					var this_num = preview.length;
-
-					var name = 'Additional Image#'+this_num;
-
-					formData.append('new_name', name);
-				});
 				this.on('addedfile', function(file){
 
 					var preview = document.getElementsByClassName('dz-preview');
@@ -126,41 +136,28 @@ $(document).ready(function () {
 					this.removeAllFiles();
 				});
 				this.on("thumbnail", function (file) {
-					if (file.width < minImage || file.height < minImage) {
-						file.rejectMinDimensions()
-					} else if (file.width > maxImage || file.height > maxImage) {
-						file.rejectMaxDimensions()
-					} else {
-						file.acceptDimensions();
+					if (file.rejectMaxDimensions !== undefined || file.rejectMinDimensions !== undefined || file.acceptDimensions !== undefined) {
+						if (file.width < minImage || file.height < minImage) {
+							file.rejectMinDimensions()
+						} else if (file.width > maxImage || file.height > maxImage) {
+							file.rejectMaxDimensions()
+						} else {
+							file.acceptDimensions();
+						}
 					}
 				});
-				this.on("complete", function() {
-					// If all files have been uploaded
-					if (this.getQueuedFiles().length == 0 && this.getUploadingFiles().length == 0) {
-
-					}
+				this.on("maxfilesexceeded", function(file) {
+					this.removeFile(file);
 				});
 			},
 			accept: function (file, done) {
-				file.acceptDimensions = done;
+				file.acceptDimensions = function(){done();}
 				file.rejectMinDimensions = function () {
 					done("Images must be at least 1000 pixels on its shortest side.");
 				};
 				file.rejectMaxDimensions = function () {
 					done("Images can’t exceed 10,000 pixels on its longest side.");
 				};
-			}
-		});
-
-		$("#image_additional").sortable({
-			items:'.dz-preview',
-			cursor: 'move',
-			opacity: 0.5,
-			containment: "parent",
-			distance: 20,
-			tolerance: 'pointer',
-			update: function(e, ui){
-				// do what you want
 			}
 		});
 	}
@@ -209,6 +206,20 @@ $(document).ready(function () {
 			type: 'POST',
 			url: base_url + 'user/services/ImageHosting/deleteUploadedFile',
 			data: {name: filename},
+			async: false,
+			success: function(data){
+				console.log('success: ' + data);
+			}
+		});
+
+	}
+
+	function fileRename(old_name, new_name) {
+
+		$.ajax({
+			type: 'POST',
+			url: base_url + 'user/services/ImageHosting/renameUploadedFile',
+			data: {old_name: old_name, new_name: new_name},
 			async: false,
 			success: function(data){
 				console.log('success: ' + data);

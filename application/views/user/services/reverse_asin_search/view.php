@@ -71,7 +71,7 @@
                                                 </div>
                                                 <div class="col-md-9 col-sm-12 col-xs-12" style="padding: 0px;">
                                                     <?php if (!empty($result['market'])){ ?>
-                                                        <p style="font-size: 16px; color: red;"><?= $result['market']; ?></p>
+                                                        <span class="flag-icon flag-icon-<?= $result['flag']; ?>" style="font-size: 18px;"></span>&nbsp;&nbsp;<small style="font-size: 16px; color: red;"><?= $result['market']; ?></small>
                                                     <?php } ?>
                                                 </div>
                                             </div>

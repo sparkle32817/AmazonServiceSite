@@ -60,7 +60,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>&nbsp;&nbsp;&nbsp;Big Data – Advertising(Result View)</h3>
+                <h3>&nbsp;&nbsp;&nbsp;<?= $this->lang->line('big_data'); ?> – <?= $this->lang->line('advertising'); ?>(<?= $this->lang->line('result_view'); ?>)</h3>
             </div>
 
         </div>
@@ -83,7 +83,7 @@
 									<div class="item form-group">
 										<div class="col-md-12 col-sm-12 col-xs-12">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<label class="control-label">Product Asin</label>
+												<label class="control-label"><?= $this->lang->line('product_asin'); ?></label>
 											</div>
 											<input type="text" class="input-category" value="<?= $result['asin']; ?>" readonly >
 										</div>
@@ -91,7 +91,7 @@
 									<div class="item form-group">
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-												<label class="control-label">Market Place</label>
+												<label class="control-label"><?= $this->lang->line('marketplace'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
 												<input type="text" class="input-category" value="<?= $result['market_place']; ?>" readonly>
@@ -101,7 +101,7 @@
 									<div class="item form-group">
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-												<label class="control-label">Category</label>
+												<label class="control-label"><?= $this->lang->line('category'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
 												<input type="text" class="input-category" value="<?= $result['category']; ?>" readonly>
@@ -113,7 +113,7 @@
 									<div class="item form-group">
 										<div class="col-md-12 col-sm-12 col-xs-12">
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-												<label class="control-label">Monthly Revenue</label>
+												<label class="control-label"><?= $this->lang->line('monthly_revenue'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -129,7 +129,7 @@
 										</div>
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<label class="control-label">Sales Year Over Year(%)</label>
+												<label class="control-label"><?= $this->lang->line('sales_year'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -145,7 +145,7 @@
 										</div>
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<label class="control-label">Monthly Sales(Units)</label>
+												<label class="control-label"><?= $this->lang->line('monthly_sales'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -165,7 +165,7 @@
 									<div class="item form-group">
 										<div class="col-md-12 col-sm-12 col-xs-12">
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-												<label class="control-label">Price</label>
+												<label class="control-label"><?= $this->lang->line('price'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -181,7 +181,7 @@
 										</div>
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<label class="control-label">Price Change(%)</label>
+												<label class="control-label"><?= $this->lang->line('price_change'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -197,7 +197,7 @@
 										</div>
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<label class="control-label">Best Sales Rank(BSR)</label>
+												<label class="control-label"><?= $this->lang->line('bsr'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -217,7 +217,7 @@
 									<div class="item form-group">
 										<div class="col-md-12 col-sm-12 col-xs-12">
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-												<label class="control-label">Review Count</label>
+												<label class="control-label"><?= $this->lang->line('review_count'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -233,7 +233,7 @@
 										</div>
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<label class="control-label">Sales Change(%)</label>
+												<label class="control-label"><?= $this->lang->line('sales_change'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -249,7 +249,7 @@
 										</div>
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<label class="control-label">Number of Sellers</label>
+												<label class="control-label"><?= $this->lang->line('num_sellers'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -269,7 +269,7 @@
 									<div class="item form-group">
 										<div class="col-md-12 col-sm-12 col-xs-12">
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-												<label class="control-label">Review Rating</label>
+												<label class="control-label"><?= $this->lang->line('review_rating'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -285,7 +285,7 @@
 										</div>
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<label class="control-label">Best Sales Period</label>
+												<label class="control-label"><?= $this->lang->line('best_sales'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<input type="text" class="input-category" value="<?= $result['best_sales_period']; ?>" readonly>
@@ -293,7 +293,7 @@
 										</div>
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<label class="control-label">Weight(lb)</label>
+												<label class="control-label"><?= $this->lang->line('weight'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -313,7 +313,7 @@
 									<div class="item form-group">
 										<div class="col-md-12 col-sm-12 col-xs-12">
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-												<label class="control-label">Variation Count</label>
+												<label class="control-label"><?= $this->lang->line('variation_count'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -329,7 +329,7 @@
 										</div>
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<label class="control-label">Sales to Reviews</label>
+												<label class="control-label"><?= $this->lang->line('sales_review'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -345,7 +345,7 @@
 										</div>
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<label class="control-label">Number of Images</label>
+												<label class="control-label"><?= $this->lang->line('num_images'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -364,7 +364,7 @@
 									<div class="col-md-6 col-sm-6 col-xs-12">
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<label class="control-label">Exclude Keyword:</label>
+												<label class="control-label"><?= $this->lang->line('exclude_keywords'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
@@ -376,7 +376,7 @@
 									<div class="col-md-6 col-sm-6 col-xs-12">
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<label class="control-label">Include Keyword:</label>
+												<label class="control-label"><?= $this->lang->line('include_keywords'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
@@ -388,7 +388,7 @@
 									<div class="col-md-6 col-sm-6 col-xs-12">
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<label class="control-label">Fulfillment</label>
+												<label class="control-label"><?= $this->lang->line('fulfillment'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<input type="text" class="input-category" value="<?= $result['fulfillment'];?>" readonly>
@@ -398,7 +398,7 @@
 									<div class="col-md-6 col-sm-6 col-xs-12">
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<label class="control-label">Relevance Type</label>
+												<label class="control-label"><?= $this->lang->line('relevance_type'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<input type="text" class="input-category" value="<?= $result['shipping_tier']; ?>" readonly>
@@ -421,11 +421,11 @@
                         <input type="hidden" id="cur_status" value="<?= $status; ?>">
 						<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px; padding-bottom: 10px;border-bottom: #46b8da solid 2px;">
 							<div class="col-md-6 col-sm-6 col-xs-6">
-								<label style="font-size: 22px; color: red;"><?= $total_cnt; ?>&nbsp;<small style="font-size: 20px; color: #000;">Products Found</small></label>
+								<label style="font-size: 22px; color: red;"><?= $total_cnt; ?>&nbsp;<small style="font-size: 20px; color: #000;"><?= $this->lang->line('product_found'); ?></small></label>
 							</div>
 							<div class="col-md-6 col-sm-6 col-xs-6">
-                                <p style="color: #000; float: right;">Download result
-                                    <a href="<?= ($export_file_name); ?>" class="btn btn-round btn-default" style="width: 60px; margin-top: -2px; margin-right: 40px; cursor: pointer;" title="Download Result">
+                                <p style="color: #000; float: right;"><?= $this->lang->line('download_result'); ?>
+                                    <a href="<?= ($export_file_name); ?>" class="btn btn-round btn-default" style="width: 60px; margin-top: -2px; margin-right: 40px; cursor: pointer;" title="<?= $this->lang->line('download_result'); ?>">
                                         <i class="fa fa-download" style=" font-size: 20px;"></i>
                                     </a>
                                 </p>
@@ -436,17 +436,17 @@
 							<table id="table_bigdata_advertising" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
 								<thead style="background-color: #000; /*font-size: 10px;*/ color: #dedee0">
 								<th width="3%"></th>
-								<th width="10%">ASIN</th>
-								<th width="40%">PRODUCT</th>
-								<th>Frequently Bought<br/> Together</th>
-								<th>Customer Also<br/> Bought</th>
-								<th>Amazom<br/> Suggested</th>
-								<th>SELLERS</th>
-								<th>PRICE</th>
-								<th>MONTHLY<br/> SALES</th>
-								<th>MONTHLY<br/> REVENUE</th>
-								<th>BSR</th>
-								<th>REVIEWS</th>
+								<th width="10%"><?= $this->lang->line('asin'); ?></th>
+								<th width="40%"><?= $this->lang->line('t_product'); ?></th>
+								<th><?= $this->lang->line('t_bought_together'); ?></th>
+								<th><?= $this->lang->line('t_customer_bought'); ?></th>
+								<th><?= $this->lang->line('t_amazon_suggested'); ?></th>
+								<th><?= $this->lang->line('t_sellers'); ?></th>
+								<th><?= $this->lang->line('t_price'); ?></th>
+								<th><?= $this->lang->line('t_monthly_sales'); ?></th>
+								<th><?= $this->lang->line('t_monthly_revenue'); ?></th>
+								<th><?= $this->lang->line('t_bsr'); ?></th>
+								<th><?= $this->lang->line('t_reviews'); ?></th>
 								</thead>
 							</table>
 						</div>
@@ -457,3 +457,19 @@
     </div>
 </div>
 <!-- /page content -->
+
+<input type="hidden" id="txt_advertising_title" value="<?= $this->lang->line('title'); ?>">
+<input type="hidden" id="txt_advertising_category" value="<?= $this->lang->line('category'); ?>">
+<input type="hidden" id="txt_advertising_brand" value="<?= $this->lang->line('brand'); ?>">
+<input type="hidden" id="txt_advertising_fulfillment" value="<?= $this->lang->line('fulfillment'); ?>">
+<input type="hidden" id="txt_advertising_size_tier" value="<?= $this->lang->line('size_tier'); ?>">
+<input type="hidden" id="txt_advertising_num_images" value="<?= $this->lang->line('num_images'); ?>">
+<input type="hidden" id="txt_advertising_variation_count" value="<?= $this->lang->line('variation_count'); ?>">
+<input type="hidden" id="txt_advertising_weight" value="<?= $this->lang->line('weight'); ?>">
+
+<input type="hidden" id="txt_last_year_sales" value="<?= $this->lang->line('last_year_sales'); ?>">
+<input type="hidden" id="txt_sales_year" value="<?= $this->lang->line('sales_year'); ?>">
+<input type="hidden" id="txt_best_sales" value="<?= $this->lang->line('best_sales'); ?>">
+<input type="hidden" id="txt_sales_review" value="<?= $this->lang->line('sales_review'); ?>">
+<input type="hidden" id="txt_sales_trend" value="<?= $this->lang->line('sales_trend'); ?>">
+<input type="hidden" id="txt_price_trend" value="<?= $this->lang->line('price_trend'); ?>">

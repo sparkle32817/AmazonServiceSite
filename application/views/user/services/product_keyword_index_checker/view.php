@@ -47,7 +47,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>&nbsp;&nbsp;&nbsp;AMZ Product Keyword Index Checker(Result View)</h3>
+                <h3>&nbsp;&nbsp;&nbsp;<?= $this->lang->line('keyword_index_checker'); ?>(<?= $this->lang->line('result_view'); ?>)</h3>
             </div>
 
         </div>
@@ -70,7 +70,7 @@
 									<div class="item form-group">
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px;">
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-												<label class="control-label">Market Place</label>
+												<label class="control-label"><?= $this->lang->line('marketplace'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
 												<input type="text" class="input-category" value="<?= $result['market_place']; ?>" readonly>
@@ -80,7 +80,7 @@
 									<div class="item form-group">
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px;">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<label class="control-label">Product Asin</label>
+												<label class="control-label"><?= $this->lang->line('product_asin'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
 												<input type="text" class="input-category" value="<?= $result['asin']; ?>" readonly>
@@ -90,7 +90,7 @@
 									<div class="item form-group">
 										<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px; margin-bottom: 30px;">
 											<div class="col-md-12 col-sm-12 col-xs-12">
-												<label class="control-label">Seller ID</label>
+												<label class="control-label"><?= $this->lang->line('seller_id'); ?></label>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
 												<input type="text" class="input-category" value="<?= $result['seller_id']; ?>" readonly>
@@ -102,7 +102,7 @@
 									<div class="item form-group">
 										<div class="col-md-12 col-sm-12 col-xs-12">
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-												<label class="control-label">Keywords</label>
+												<label class="control-label"><?= $this->lang->line('keywords'); ?></label>
 											</div>
 											<textarea id="key_checker_textarea" readonly><?php echo str_replace(',', '&#13;&#10;', $result['keywords']); ?></textarea>
 										</div>
@@ -117,11 +117,11 @@
 							<table id="table_key_checker" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
 								<thead style="background-color: #000000; color: #dedee0">
 									<th width="3%"></th>
-									<th>Keyword</th>
-									<th>Traditional Index</th>
-									<th>Field-ASIN Index</th>
-									<th>Storefront Index</th>
-									<th>Cumulative</th>
+									<th><?= $this->lang->line('t_keyword'); ?></th>
+									<th><?= $this->lang->line('traditional_index'); ?></th>
+									<th><?= $this->lang->line('field_asin_index'); ?></th>
+									<th><?= $this->lang->line('store_front_index'); ?></th>
+									<th><?= $this->lang->line('cumulative'); ?></th>
 								</thead>
 							</table>
 						</div>

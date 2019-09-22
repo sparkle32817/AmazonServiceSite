@@ -60,36 +60,40 @@ class KeywordRankTracking extends CI_Controller
             $res_product['flag'] = $res1['country_code'];
             $res_product['tracked_count'] = !empty($res1['cnt'])?$res1['cnt']:'0';
 
-            $res_overview['key_10'] = $res1['key_10'];
-            $res_overview['key_10_sub'] = $res1['key_10_sub'];
+            $res_overview['key_10'] = $this->makeComma($res1['key_10']);
+            $res_overview['key_10_sub'] = $this->makeComma($res1['key_10_sub']);
             if ($res_overview['key_10_sub']==0)
             {
                 $res_overview['key_10_sub'] = '';
                 $res_overview['key_10_sub_color'] = 'white';
             }elseif ($res_overview['key_10_sub']>0)
             {
-                $res_overview['key_10_sub'] = '+'.$res_overview['key_10_sub'];
+                $res_overview['key_10_sub'] = '+'.$this->makeComma($res_overview['key_10_sub']);
                 $res_overview['key_10_sub_color'] = 'green';
             }
             else
+            {
                 $res_overview['key_10_sub_color'] = 'red';
+            }
 
-            $res_overview['exact_10'] = $res1['exact_10'];
-            $res_overview['broad_10'] = $res1['broad_10'];
+            $res_overview['exact_10'] = $this->makeComma($res1['exact_10']);
+            $res_overview['broad_10'] = $this->makeComma($res1['broad_10']);
 
-            $res_overview['key_50'] = $res1['key_50'];
-            $res_overview['key_50_sub'] = $res1['key_50_sub'];
+            $res_overview['key_50'] = $this->makeComma($res1['key_50']);
+            $res_overview['key_50_sub'] = $this->makeComma($res1['key_50_sub']);
             if ($res_overview['key_50_sub']==0)
             {
                 $res_overview['key_50_sub'] = '';
                 $res_overview['key_50_sub_color'] = 'white';
             }elseif ($res_overview['key_50_sub']>0)
             {
-                $res_overview['key_50_sub'] = '+'.$res_overview['key_50_sub'];
+                $res_overview['key_50_sub'] = '+'.$this->makeComma($res_overview['key_50_sub']);
                 $res_overview['key_50_sub_color'] = 'green';
             }
             else
+            {
                 $res_overview['key_50_sub_color'] = 'red';
+            }
 
             $res_overview['exact_50'] = $res1['exact_50'];
             $res_overview['broad_50'] = $res1['broad_50'];
@@ -119,16 +123,16 @@ class KeywordRankTracking extends CI_Controller
                 $rank = $this->KeyTrack_model->getTrendData($res['id'], $offset);
 
                 array_push($labels, $date);
-                array_push($data, $rank);
+                array_push($data, $rank!=0?$rank:null);
             }
 
             $result[] = array(
-                'num' => $res['num'],
+                'num' => $this->makeComma($res['num']),
                 'keyword' => $res['keyword'],
-                'exact' => $res['exact'],
-                'broad' => $res['broad'],
-                'competing' => $res['competing'],
-                'rank' => $res['rank'],
+                'exact' => $this->makeComma($res['exact']),
+                'broad' => $this->makeComma($res['broad']),
+                'competing' => $this->makeComma($res['competing']),
+                'rank' => $this->makeComma($res['rank']),
                 'trend' => array(
                     'labels' => $labels,
                     'datasets' => array(
@@ -362,16 +366,16 @@ class KeywordRankTracking extends CI_Controller
 
             $result = $this->KeyTrack_model->getHistoryChartData($client_id, $postData['asin_id'], $start->format('Y-m-d 00:00:00'), $t_end->format('Y-m-d 23:59:59'));
 
-            if ($result)
-            {
+//            if ($result)
+//            {
                 $res_datas['top10'][] = $result['top_10'];
                 $res_datas['top50'][] = $result['top_50'];
-            }
-            else
-            {
-                $res_datas['top10'][] = 0;
-                $res_datas['top50'][] = 0;
-            }
+//            }
+//            else
+//            {
+//                $res_datas['top10'][] = 0;
+//                $res_datas['top50'][] = 0;
+//            }
 
             $start->add(new DateInterval('P'.$interval.'D'));
             array_push($labels, $t_end->format('Y-m-d'));
@@ -456,14 +460,15 @@ class KeywordRankTracking extends CI_Controller
 
             $result = $this->KeyTrack_model->getKeyHistoryChartData($keyword, $asin_id, $start->format('Y-m-d 00:00:00'), $t_end->format('Y-m-d 23:59:59'));
 
-            if ($result)
-            {
-                $res_datas[] = round($result['rank'], 2);
-            }
-            else
-            {
-                $res_datas[] = 0;
-            }
+            $res_datas[] = $result['rank'];
+//            if ($result)
+//            {
+//                $res_datas[] = round($result['rank'], 2);
+//            }
+//            else
+//            {
+//                $res_datas[] = 0;
+//            }
 
             $start->add(new DateInterval('P'.$interval.'D'));
             array_push($labels, $t_end->format('Y-m-d'));
@@ -492,4 +497,8 @@ class KeywordRankTracking extends CI_Controller
         $this->KeyTrack_model->generateAutoNewTicket();
     }
 
+    function makeComma($var)
+    {
+        return str_replace('.00', '', ($var!='-' && $var!='')?number_format($var, 2, '.', ','):$var);
+    }
 }

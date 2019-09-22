@@ -131,25 +131,25 @@
                         <h3><?= $this->lang->line('service'); ?></h3>
                         <ul class="nav side-menu">
                             <li>
-                                <a><i class="fa fa-tasks"></i> Amazon Marketing URL Generator <span class="fa fa-chevron-down"></span></a>
+                                <a><i class="fa fa-tasks"></i> <?= $this->lang->line('url_generator'); ?> <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="<?= base_url("services/marketurl"); ?>">Promote Brand & Keyword URL</a></li>
-                                    <li><a href="<?= base_url("services/marketurl/asinkeyword"); ?>">ASIN + Keyword URL</a></li>
-                                    <li><a href="<?= base_url("services/marketurl/asinkeyword_special"); ?>">ASIN + Keyword URL (Special)</a></li>
-                                    <li><a href="<?= base_url("services/marketurl/search_engine"); ?>">Search-Engine AMZ URL</a></li>
-                                    <li><a href="<?= base_url("services/marketurl/add_cart_url"); ?>">Add to Cart URL</a></li>
-                                    <li><a href="<?= base_url("services/marketurl/add_cart_multi"); ?>">Add to Cart with Multiple</a></li>
-                                    <li><a href="<?= base_url("services/marketurl/search_multi_asin"); ?>">Multi-ASIN AMZ Page URL</a></li>
+                                    <li><a href="<?= base_url("services/marketurl"); ?>"><?= $this->lang->line('promote_brand'); ?></a></li>
+                                    <li><a href="<?= base_url("services/marketurl/asinkeyword"); ?>"><?= $this->lang->line('asin_url'); ?></a></li>
+                                    <li><a href="<?= base_url("services/marketurl/asinkeyword_special"); ?>"><?= $this->lang->line('asin_url_special'); ?></a></li>
+                                    <li><a href="<?= base_url("services/marketurl/search_engine"); ?>"><?= $this->lang->line('search_engine_url'); ?></a></li>
+                                    <li><a href="<?= base_url("services/marketurl/add_cart_url"); ?>"><?= $this->lang->line('add_to_cart'); ?></a></li>
+                                    <li><a href="<?= base_url("services/marketurl/add_cart_multi"); ?>"><?= $this->lang->line('add_to_cart_multi'); ?></a></li>
+                                    <li><a href="<?= base_url("services/marketurl/search_multi_asin"); ?>"><?= $this->lang->line('multi_page_url'); ?></a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="<?= base_url("services/reverse_search"); ?>"><i class="fa fa-tasks"></i> Reverse ASIN Search</a>
+                                <a href="<?= base_url("services/reverse_search"); ?>"><i class="fa fa-tasks"></i> <?= $this->lang->line('reverse_asin_search'); ?></a>
                             </li>
                             <li>
-                                <a href="<?= base_url("services/magnet_search"); ?>"><i class="fa fa-tasks"></i> Magnet Related Keyword Search </a>
+                                <a href="<?= base_url("services/magnet_search"); ?>"><i class="fa fa-tasks"></i> <?= $this->lang->line('magnet_related_search'); ?> </a>
                             </li>
                             <li>
-                                <a href="<?= base_url("services/keyword_rank_tracking"); ?>"><i class="fa fa-tasks"></i> Keyword Rank Tracking </a>
+                                <a href="<?= base_url("services/keyword_rank_tracking"); ?>"><i class="fa fa-tasks"></i> <?= $this->lang->line('keyword_rank_tracking'); ?> </a>
                             </li>
                             <!--                                <li>-->
                             <!--                                    <a><i class="fa fa-tasks"></i> Listing Optimization <span class="fa fa-chevron-down"></span></a>-->
@@ -160,28 +160,28 @@
                             <!--                                    </ul>-->
                             <!--                                </li>-->
                             <li>
-                                <a><i class="fa fa-tasks"></i> Big Data <span class="fa fa-chevron-down"></span></a>
+                                <a><i class="fa fa-tasks"></i> <?= $this->lang->line('big_data'); ?> <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
-                                    <li><a href="<?= base_url("services/big_data/product"); ?>">Products</a></li>
-                                    <li><a href="<?= base_url("services/big_data/keyword"); ?>">Keywords</a></li>
-                                    <li><a href="<?= base_url("services/big_data/category"); ?>">Category</a></li>
-                                    <li><a href="<?= base_url("services/big_data/advertising"); ?>">Advertising</a></li>
+                                    <li><a href="<?= base_url("services/big_data/product"); ?>"><?= $this->lang->line('products'); ?></a></li>
+                                    <li><a href="<?= base_url("services/big_data/keyword"); ?>"><?= $this->lang->line('keywords'); ?></a></li>
+                                    <li><a href="<?= base_url("services/big_data/category"); ?>"><?= $this->lang->line('category'); ?></a></li>
+                                    <li><a href="<?= base_url("services/big_data/advertising"); ?>"><?= $this->lang->line('advertising'); ?></a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="<?= base_url("services/image_hosting"); ?>"><i class="fa fa-tasks"></i> Image Hosting </a>
+                                <a href="<?= base_url("services/image_hosting"); ?>"><i class="fa fa-tasks"></i> <?= $this->lang->line('image_hosting'); ?> </a>
                             </li>
                             <li>
-                                <a href="<?= base_url("services/keyword_index_checker"); ?>"><i class="fa fa-tasks"></i> AMZ Product Keyword Index Checker </a>
+                                <a href="<?= base_url("services/keyword_index_checker"); ?>"><i class="fa fa-tasks"></i> <?= $this->lang->line('keyword_index_checker'); ?> </a>
                             </li>
                             <li>
-                                <a href="<?= base_url("services/keyword_optimization"); ?>"><i class="fa fa-tasks"></i> Search Term Optimization </a>
+                                <a href="<?= base_url("services/keyword_optimization"); ?>"><i class="fa fa-tasks"></i> <?= $this->lang->line('search_term_optimization'); ?> </a>
                             </li>
                             <li>
-                                <a href="<?= base_url("services/listing_stuffer"); ?>"><i class="fa fa-tasks"></i> AMZ Listing Keyword Stuffer </a>
+                                <a href="<?= base_url("services/listing_stuffer"); ?>"><i class="fa fa-tasks"></i> <?= $this->lang->line('listing_stuffer'); ?> </a>
                             </li>
                             <li>
-                                <a href="<?= base_url("services/account_management"); ?>"><i class="fa fa-tasks"></i> AMZ Account Management </a>
+                                <a href="<?= base_url("services/account_management"); ?>"><i class="fa fa-tasks"></i> <?= $this->lang->line('account_management'); ?> </a>
                             </li>
                             <li>
                                 <!--                                    <a><i class="fa fa-tasks"></i> FBA Tools <span class="fa fa-chevron-down"></span></a>-->

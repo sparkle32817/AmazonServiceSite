@@ -692,6 +692,24 @@ class Employee_task_model extends CI_Model
         return 'success';
     }
 
+    public function getKeyTrackingPendingTaskNum($emp_id)
+    {
+        $service = 'Keyword Rank Tracking';
+        $this->db->select('service_permission');
+        $this->db->where('id', $emp_id);
+        $result = $this->db->get('tbl_employee_info')->row_array();
+        $service_names = explode(",", $result['service_permission']);
+
+        if (!in_array($service, $service_names))
+        {
+            return 0;
+        }
+
+        return $this->db->from('tbl_view_all_task a')->join('tbl_service_tracking_asin b', 'b.id=a.related_task_id')
+                    ->where(array('a.status'=>'pending', 'a.service'=>$service, 'b.exist_status'=>1))
+                    ->get()->num_rows();
+    }
+
     public function getRelatedTaskID($task_id)
     {
         $str_query = 'SELECT related_task_id FROM tbl_view_all_task WHERE id = \''.$task_id.'\'';

@@ -241,7 +241,7 @@
             <div class="col-md-12">
                 <div class="x_panel tile">
                     <div class="x_title">
-                        <h2>Image Hosting</h2>
+                        <h2><?= $this->lang->line('image_hosting'); ?></h2>
                         <ul class="nav navbar-right panel_toolbox">
                             <li>
                                 <!--                                <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>-->

@@ -73,18 +73,5 @@
     <script src="<?= base_url('assets/build/js/user/service_listing_stuffer.js') ?>"></script>
     <script src="<?= base_url('assets/build/js/user/service_account_management.js') ?>"></script>
 
-
-<!--            --><?php //if (urldecode(uri_string()) == 'services/big_data/product'
-//                || urldecode(uri_string()) == 'services/big_data/keyword'
-//                || urldecode(uri_string()) == 'services/big_data/category'
-//                || urldecode(uri_string()) == 'services/big_data/advertising'){?>
-<!--                <script src="--><?//= base_url('assets/build/js/user/service_big_data.js') ?><!--"></script>-->
-<!--            --><?php //} ?>
-<!---->
-<!--            --><?php //if (urldecode(uri_string()) == 'services/keyword_index_checker'
-//                || urldecode(uri_string()) == 'services/keyword_index_checker/resultView/(:any)'){?>
-<!--                <script src="--><?//= base_url('assets/build/js/user/service_key_index_checker.js') ?><!--"></script>-->
-<!--            --><?php //} ?>
-
-            </body>
+    </body>
 </html>

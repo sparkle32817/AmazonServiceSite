@@ -44,12 +44,21 @@ $lang['brand'] = 'Brand';
 $lang['last_year_sales'] = 'Last Year Sales';
 $lang['sales_trend'] = 'Sales Trend(90 days)';
 $lang['price_trend'] = 'Price Trend(90 days)';
+$lang['t_searched_date'] = 'Searched<br> Date';
 
 //Keyword
+$lang['max_200_products'] = 'Maximum of 200 Products will be shown.';
 $lang['broad_search_score'] = 'Broad Search Score';
+$lang['competing_product'] = 'Competing Product';
+$lang['avg_seller_cnt'] = 'AVG Seller Count';
+$lang['t_keyword_phrase'] = 'KEYWORD PHRASE';
 $lang['t_search_volume'] = 'SEARCH<br> VOLUME';
 
 //Advertising
-$lang['bought_together'] = 'Frequently Bought<br> Together';
-$lang['customer_bought'] = 'Customer Also<br> Bought';
-$lang['amazon_suggested'] = 'Amazon<br> Suggested';
+$lang['relevance_type'] = 'Relevance Type';
+$lang['bought_together'] = 'Frequently Bought Together';
+$lang['customer_bought'] = 'Customer Also Bought';
+$lang['amazon_suggested'] = 'Amazon Suggested';
+$lang['t_bought_together'] = 'Frequently Bought<br> Together';
+$lang['t_customer_bought'] = 'Customer Also<br> Bought';
+$lang['t_amazon_suggested'] = 'Amazon<br> Suggested';

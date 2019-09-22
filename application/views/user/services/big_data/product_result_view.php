@@ -455,3 +455,19 @@
     </div>
 </div>
 <!-- /page content -->
+
+<input type="hidden" id="txt_product_title" value="<?= $this->lang->line('title'); ?>">
+<input type="hidden" id="txt_product_category" value="<?= $this->lang->line('category'); ?>">
+<input type="hidden" id="txt_product_brand" value="<?= $this->lang->line('brand'); ?>">
+<input type="hidden" id="txt_product_fulfillment" value="<?= $this->lang->line('fulfillment'); ?>">
+<input type="hidden" id="txt_product_size_tier" value="<?= $this->lang->line('size_tier'); ?>">
+<input type="hidden" id="txt_product_num_images" value="<?= $this->lang->line('num_images'); ?>">
+<input type="hidden" id="txt_product_variation_count" value="<?= $this->lang->line('variation_count'); ?>">
+<input type="hidden" id="txt_product_weight" value="<?= $this->lang->line('weight'); ?>">
+
+<input type="hidden" id="txt_last_year_sales" value="<?= $this->lang->line('last_year_sales'); ?>">
+<input type="hidden" id="txt_sales_year" value="<?= $this->lang->line('sales_year'); ?>">
+<input type="hidden" id="txt_best_sales" value="<?= $this->lang->line('best_sales'); ?>">
+<input type="hidden" id="txt_sales_review" value="<?= $this->lang->line('sales_review'); ?>">
+<input type="hidden" id="txt_sales_trend" value="<?= $this->lang->line('sales_trend'); ?>">
+<input type="hidden" id="txt_price_trend" value="<?= $this->lang->line('price_trend'); ?>">

@@ -46,7 +46,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>&nbsp;&nbsp;&nbsp;Big Data – Keyword</h3>
+                <h3>&nbsp;&nbsp;&nbsp;<?= $this->lang->line('big_data'); ?> – <?= $this->lang->line('keywords'); ?></h3>
             </div>
 
         </div>
@@ -69,21 +69,21 @@
 									<div class="col-md-2 col-sm-2 col-xs-2">
 									</div>
 									<div class="col-md-10 col-sm-10 col-xs-10">
-										<label class="col-md-12 col-sm-12 col-xs-10 letter"> •  Search research generally will be available within 12 hours. (Fastest: 15 minutes).</label>
+										<label class="col-md-12 col-sm-12 col-xs-10 letter"> •  <?= $this->lang->line('magnet_text'); ?></label>
 									</div>
 								</div>
 								<div class="form-group col-md-12 col-sm-12 col-xs-12">
 									<div class="col-md-2 col-sm-2 col-xs-2">
 									</div>
 									<div class="col-md-10 col-sm-10 col-xs-10">
-										<label class="col-md-12 col-sm-12 col-xs-12 letter"> •	Notice: Entering Too many criteria may return 0 or very few results. </label>
+										<label class="col-md-12 col-sm-12 col-xs-12 letter"> •	<?= $this->lang->line('notice'); ?> </label>
 									</div>
 								</div>
 								<div class="form-group col-md-12 col-sm-12 col-xs-12">
 									<div class="col-md-2 col-sm-2 col-xs-2">
 									</div>
 									<div class="col-md-10 col-sm-10 col-xs-10">
-										<label class="col-md-12 col-sm-12 col-xs-12 letter"> •	Maximum of 200 Products will be shown. </label>
+										<label class="col-md-12 col-sm-12 col-xs-12 letter"> •	<?= $this->lang->line('max_200_products'); ?> </label>
 									</div>
 								</div>
 							</div>
@@ -92,12 +92,12 @@
 								</div>
 								<div class="col-md-4 col-sm-4 col-xs-12">
 									<center>
-										<button type="reset" class="btn btn-info">Tutorial & Learn</button>
+										<button type="reset" class="btn btn-info"><?= $this->lang->line('tutorial_learn'); ?></button>
 									</center>
 								</div>
 								<div class="col-md-4 col-sm-4 col-xs-12">
 									<center>
-										<button type="submit" id="btn_keyword_history" data-toggle="modal" data-target="#modal_keyword_history" class="btn btn-primary">History</button>
+										<button type="submit" id="btn_keyword_history" data-toggle="modal" data-target="#modal_keyword_history" class="btn btn-primary"><?= $this->lang->line('history'); ?></button>
 									</center>
 								</div>
 							</div>
@@ -109,7 +109,7 @@
 										<div class="item form-group">
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-													<label class="control-label">Market Place</label>
+													<label class="control-label"><?= $this->lang->line('marketplace'); ?></label>
 												</div>
 												<select name="keyword_market_place" class="form-control input-box" required="required" id="keyword_market_place">
 													<option value=""></option>
@@ -126,7 +126,7 @@
 										<div class="item form-group">
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 15px;">
 												<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-													<label class="control-label">Category</label>
+													<label class="control-label"><?= $this->lang->line('category'); ?></label>
 												</div>
 												<select name="keyword_market_category" class="form-control input-box" id="keyword_market_category" multiple>
 												</select>
@@ -137,49 +137,49 @@
 										<div class="item form-group">
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-													<label class="control-label">Monthly Revenue</label>
+													<label class="control-label"><?= $this->lang->line('monthly_revenue'); ?></label>
 												</div>
 												<div class="col-md-12 col-sm-12 col-xs-12">
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_revenue_min" name="keyword_revenue_min" class="input-keyword" placeholder="Min">
+														<input type="text" id="keyword_revenue_min" name="keyword_revenue_min" class="input-keyword" placeholder="<?= $this->lang->line('min'); ?>">
 													</div>
 													<div class="col-md-2 col-sm-2 col-xs-12" style="align-content: center; height: 34px;">
 														-
 													</div>
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_revenue_max" name="keyword_revenue_max" class="input-keyword" placeholder="Max">
+														<input type="text" id="keyword_revenue_max" name="keyword_revenue_max" class="input-keyword" placeholder="<?= $this->lang->line('max'); ?>">
 													</div>
 												</div>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 												<div class="col-md-12 col-sm-12 col-xs-12">
-													<label class="control-label">Monthly Sales(Units)</label>
+													<label class="control-label"><?= $this->lang->line('monthly_sales'); ?></label>
 												</div>
 												<div class="col-md-12 col-sm-12 col-xs-12">
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_sales_month_min" name="keyword_sales_month_min" class="input-keyword" placeholder="Min">
+														<input type="text" id="keyword_sales_month_min" name="keyword_sales_month_min" class="input-keyword" placeholder="<?= $this->lang->line('min'); ?>">
 													</div>
 													<div class="col-md-2 col-sm-2 col-xs-12" style="align-content: center; height: 34px;">
 														-
 													</div>
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_sales_month_max" name="keyword_sales_month_max" class="input-keyword" placeholder="Max">
+														<input type="text" id="keyword_sales_month_max" name="keyword_sales_month_max" class="input-keyword" placeholder="<?= $this->lang->line('max'); ?>">
 													</div>
 												</div>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 												<div class="col-md-12 col-sm-12 col-xs-12">
-													<label class="control-label">Competing Product</label>
+													<label class="control-label"><?= $this->lang->line('competing_product'); ?></label>
 												</div>
 												<div class="col-md-12 col-sm-12 col-xs-12">
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_competing_product_min" class="input-keyword" placeholder="Min">
+														<input type="text" id="keyword_competing_product_min" class="input-keyword" placeholder="<?= $this->lang->line('min'); ?>">
 													</div>
 													<div class="col-md-2 col-sm-2 col-xs-12" style="align-content: center; height: 34px;">
 														-
 													</div>
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_competing_product_max" class="input-keyword" placeholder="Max">
+														<input type="text" id="keyword_competing_product_max" class="input-keyword" placeholder="<?= $this->lang->line('max'); ?>">
 													</div>
 												</div>
 											</div>
@@ -189,33 +189,33 @@
 										<div class="item form-group">
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-													<label class="control-label">Price</label>
+													<label class="control-label"><?= $this->lang->line('price'); ?></label>
 												</div>
 												<div class="col-md-12 col-sm-12 col-xs-12">
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_price_min" name="keyword_price_min" class="input-keyword" placeholder="Min">
+														<input type="text" id="keyword_price_min" name="keyword_price_min" class="input-keyword" placeholder="<?= $this->lang->line('min'); ?>">
 													</div>
 													<div class="col-md-2 col-sm-2 col-xs-12" style="align-content: center; height: 34px;">
 														-
 													</div>
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_price_max" name="keyword_price_max" class="input-keyword" placeholder="Max">
+														<input type="text" id="keyword_price_max" name="keyword_price_max" class="input-keyword" placeholder="<?= $this->lang->line('max'); ?>">
 													</div>
 												</div>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 												<div class="col-md-12 col-sm-12 col-xs-12">
-													<label class="control-label">Best Sales Rank(BSR)</label>
+													<label class="control-label"><?= $this->lang->line('bsr'); ?></label>
 												</div>
 												<div class="col-md-12 col-sm-12 col-xs-12">
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_sales_rank_min" name="keyword_sales_rank_min" class="input-keyword" placeholder="Min">
+														<input type="text" id="keyword_sales_rank_min" name="keyword_sales_rank_min" class="input-keyword" placeholder="<?= $this->lang->line('min'); ?>">
 													</div>
 													<div class="col-md-2 col-sm-2 col-xs-12" style="align-content: center; height: 34px;">
 														-
 													</div>
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_sales_rank_max" name="keyword_sales_rank_max" class="input-keyword" placeholder="Max">
+														<input type="text" id="keyword_sales_rank_max" name="keyword_sales_rank_max" class="input-keyword" placeholder="<?= $this->lang->line('max'); ?>">
 													</div>
 												</div>
 											</div>
@@ -225,33 +225,33 @@
 										<div class="item form-group">
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-													<label class="control-label">Review Count</label>
+													<label class="control-label"><?= $this->lang->line('review_count'); ?></label>
 												</div>
 												<div class="col-md-12 col-sm-12 col-xs-12">
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_review_count_min" name="keyword_review_count_min" class="input-keyword" placeholder="Min">
+														<input type="text" id="keyword_review_count_min" name="keyword_review_count_min" class="input-keyword" placeholder="<?= $this->lang->line('min'); ?>">
 													</div>
 													<div class="col-md-2 col-sm-2 col-xs-12" style="align-content: center; height: 34px;">
 														-
 													</div>
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_review_count_max" name="keyword_review_count_max" class="input-keyword" placeholder="Max">
+														<input type="text" id="keyword_review_count_max" name="keyword_review_count_max" class="input-keyword" placeholder="<?= $this->lang->line('max'); ?>">
 													</div>
 												</div>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 												<div class="col-md-12 col-sm-12 col-xs-12">
-													<label class="control-label">Number of Sellers</label>
+													<label class="control-label"><?= $this->lang->line('num_sellers'); ?></label>
 												</div>
 												<div class="col-md-12 col-sm-12 col-xs-12">
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_seller_num_min" name="keyword_seller_num_min" class="input-keyword" placeholder="Min">
+														<input type="text" id="keyword_seller_num_min" name="keyword_seller_num_min" class="input-keyword" placeholder="<?= $this->lang->line('min'); ?>">
 													</div>
 													<div class="col-md-2 col-sm-2 col-xs-12" style="align-content: center; height: 34px;">
 														-
 													</div>
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_seller_num_max" name="keyword_seller_num_max" class="input-keyword" placeholder="Max">
+														<input type="text" id="keyword_seller_num_max" name="keyword_seller_num_max" class="input-keyword" placeholder="<?= $this->lang->line('max'); ?>">
 													</div>
 												</div>
 											</div>
@@ -261,23 +261,23 @@
 										<div class="item form-group">
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-													<label class="control-label">Review Rating</label>
+													<label class="control-label"><?= $this->lang->line('review_rating'); ?></label>
 												</div>
 												<div class="col-md-12 col-sm-12 col-xs-12">
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_review_rating_min" name="keyword_review_rating_min" class="input-keyword" placeholder="Min">
+														<input type="text" id="keyword_review_rating_min" name="keyword_review_rating_min" class="input-keyword" placeholder="<?= $this->lang->line('min'); ?>">
 													</div>
 													<div class="col-md-2 col-sm-2 col-xs-12" style="align-content: center; height: 34px;">
 														-
 													</div>
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_review_rating_max" name="keyword_review_rating_max" class="input-keyword" placeholder="Max">
+														<input type="text" id="keyword_review_rating_max" name="keyword_review_rating_max" class="input-keyword" placeholder="<?= $this->lang->line('max'); ?>">
 													</div>
 												</div>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 												<div class="col-md-12 col-sm-12 col-xs-12">
-													<label class="control-label">Best Sales Period</label>
+													<label class="control-label"><?= $this->lang->line('best_sales'); ?></label>
 												</div>
 												<div class="col-md-12 col-sm-12 col-xs-12">
 													<input id="daterange_keyword_best_period" class="input-keyword" value="" autocomplete="off" style="width: 100%; height: 34px; font-size: 20px;" readonly>
@@ -289,33 +289,33 @@
 										<div class="item form-group">
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-													<label class="control-label">Variation Count</label>
+													<label class="control-label"><?= $this->lang->line('variation_count'); ?></label>
 												</div>
 												<div class="col-md-12 col-sm-12 col-xs-12">
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_variation_count_min" name="keyword_variation_count_min" class="input-keyword" placeholder="Min">
+														<input type="text" id="keyword_variation_count_min" name="keyword_variation_count_min" class="input-keyword" placeholder="<?= $this->lang->line('min'); ?>">
 													</div>
 													<div class="col-md-2 col-sm-2 col-xs-12" style="align-content: center; height: 34px;">
 														-
 													</div>
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_variation_count_max" name="keyword_variation_count_max" class="input-keyword" placeholder="Max">
+														<input type="text" id="keyword_variation_count_max" name="keyword_variation_count_max" class="input-keyword" placeholder="<?= $this->lang->line('max'); ?>">
 													</div>
 												</div>
 											</div>
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 												<div class="col-md-12 col-sm-12 col-xs-12">
-													<label class="control-label">Search Volume</label>
+													<label class="control-label"><?= $this->lang->line('search_volume'); ?></label>
 												</div>
 												<div class="col-md-12 col-sm-12 col-xs-12">
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_search_volume_min" class="input-keyword" placeholder="Min">
+														<input type="text" id="keyword_search_volume_min" class="input-keyword" placeholder="<?= $this->lang->line('min'); ?>">
 													</div>
 													<div class="col-md-2 col-sm-2 col-xs-12" style="align-content: center; height: 34px;">
 														-
 													</div>
 													<div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
-														<input type="text" id="keyword_search_volume_max" class="input-keyword" placeholder="Max">
+														<input type="text" id="keyword_search_volume_max" class="input-keyword" placeholder="<?= $this->lang->line('max'); ?>">
 													</div>
 												</div>
 											</div>
@@ -325,7 +325,7 @@
 										<div class="col-md-6 col-sm-6 col-xs-12">
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 												<div class="col-md-12 col-sm-12 col-xs-12">
-													<label class="control-label">Include Keyword:</label>
+													<label class="control-label"><?= $this->lang->line('include_keywords'); ?></label>
 												</div>
 												<div class="col-md-12 col-sm-12 col-xs-12">
 													<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
@@ -337,7 +337,7 @@
 										<div class="col-md-6 col-sm-6 col-xs-12">
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 												<div class="col-md-12 col-sm-12 col-xs-12">
-													<label class="control-label">Exclude Keyword:</label>
+													<label class="control-label"><?= $this->lang->line('exclude_keywords'); ?></label>
 												</div>
 												<div class="col-md-12 col-sm-12 col-xs-12">
 													<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
@@ -349,11 +349,11 @@
 										<div class="col-md-6 col-sm-6 col-xs-12">
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
 												<div class="col-md-12 col-sm-12 col-xs-12">
-													<label class="control-label">Fulfillment</label>
+													<label class="control-label"><?= $this->lang->line('fulfillment'); ?></label>
 												</div>
 												<div class="col-md-12 col-sm-12 col-xs-12">
 													<select name="keyword_fulfillment" class="form-control input-box" id="keyword_fulfillment" multiple>
-														<option value="Select All">Select All</option>
+														<option value="<?= $this->lang->line('select_all'); ?>"><?= $this->lang->line('select_all'); ?></option>
 														<option value="FBA">FBA</option>
 														<option value="FBM">FBM</option>
 														<option value="Amazon">Amazon</option>
@@ -364,17 +364,17 @@
 										<div class="col-md-6 col-sm-6 col-xs-12">
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
-													<label class="control-label">Shipping Size Tier</label>
+													<label class="control-label"><?= $this->lang->line('size_tier'); ?></label>
 												</div>
 												<div class="col-md-12 col-sm-12 col-xs-12">
 													<select name="keyword_shipping_tier" class="form-control input-box" id="keyword_shipping_tier" multiple>
-														<option value="Select All">Select All</option>
-														<option value="Small Standard-Size">Small Standard-Size</option>
-														<option value="Large Standard-Size">Large Standard-Size</option>
-														<option value="Small Oversize">Small Oversize</option>
-														<option value="Medium Oversize">Medium Oversize</option>
-														<option value="Large Oversize">Large Oversize</option>
-														<option value="Special Oversize">Special Oversize</option>
+														<option value="<?= $this->lang->line('select_all'); ?>"><?= $this->lang->line('select_all'); ?></option>
+														<option value="<?= $this->lang->line('small_standard'); ?>"><?= $this->lang->line('small_standard'); ?></option>
+														<option value="<?= $this->lang->line('large_standard'); ?>"><?= $this->lang->line('large_standard'); ?></option>
+														<option value="<?= $this->lang->line('small_oversize'); ?>"><?= $this->lang->line('small_oversize'); ?></option>
+														<option value="<?= $this->lang->line('medium_oversize'); ?>"><?= $this->lang->line('medium_oversize'); ?></option>
+														<option value="<?= $this->lang->line('large_oversize'); ?>"><?= $this->lang->line('large_oversize'); ?></option>
+														<option value="<?= $this->lang->line('special_oversize'); ?>"><?= $this->lang->line('special_oversize'); ?></option>
 													</select>
 												</div>
 											</div>
@@ -384,12 +384,12 @@
 								<div class="col-md-12 col-sm-12 col-xs-12" style="margin: 30px;">
 									<div class="col-md-6 col-sm-6 col-xs-6">
 										<center>
-											<button type="reset" class="btn btn-round btn-default">Clear</button>
+											<button type="reset" class="btn btn-round btn-default"><?= $this->lang->line('clear'); ?></button>
 										</center>
 									</div>
 									<div class="col-md-6 col-sm-6 col-xs-6">
 										<center>
-											<button type="submit" class="btn btn-round btn-primary">Search</button>
+											<button type="submit" class="btn btn-round btn-primary"><?= $this->lang->line('search'); ?></button>
 										</center>
 									</div>
 								</div>
@@ -408,7 +408,7 @@
 	<div class="modal-dialog modal-md" role="document">
 		<div class="modal-content" style="width: 650px;">
 			<div class="modal-header">
-				<h4 class="modal-title col-md-10 col-sm-10 col-xs-10" id="exampleModalLabel">Keyword History</h4>
+				<h4 class="modal-title col-md-10 col-sm-10 col-xs-10" id="exampleModalLabel">Keyword <?= $this->lang->line('history'); ?></h4>
 				<button type="button" class="close" data-dismiss="modal"  aria-label="Close" style="float:right;">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -418,11 +418,11 @@
 					<table id="table_bigdata_keyword_history" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
 						<thead style="background-color: #000000; color: #dedee0">
 							<th width="%5">#</th>
-							<th width="%35">Marketplace</th>
-							<th>Category</th>
-							<th>Date<br/> Searched</th>
-							<th>Status</th>
-							<th width="%10">Action</th>
+							<th width="%35"><?= $this->lang->line('marketplace'); ?></th>
+							<th><?= $this->lang->line('category'); ?></th>
+							<th><?= $this->lang->line('searched_date'); ?></th>
+							<th><?= $this->lang->line('status'); ?></th>
+							<th width="%10"><?= $this->lang->line('actions'); ?></th>
 						</thead>
 					</table>
 				</div>
@@ -430,7 +430,7 @@
 			<div class="modal-footer" style="border-top: none;">
 				<div class="form-group" style="margin-right: 40px;">
 					<div class="col-md-col-md-12 col-sm-12 col-xs-12">
-						<button type="reset"  class="btn btn-danger" data-dismiss="modal" style="float: right;">Close</button>
+						<button type="reset"  class="btn btn-danger" data-dismiss="modal" style="float: right;"><?= $this->lang->line('close'); ?></button>
 					</div>
 				</div>
 			</div>

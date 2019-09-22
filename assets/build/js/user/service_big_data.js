@@ -65,14 +65,15 @@ $(document).ready(function () {
 		}
 
 		var div_element = $("<div class=\"col-md-12 col-sm-12 col-xs-12\">" +
-			'<div class="col-md-2 col-sm-2 col-xs-12"><label class="control-label">Last Year Sales: <small class="content" >'+d.others.last_year_sales+'</small></label></div>'+
-			'<div class="col-md-2 col-sm-2 col-xs-12"><label class="control-label">Sales Year Over Year: <small class="content" '+str_style_sales_year+'>'+str_sales_year+'</small></label></div>'+
-			'<div class="col-md-2 col-sm-2 col-xs-12"><label class="control-label">Sales Trend(90 days): <small class="content" '+str_style_sales_trend+'>'+str_sales_trend+'</small></label></div>'+
-			'<div class="col-md-2 col-sm-2 col-xs-12"><label class="control-label">Price Trend(90 days): <small class="content" '+str_style_price_trend+'>'+str_price_trend+'</small></label></div>'+
-			'<div class="col-md-2 col-sm-2 col-xs-12"><label class="control-label">Best Sales Period: <small class="content" style="white-space: normal;">'+d.others.best_sales_period+'</small></label></div>'+
-			'<div class="col-md-2 col-sm-2 col-xs-12"><label class="control-label">Sales To Reviews: <small class="content" style="white-space: normal;">'+d.others.sales_to_reviews+'</small></label></div>'+
+			'<div class="col-md-2 col-sm-2 col-xs-12"><label class="control-label">'+$("#txt_last_year_sales").val()+': <small class="content" >'+d.others.last_year_sales+'</small></label></div>'+
+			'<div class="col-md-2 col-sm-2 col-xs-12"><label class="control-label">'+$("#txt_sales_year").val()+': <small class="content" '+str_style_sales_year+'>'+str_sales_year+'</small></label></div>'+
+			'<div class="col-md-2 col-sm-2 col-xs-12"><label class="control-label">'+$("#txt_sales_trend").val()+': <small class="content" '+str_style_sales_trend+'>'+str_sales_trend+'</small></label></div>'+
+			'<div class="col-md-2 col-sm-2 col-xs-12"><label class="control-label">'+$("#txt_price_trend").val()+': <small class="content" '+str_style_price_trend+'>'+str_price_trend+'</small></label></div>'+
+			'<div class="col-md-2 col-sm-2 col-xs-12"><label class="control-label">'+$("#txt_best_sales").val()+': <small class="content" style="white-space: normal;">'+d.others.best_sales_period+'</small></label></div>'+
+			'<div class="col-md-2 col-sm-2 col-xs-12"><label class="control-label">'+$("#txt_sales_review").val()+': <small class="content" style="white-space: normal;">'+d.others.sales_to_reviews+'</small></label></div>'+
 			'</div>'
 		);
+
 		return div_element;
 	}
 
@@ -117,7 +118,6 @@ $(document).ready(function () {
 		columnDefs: [
 			{
 				targets: 1,
-				title: "ASIN",
 				render: function (data) {
 					return `
                             <div>
@@ -128,7 +128,6 @@ $(document).ready(function () {
 			},
 			{
 				targets: 2,
-				title: "PRODUCT",
 				render: function(data) {
 
 					console.log(data);
@@ -145,14 +144,14 @@ $(document).ready(function () {
 
 					return `
                             <div style="text-align: left; margin-left: 20px; padding: 0px;">
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Title: <small class="content" style="white-space: normal;">`+title+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px; margin-top: 10px;"><label class="control-label">Category: <small class="content" style="white-space: normal;">`+category+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Brand: <small class="content" style="white-space: normal;">`+brand+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Fulfillment: <small class="content" style="white-space: normal;">`+fulfillment+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Size Tier: <small class="content" style="white-space: normal;">`+data['size_tier']+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Number of Images: <small class="content" style="white-space: normal;">`+data['num_image']+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Variation Count: <small class="content" style="white-space: normal;">`+data['variation_cnt']+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Weight: <small class="content" style="white-space: normal;">`+str_weight+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_category_title").val()+`: <small class="content" style="white-space: normal;">`+title+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px; margin-top: 10px;"><label class="control-label">`+$("#txt_category_category").val()+`: <small class="content" style="white-space: normal;">`+category+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_category_brand").val()+`: <small class="content" style="white-space: normal;">`+brand+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_category_fulfillment").val()+`: <small class="content" style="white-space: normal;">`+fulfillment+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_category_size_tier").val()+`: <small class="content" style="white-space: normal;">`+data['size_tier']+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_category_num_images").val()+`: <small class="content" style="white-space: normal;">`+data['num_image']+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_category_variation_count").val()+`: <small class="content" style="white-space: normal;">`+data['variation_cnt']+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_category_weight").val()+`: <small class="content" style="white-space: normal;">`+str_weight+`</small></label></div>
                             </div>
                             `;
 				}
@@ -175,7 +174,6 @@ $(document).ready(function () {
 			},
 			{
 				targets: -1,
-				title: 'REVIEWS',
 				orderable: false,
 				render: function(data) {
 
@@ -720,7 +718,6 @@ $(document).ready(function () {
 		columnDefs: [
 			{
 				targets: 1,
-				title: "ASIN",
 				render: function (data) {
 					return `
                             <div>
@@ -731,7 +728,6 @@ $(document).ready(function () {
 			},
 			{
 				targets: 2,
-				title: 'PRODUCT',
 				render: function(data) {
 
 					var title = data['title']!=null?data['title']:'';
@@ -745,14 +741,14 @@ $(document).ready(function () {
 
 					return `
                             <div style="text-align: left; margin-left: 20px; padding: 0px;">
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Title: <small class="content" style="white-space: normal;">`+title+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px; margin-top: 10px;"><label class="control-label">Category: <small class="content" style="white-space: normal;">`+category+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Brand: <small class="content" style="white-space: normal;">`+brand+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Fulfillment: <small class="content" style="white-space: normal;">`+fulfillment+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Size Tier: <small class="content" style="white-space: normal;">`+data['size_tier']+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Number of Images: <small class="content" style="white-space: normal;">`+data['num_image']+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Variation Count: <small class="content" style="white-space: normal;">`+data['variation_cnt']+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Weight: <small class="content" style="white-space: normal;">`+str_weight+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_advertising_title").val()+`: <small class="content" style="white-space: normal;">`+title+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px; margin-top: 10px;"><label class="control-label">`+$("#txt_advertising_category").val()+`: <small class="content" style="white-space: normal;">`+category+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_advertising_brand").val()+`: <small class="content" style="white-space: normal;">`+brand+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_advertising_fulfillment").val()+`: <small class="content" style="white-space: normal;">`+fulfillment+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_advertising_size_tier").val()+`: <small class="content" style="white-space: normal;">`+data['size_tier']+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_advertising_title").val()+`: <small class="content" style="white-space: normal;">`+data['num_image']+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_advertising_title").val()+`: <small class="content" style="white-space: normal;">`+data['variation_cnt']+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_advertising_title").val()+`: <small class="content" style="white-space: normal;">`+str_weight+`</small></label></div>
                             </div>
                             `;
 				}
@@ -815,7 +811,6 @@ $(document).ready(function () {
 			},
 			{
 				targets: -1,
-				title: 'REVIEWS',
 				type: "num-fmt",
 				orderable: false,
 				render: function(data) {
@@ -1366,7 +1361,6 @@ $(document).ready(function () {
 		columnDefs: [
 			{
 				targets: 1,
-				title: "ASIN",
 				render: function (data) {
 					return `
                             <div>
@@ -1377,7 +1371,6 @@ $(document).ready(function () {
 			},
 			{
 				targets: 2,
-				title: 'PRODUCT',
 				render: function(data) {
 
 					var title = data['title']!=null?data['title']:'';
@@ -1391,14 +1384,14 @@ $(document).ready(function () {
 
 					return `
                             <div style="text-align: left; margin-left: 20px; padding: 0px;">
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Title: <small class="content" style="white-space: normal;">`+title+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px; margin-top: 10px;"><label class="control-label">Category: <small class="content" style="white-space: normal;">`+category+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Brand: <small class="content" style="white-space: normal;">`+brand+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Fulfillment: <small class="content" style="white-space: normal;">`+fulfillment+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Size Tier: <small class="content" style="white-space: normal;">`+data['size_tier']+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Number of Images: <small class="content" style="white-space: normal;">`+data['num_image']+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Variation Count: <small class="content" style="white-space: normal;">`+data['variation_cnt']+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Weight: <small class="content" style="white-space: normal;">`+str_weight+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_product_title").val()+`: <small class="content" style="white-space: normal;">`+title+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px; margin-top: 10px;"><label class="control-label">`+$("#txt_product_category").val()+`: <small class="content" style="white-space: normal;">`+category+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_product_brand").val()+`: <small class="content" style="white-space: normal;">`+brand+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_product_fulfillment").val()+`: <small class="content" style="white-space: normal;">`+fulfillment+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_product_size_tier").val()+`: <small class="content" style="white-space: normal;">`+data['size_tier']+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_product_num_images").val()+`: <small class="content" style="white-space: normal;">`+data['num_image']+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_product_variation_count").val()+`: <small class="content" style="white-space: normal;">`+data['variation_cnt']+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_product_weight").val()+`: <small class="content" style="white-space: normal;">`+str_weight+`</small></label></div>
                             </div>
                             `;
 				}
@@ -1421,7 +1414,6 @@ $(document).ready(function () {
 			},
 			{
 				targets: -1,
-				title: 'REVIEWS',
 				type: "num-fmt",
 				orderable: false,
 				render: function(data) {
@@ -1999,16 +1991,16 @@ $(document).ready(function () {
 
 		var div_element = $('<div class="col-md-12 col-sm-12 col-xs-12">' +
 			'<div class="col-md-12 col-sm-12 col-xs-12">' +
-			'<div class="col-md-3 col-sm-3 col-xs-12"><label class="control-label">Last Year Sales: <small class="content" >'+d.others.last_year_sales+'</small></label></div>' +
-			'<div class="col-md-3 col-sm-3 col-xs-12"><label class="control-label">Sales Year Over Year: <small class="content" '+str_style_sales_year+'>'+str_sales_year+'</small></label></div>' +
-			'<div class="col-md-3 col-sm-3 col-xs-12"><label class="control-label">Sales Trend(90 days): <small class="content" '+str_style_sales_trend+'>'+str_sales_trend+'</small></label></div>' +
-			'<div class="col-md-3 col-sm-3 col-xs-12"><label class="control-label">Price Trend(90 days): <small class="content" '+str_style_price_trend+'>'+str_price_trend+'</small></label></div>' +
+			'<div class="col-md-3 col-sm-3 col-xs-12"><label class="control-label">'+$("#txt_last_year_sales").val()+': <small class="content" >'+d.others.last_year_sales+'</small></label></div>' +
+			'<div class="col-md-3 col-sm-3 col-xs-12"><label class="control-label">'+$("#txt_sales_year").val()+': <small class="content" '+str_style_sales_year+'>'+str_sales_year+'</small></label></div>' +
+			'<div class="col-md-3 col-sm-3 col-xs-12"><label class="control-label">'+$("#txt_sales_trend").val()+': <small class="content" '+str_style_sales_trend+'>'+str_sales_trend+'</small></label></div>' +
+			'<div class="col-md-3 col-sm-3 col-xs-12"><label class="control-label">'+$("#txt_price_trend").val()+': <small class="content" '+str_style_price_trend+'>'+str_price_trend+'</small></label></div>' +
 			'</div>' +
 			'<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px;">' +
-			'<div class="col-md-3 col-sm-3 col-xs-12"><label class="control-label">Best Sales Period: <small class="content" style="white-space: normal;">'+d.others.best_sales_period+'</small></label></div>' +
-			'<div class="col-md-3 col-sm-3 col-xs-12"><label class="control-label">Sales To Reviews: <small class="content" style="white-space: normal;">'+(d.others.sales_to_reviews)+'</small></label></div>' +
-			'<div class="col-md-3 col-sm-3 col-xs-12"><label class="control-label">Broad Search Score: <small class="content" style="white-space: normal;">'+d.others.broad_reach_potential+'</small></label></div>' +
-			'<div class="col-md-3 col-sm-3 col-xs-12"><label class="control-label">Competing Product: <small class="content" style="white-space: normal;">'+(d.others.competing_num)+'</small></label></div>' +
+			'<div class="col-md-3 col-sm-3 col-xs-12"><label class="control-label">'+$("#txt_best_sales").val()+': <small class="content" style="white-space: normal;">'+d.others.best_sales_period+'</small></label></div>' +
+			'<div class="col-md-3 col-sm-3 col-xs-12"><label class="control-label">'+$("#txt_sales_review").val()+': <small class="content" style="white-space: normal;">'+(d.others.sales_to_reviews)+'</small></label></div>' +
+			'<div class="col-md-3 col-sm-3 col-xs-12"><label class="control-label">'+$("#txt_broad_search_score").val()+': <small class="content" style="white-space: normal;">'+d.others.broad_reach_potential+'</small></label></div>' +
+			'<div class="col-md-3 col-sm-3 col-xs-12"><label class="control-label">'+$("#txt_competing_product").val()+': <small class="content" style="white-space: normal;">'+(d.others.competing_num)+'</small></label></div>' +
 			'</div>' +
 			'</div>'
 		);
@@ -2043,7 +2035,6 @@ $(document).ready(function () {
 		columnDefs: [
 			{
 				targets: 1,
-				title: 'KEYWORD / PHRASE',
 				render: function(data) {
 
 					console.log(data);
@@ -2053,17 +2044,17 @@ $(document).ready(function () {
 					return `
                             <div style="text-align: left; margin-left: 20px; padding: 0px;">
 								<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
-									<label class="control-label">KEYWORD / PHRASE:  
+									<label class="control-label">`+$("#txt_keyword_keyword_phrase").val()+`:  
 										<small class="content" style="white-space: normal;">
 											<a href="http://www.`+data['market_url']+`/s?k=`+data['keyword']+`" class="row_asin_number"  target="_blank" style="text-decoration: underline;">`+data['keyword']+`</a>
 										</small>
 									</label>
 								</div>
-								<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px; margin-top: 10px;"><label class="control-label">Size Tier: <small class="content" style="white-space: normal;">`+data['size_tier']+`</small></label></div>
-								<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Category: <small class="content" style="white-space: normal;">`+category+`</small></label></div>
-								<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Variation Count: <small class="content" style="white-space: normal;">`+data['variation_cnt']+`</small></label></div>
-								<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Fulfillment: <small class="content" style="white-space: normal;">`+fulfillment+`</small></label></div>
-								<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">Avg Sellers Count: <small class="content" style="white-space: normal;">`+(data['sellers'])+`</small></label></div>
+								<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px; margin-top: 10px;"><label class="control-label">`+$("#txt_keyword_size_tier").val()+`: <small class="content" style="white-space: normal;">`+data['size_tier']+`</small></label></div>
+								<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_keyword_category").val()+`: <small class="content" style="white-space: normal;">`+category+`</small></label></div>
+								<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_keyword_variation_count").val()+`: <small class="content" style="white-space: normal;">`+data['variation_cnt']+`</small></label></div>
+								<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_keyword_fulfillment").val()+`: <small class="content" style="white-space: normal;">`+fulfillment+`</small></label></div>
+								<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_keyword_avg_seller_cnt").val()+`: <small class="content" style="white-space: normal;">`+(data['sellers'])+`</small></label></div>
                             </div>
                             `;
 				}
@@ -2090,7 +2081,6 @@ $(document).ready(function () {
 			},
 			{
 				targets: -1,
-				title: 'REVIEWS',
 				type: "num-fmt",
 				orderable: false,
 				render: function(data) {

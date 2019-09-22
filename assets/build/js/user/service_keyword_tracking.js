@@ -73,7 +73,6 @@ function drawHistoryChart(asin_id, startDate, endDate) {
 };
 
 $(document).ready(function() {
-
 	var sub_table;
 	var asin_id, keyword, key_asin_id;
 	var keywordHistoryChart = null;
@@ -83,13 +82,13 @@ $(document).ready(function() {
 		sub_table = $('<table class="table table-striped table-bordered dt-responsive nowrap sub_table_keyword" cellspacing="0" width="100%">\n' +
 			'   <thead style="background-color: #25bf85; color: #d6d6d6;">\n' +
 			'        <th width="3%">#</th>\n' +
-			'        <th width="10%" style="text-align: left;">Keyword</th>\n' +
-			'        <th width="15%">Exact Search Volume</th>\n' +
-			'        <th width="15%">Broad Search Volume</th>\n' +
-			'        <th width="15%">Competing Products</th>\n' +
-			'        <th width="20%">Trend</th>\n' +
-			'        <th width="10%">Organic Rank</th>\n' +
-			'        <th>Actions</th>\n' +
+			'        <th width="10%">'+$("#txt_tracking_keyword").val()+'</th>\n' +
+			'        <th width="15%">'+$("#txt_tracking_exact_search").val()+'</th>\n' +
+			'        <th width="15%">'+$("#txt_tracking_broad_search").val()+'</th>\n' +
+			'        <th width="15%">'+$("#txt_tracking_competing_products").val()+'</th>\n' +
+			'        <th width="20%">'+$("#txt_tracking_trend").val()+'</th>\n' +
+			'        <th width="10%">'+$("#txt_tracking_organic_rank").val()+'</th>\n' +
+			'        <th>'+$("#txt_tracking_actions").val()+'</th>\n' +
 			'   </thead>\n' +
 			'</table>');
 
@@ -119,23 +118,33 @@ $(document).ready(function() {
 			columnDefs: [
 				{
 					targets: -3,
-					title: 'Trend',
 					orderable: false,
-					render: function(data, type, full, meta) {
+					render: function(data) {
 						return `
 								<canvas height="50" class="chart-trend" chart-data='`+JSON.stringify(data)+`' width="283"></canvas>
                             `;
 					},
 				},
 				{
+					targets: -2,
+					render: function(data) {
+
+						if (data == '0')
+						{
+							data = '-';
+						}
+
+						return data;
+					},
+				},
+				{
 					targets: -1,
-					title: 'Actions',
 					orderable: false,
-					render: function(data, type, full, meta) {
+					render: function(data) {
 						return `
-								<a href="javascript:;"><i class="fa fa-line-chart view_rank_graph" id="`+data['id']+`" style="color: #1ABB9C" title="View Rank Graph"></i> </a>&nbsp;
-								<a href="javascript:;"><i class="fa fa-trash delete_keyword" id="`+data['id']+`" style="color: #ff7474" title="Delete Keyword"></i> </a>&nbsp;
-								<a href="http://www.`+d.product['market_url']+`/s?k=`+data['keyword']+`" target="_blank"><i class="fa fa-mail-forward" style="color: #252525" title="Open Link"></i> </a>
+								<a href="javascript:;"><i class="fa fa-line-chart view_rank_graph" id="`+data['id']+`" style="color: #1ABB9C" title="`+$('#txt_tracking_view_graph').val()+`"></i> </a>&nbsp;
+								<a href="javascript:;"><i class="fa fa-trash delete_keyword" id="`+data['id']+`" style="color: #ff7474" title="`+$('#txt_tracking_delete_keyword').val()+`"></i> </a>&nbsp;
+								<a href="http://www.`+d.product['market_url']+`/s?k=`+data['keyword']+`" target="_blank"><i class="fa fa-mail-forward" style="color: #252525" title="`+$('#txt_tracking_open_link').val()+`"></i> </a>
                             `;
 					},
 				},
@@ -193,6 +202,12 @@ $(document).ready(function() {
 									labelString: 'Value'
 								}
 							}]
+						},
+						elements: {
+							point:{
+								hitRadius: 5,
+								hoverRadius: 5,
+							}
 						}
 					};
 
@@ -229,27 +244,29 @@ $(document).ready(function() {
 		columnDefs: [
 			{
 				targets: 1,
-				render: function(data, type, full, meta) {
+				render: function(data) {
 					return `
                             <div style="text-align: left;">
                                 <span class="flag-icon flag-icon-`+data['flag']+`"></span>
                                 <a href="http://www.`+data['market_url']+`/dp/`+data['asin']+`" class="row_asin_number"  target="_blank" style="text-decoration: underline;">`+data['asin']+`</a>
                                 <br/>
-                                <p>Tracked Keywords : <span class="badge" style="background: #337ab7;">`+data['tracked_count']+`</span></p>
+                                <p>`+$('#txt_tracking_tracked_keywords').val()+` : <span class="badge" style="background: #337ab7;">`+data['tracked_count']+`</span></p>
                             </div>
                             `;
 				},
 			},
 			{
 				targets: 2,
-				render: function(data, type, full, meta) {
+				orderable: false,
+				render: function(data) {
+
 					return `
                             <div style="padding: 0px;margin: 0px;">
                                 <table width="100%">
                                     <tr>
-                                        <td>Keywords</td>
-                                        <td>Exact Search Volume</td>
-                                        <td>Broad Search Volume</td>
+                                        <td>`+$('#txt_tracking_keywords').val()+`</td>
+                                        <td>`+$('#txt_tracking_exact_search').val()+`</td>
+                                        <td>`+$('#txt_tracking_broad_search').val()+`</td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -295,20 +312,20 @@ $(document).ready(function() {
 			{
 				targets: -1,
 				orderable: false,
-				render: function(data, type, full, meta) {
+				render: function(data) {
 					return `
                             <div class="btn-group">
                                 <button data-toggle="dropdown" class="btn btn-round btn-default dropdown-toggle" type="button" ><strong>&#183;&#183;&#183;</strong>
                                 </button>
                                 <ul role="menu" class="dropdown-menu" style="right: 0px;left: auto; padding: 5px 0">
-                                      <li class="add_keywords" a-id="`+data['id']+`"><a href="javascript:;"><i class="fa fa-plus " style="color: #26b85c"></i>&nbsp;&nbsp;Add Keyword</a></li>
+                                      <li class="add_keywords" a-id="`+data['id']+`"><a href="javascript:;"><i class="fa fa-plus " style="color: #26b85c"></i>&nbsp;&nbsp;`+$('#txt_tracking_add_keywords').val()+`</a></li>
                                       <li class="divider"></li>
-                                      <li class="copy_keywords" a-id="`+data['id']+`"><a href="javascript:;"><i class="fa fa-copy " style="color: #2928ab"></i>&nbsp;&nbsp;Copy all keywords to clipboard</a></li>
-                                      <li><a href="http://www.`+data['market_url']+`/dp/`+data['asin']+`" target="_blank"><i class="fa fa-external-link" style="color: #0f0707"></i>&nbsp;&nbsp;Go to product page on Amazon</a></li>
-                                      <li class="edit_keywords" a-id="`+data['id']+`"><a href="javascript:;"><i class="fa fa-edit " style="color: #2928ab"></i>&nbsp;&nbsp;Edit Keywords list</a></li>
-                                      <li class="delete_product" a-id="`+data['id']+`"><a href="javascript:;"><i class="fa fa-trash " style="color: #ff7474"></i>&nbsp;&nbsp;Delete Product & Keyword History</a></li>
+                                      <li class="copy_keywords" a-id="`+data['id']+`"><a href="javascript:;"><i class="fa fa-copy " style="color: #2928ab"></i>&nbsp;&nbsp;`+$('#txt_tracking_copy_all').val()+`</a></li>
+                                      <li><a href="http://www.`+data['market_url']+`/dp/`+data['asin']+`" target="_blank"><i class="fa fa-external-link" style="color: #0f0707"></i>&nbsp;&nbsp;`+$('#txt_tracking_go_to').val()+`</a></li>
+                                      <li class="edit_keywords" a-id="`+data['id']+`"><a href="javascript:;"><i class="fa fa-edit " style="color: #2928ab"></i>&nbsp;&nbsp;`+$('#txt_tracking_edit_keywords').val()+`</a></li>
+                                      <li class="delete_product" a-id="`+data['id']+`"><a href="javascript:;"><i class="fa fa-trash " style="color: #ff7474"></i>&nbsp;&nbsp;`+$('#txt_tracking_delete_history').val()+`</a></li>
                                       <li class="divider"></li>
-                                      <li class="view_keyword_history" a-id="`+data['id']+`"><a href="javascript:;"><i class="fa fa-line-chart " style="color: #0f0707"></i>&nbsp;&nbsp;Keyword History</a></li>
+                                      <li class="view_keyword_history" a-id="`+data['id']+`"><a href="javascript:;"><i class="fa fa-line-chart " style="color: #0f0707"></i>&nbsp;&nbsp;`+$('#txt_tracking_keyword_history').val()+`</a></li>
                                 </ul>
                             </div>`;
 				},
@@ -898,7 +915,7 @@ $(document).ready(function() {
 					display: true,
 					scaleLabel: {
 						display: true,
-						labelString: 'Keywords #'
+						labelString: 'Organic Rank'
 					},
 					ticks: {
 						reverse: true,

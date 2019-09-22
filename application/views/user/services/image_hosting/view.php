@@ -25,7 +25,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>&nbsp;&nbsp;&nbsp;Image Hosting(View)</h3>
+                <h3>&nbsp;&nbsp;&nbsp;<?= $this->lang->line('image_hosting'); ?>(<?= $this->lang->line('result_view'); ?>)</h3>
             </div>
 
         </div>

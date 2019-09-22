@@ -50,7 +50,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>AMZ Listing Keyword Stuffer</h3>
+                <h3><?= $this->lang->line('listing_stuffer'); ?></h3>
             </div>
 
         </div>
@@ -68,12 +68,12 @@
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <center>
-                                    <button type="reset" class="btn btn-info">Tutorial & Learn</button>
+                                    <button type="reset" class="btn btn-info"><?= $this->lang->line('tutorial_learn'); ?></button>
                                 </center>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-12">
                                 <center>
-                                    <button type="button" data-toggle="modal" data-target="#modal_listing_stuffer_history" class="btn btn-primary">History</button>
+                                    <button type="button" data-toggle="modal" data-target="#modal_listing_stuffer_history" class="btn btn-primary"><?= $this->lang->line('history'); ?></button>
                                 </center>
                             </div>
                         </div>
@@ -91,7 +91,7 @@
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px;">
                                     <div class="item form-group">
                                         <select class="form-control" required="required" id="stuffer_market_place" style=" border-radius: 5px;">
-                                            <option value="">--Marketplace--</option>
+                                            <option value="">--<?= $this->lang->line('market_place'); ?>--</option>
                                             <option value="1" <?= $result['market_id']==1?'selected':''; ?>>Amazon.com</option>
                                             <option value="3" <?= $result['market_id']==3?'selected':''; ?>>Amazon.ca</option>
                                             <option value="9" <?= $result['market_id']==9?'selected':''; ?>>Amazon.com.mx</option>
@@ -109,24 +109,24 @@
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                     <div class="item form-group">
-                                        <textarea id="stuffer_textarea" required="required" style="width: 100%; height: 800px; resize: none; border-radius: 5px;" placeholder="Please enter one keyword or key phrase per line..."><?php echo str_replace(',', '&#13;&#10;', $result['searched_text']); ?></textarea>
+                                        <textarea id="stuffer_textarea" required="required" style="width: 100%; height: 800px; resize: none; border-radius: 5px;" placeholder="<?= $this->lang->line('area_txt'); ?>"><?php echo str_replace(',', '&#13;&#10;', $result['searched_text']); ?></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin: 10px;">
                                     <div class="item form-group">
                                         <div class="col-md-4 col-sm-4 col-xs-12">
                                             <center>
-                                                <button type="reset" class="btn btn-round btn-default">Clear</button>
+                                                <button type="reset" class="btn btn-round btn-default"><?= $this->lang->line('clear'); ?></button>
                                             </center>
                                         </div>
                                         <div class="col-md-4 col-sm-4 col-xs-12">
                                             <center>
-                                                <button type="button" id="btn_stuffer_cancel" class="btn btn-round btn-danger" style="display: <?= $result['searched_text']!=''?'block':'none'; ?>;">Cancel</button>
+                                                <button type="button" id="btn_stuffer_cancel" class="btn btn-round btn-danger" style="display: <?= $result['searched_text']!=''?'block':'none'; ?>;"><?= $this->lang->line('cancel'); ?></button>
                                             </center>
                                         </div>
                                         <div class="col-md-4 col-sm-4 col-xs-12">
                                             <center>
-                                                <button type="submit" id="btn_stuffer_apply" class="btn btn-round btn-primary">Apply</button>
+                                                <button type="submit" id="btn_stuffer_apply" class="btn btn-round btn-primary"><?= $this->lang->line('apply'); ?></button>
                                             </center>
                                         </div>
                                     </div>
@@ -137,7 +137,7 @@
                             <div class="col-md-12 col-sm-12 col-xs-12" style="height: 500px; border-bottom: solid 1px #c4c4c4;">
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;margin-bottom: 10px;">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <label class="control-label">Words ( <span id="word_cross_cnt">0</span> / <span id="word_total_cnt">0</span> )</label>
+                                        <label class="control-label"><?= $this->lang->line('upper_words'); ?> ( <span id="word_cross_cnt">0</span> / <span id="word_total_cnt">0</span> )</label>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12">
@@ -147,11 +147,11 @@
                             <div class="col-md-12 col-sm-12 col-xs-12" style="height: 800px;">
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;margin-bottom: 10px;">
                                     <div class="col-md-6 col-sm-12 col-xs-12">
-                                        <label class="control-label">Phrases ( <span id="phrase_cross_cnt">0</span> / <span id="phrase_total_cnt">0</span> )</label>
+                                        <label class="control-label"><?= $this->lang->line('upper_phrases'); ?> ( <span id="phrase_cross_cnt">0</span> / <span id="phrase_total_cnt">0</span> )</label>
                                     </div>
                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                     <span id="words_list_edit" style="font-size: 14px; float:right; color: #615dff; cursor:pointer;">
-                                        <i class="glyphicon glyphicon-pencil"></i>&nbsp; Edit List
+                                        <i class="glyphicon glyphicon-pencil"></i>&nbsp; <?= $this->lang->line('edit_list'); ?>
                                     </span>
                                     </div>
                                 </div>
@@ -168,10 +168,10 @@
                     <div class="x_content">
                         <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px; padding: 0;">
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label">Title</label></div>
+                                <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label"><?= $this->lang->line('title'); ?></label></div>
                                 <div class="col-md-6 col-sm-6 col-sx-6">
                                     <span style="font-size: 13px; float:right;">
-                                        <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="0">0</span>/200 characters, <span class="textarea-word-count" w-id="0">0</span> words
+                                        <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="0">0</span>/200 <?= $this->lang->line('characters'); ?>, <span class="textarea-word-count" w-id="0">0</span><?= $this->lang->line('words'); ?>
                                     </span>
                                 </div>
                             </div>
@@ -182,7 +182,7 @@
                                     &nbsp;<span class="first_upper" style="cursor: pointer;">Ab</span>&nbsp;
                                     &nbsp;<span>&#8624;</span>&nbsp;
                                     &nbsp;<span>&#8625;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;Copy</span>&nbsp;
+                                    &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;<?= $this->lang->line('copy'); ?></span>&nbsp;
                                 </div>
                                 <textarea class="textarea-listing-stuffer" e-id="0" maxlength="200"></textarea>
                             </div>
@@ -191,10 +191,10 @@
                             <div class="col-md-6 col-sm-12 col-xs-12" style="padding: 0px 10px 0px 0px;">
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px; padding: 0;">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label">Bullet Point #1</label></div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label"><?= $this->lang->line('bullet_point'); ?> #1</label></div>
                                         <div class="col-md-6 col-sm-6 col-sx-6">
                                             <span style="font-size: 13px; float:right;">
-                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="1">0</span>/100 characters, <span class="textarea-word-count" w-id="1">0</span> words
+                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="1">0</span>/100 <?= $this->lang->line('characters'); ?>, <span class="textarea-word-count" w-id="1">0</span><?= $this->lang->line('words'); ?>
                                             </span>
                                         </div>
                                     </div>
@@ -205,17 +205,17 @@
                                             &nbsp;<span class="first_upper" style="cursor: pointer;">Ab</span>&nbsp;
                                             &nbsp;<span>&#8624;</span>&nbsp;
                                             &nbsp;<span>&#8625;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;Copy</span>&nbsp;
+                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;<?= $this->lang->line('copy'); ?></span>&nbsp;
                                         </div>
                                         <textarea class="textarea-listing-stuffer" e-id="1" maxlength="100"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px; padding: 0;">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label">Bullet Point #2</label></div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label"><?= $this->lang->line('bullet_point'); ?> #2</label></div>
                                         <div class="col-md-6 col-sm-6 col-sx-6">
                                             <span style="font-size: 13px; float:right;">
-                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="2">0</span>/100 characters, <span class="textarea-word-count" w-id="2">0</span> words
+                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="2">0</span>/100 <?= $this->lang->line('characters'); ?>, <span class="textarea-word-count" w-id="2">0</span> <?= $this->lang->line('words'); ?>
                                             </span>
                                         </div>
                                     </div>
@@ -226,17 +226,17 @@
                                             &nbsp;<span class="first_upper" style="cursor: pointer;">Ab</span>&nbsp;
                                             &nbsp;<span>&#8624;</span>&nbsp;
                                             &nbsp;<span>&#8625;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;Copy</span>&nbsp;
+                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;<?= $this->lang->line('copy'); ?></span>&nbsp;
                                         </div>
                                         <textarea class="textarea-listing-stuffer" e-id="2" maxlength="100"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px; padding: 0;">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label">Bullet Point #3</label></div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label"><?= $this->lang->line('bullet_point'); ?> #3</label></div>
                                         <div class="col-md-6 col-sm-6 col-sx-6">
                                             <span style="font-size: 13px; float:right;">
-                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="3">0</span>/100 characters, <span class="textarea-word-count" w-id="3">0</span> words
+                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="3">0</span>/100 <?= $this->lang->line('characters'); ?>, <span class="textarea-word-count" w-id="3">0</span><?= $this->lang->line('words'); ?>
                                             </span>
                                         </div>
                                     </div>
@@ -247,17 +247,17 @@
                                             &nbsp;<span class="first_upper" style="cursor: pointer;">Ab</span>&nbsp;
                                             &nbsp;<span>&#8624;</span>&nbsp;
                                             &nbsp;<span>&#8625;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;Copy</span>&nbsp;
+                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;<?= $this->lang->line('copy'); ?></span>&nbsp;
                                         </div>
                                         <textarea class="textarea-listing-stuffer" e-id="3" maxlength="100"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px; padding: 0;">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label">Bullet Point #4</label></div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label"><?= $this->lang->line('bullet_point'); ?> #4</label></div>
                                         <div class="col-md-6 col-sm-6 col-sx-6">
                                             <span style="font-size: 13px; float:right;">
-                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="4">0</span>/100 characters, <span class="textarea-word-count" w-id="4">0</span> words
+                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="4">0</span>/100 <?= $this->lang->line('characters'); ?>, <span class="textarea-word-count" w-id="4">0</span><?= $this->lang->line('words'); ?>
                                             </span>
                                         </div>
                                     </div>
@@ -268,17 +268,17 @@
                                             &nbsp;<span class="first_upper" style="cursor: pointer;">Ab</span>&nbsp;
                                             &nbsp;<span>&#8624;</span>&nbsp;
                                             &nbsp;<span>&#8625;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;Copy</span>&nbsp;
+                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;<?= $this->lang->line('copy'); ?></span>&nbsp;
                                         </div>
                                         <textarea class="textarea-listing-stuffer" e-id="4" maxlength="100"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px; padding: 0;">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label">Bullet Point #5</label></div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label"><?= $this->lang->line('bullet_point'); ?> #5</label></div>
                                         <div class="col-md-6 col-sm-6 col-sx-6">
                                             <span style="font-size: 13px; float:right;">
-                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="5">0</span>/100 characters, <span class="textarea-word-count" w-id="5">0</span> words
+                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="5">0</span>/100 <?= $this->lang->line('characters'); ?>, <span class="textarea-word-count" w-id="5">0</span><?= $this->lang->line('words'); ?>
                                             </span>
                                         </div>
                                     </div>
@@ -289,7 +289,7 @@
                                             &nbsp;<span class="first_upper" style="cursor: pointer;">Ab</span>&nbsp;
                                             &nbsp;<span>&#8624;</span>&nbsp;
                                             &nbsp;<span>&#8625;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;Copy</span>&nbsp;
+                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;<?= $this->lang->line('copy'); ?></span>&nbsp;
                                         </div>
                                         <textarea class="textarea-listing-stuffer" e-id="5" maxlength="100"></textarea>
                                     </div>
@@ -298,10 +298,10 @@
                             <div class="col-md-6 col-sm-12 col-xs-12" style="padding: 0px 0px 0px                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     10px;">
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px; padding: 0;">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label">Subject Matter #1</label></div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label"><?= $this->lang->line('subject_matter'); ?> #1</label></div>
                                         <div class="col-md-6 col-sm-6 col-sx-6">
                                             <span style="font-size: 13px; float:right;">
-                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="6">0</span>/50 characters, <span class="textarea-word-count" w-id="6">0</span> words
+                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="6">0</span>/50 <?= $this->lang->line('characters'); ?>, <span class="textarea-word-count" w-id="6">0</span><?= $this->lang->line('words'); ?>
                                             </span>
                                         </div>
                                     </div>
@@ -312,17 +312,17 @@
                                             &nbsp;<span class="first_upper" style="cursor: pointer;">Ab</span>&nbsp;
                                             &nbsp;<span>&#8624;</span>&nbsp;
                                             &nbsp;<span>&#8625;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;Copy</span>&nbsp;
+                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;<?= $this->lang->line('copy'); ?></span>&nbsp;
                                         </div>
                                         <textarea class="textarea-listing-stuffer" e-id="6" maxlength="50"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px; padding: 0;">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label">Subject Matter #2</label></div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label"><?= $this->lang->line('subject_matter'); ?> #2</label></div>
                                         <div class="col-md-6 col-sm-6 col-sx-6">
                                             <span style="font-size: 13px; float:right;">
-                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="7">0</span>/50 characters, <span class="textarea-word-count" w-id="7">0</span> words
+                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="7">0</span>/50 <?= $this->lang->line('characters'); ?>, <span class="textarea-word-count" w-id="7">0</span><?= $this->lang->line('words'); ?>
                                             </span>
                                         </div>
                                     </div>
@@ -333,17 +333,17 @@
                                             &nbsp;<span class="first_upper" style="cursor: pointer;">Ab</span>&nbsp;
                                             &nbsp;<span>&#8624;</span>&nbsp;
                                             &nbsp;<span>&#8625;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;Copy</span>&nbsp;
+                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;<?= $this->lang->line('copy'); ?></span>&nbsp;
                                         </div>
                                         <textarea class="textarea-listing-stuffer" e-id="7" maxlength="50"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px; padding: 0;">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label">Subject Matter #3</label></div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label"><?= $this->lang->line('subject_matter'); ?> #3</label></div>
                                         <div class="col-md-6 col-sm-6 col-sx-6">
                                             <span style="font-size: 13px; float:right;">
-                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="8">0</span>/50 characters, <span class="textarea-word-count" w-id="8">0</span> words
+                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="8">0</span>/50 <?= $this->lang->line('characters'); ?>, <span class="textarea-word-count" w-id="8">0</span><?= $this->lang->line('words'); ?>
                                             </span>
                                         </div>
                                     </div>
@@ -354,17 +354,17 @@
                                             &nbsp;<span class="first_upper" style="cursor: pointer;">Ab</span>&nbsp;
                                             &nbsp;<span>&#8624;</span>&nbsp;
                                             &nbsp;<span>&#8625;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;Copy</span>&nbsp;
+                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;<?= $this->lang->line('copy'); ?></span>&nbsp;
                                         </div>
                                         <textarea class="textarea-listing-stuffer" e-id="8" maxlength="50"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px; padding: 0;">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label">Subject Matter #4</label></div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label"><?= $this->lang->line('subject_matter'); ?> #4</label></div>
                                         <div class="col-md-6 col-sm-6 col-sx-6">
                                             <span style="font-size: 13px; float:right;">
-                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="9">0</span>/50 characters, <span class="textarea-word-count" w-id="9">0</span> words
+                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="9">0</span>/50 <?= $this->lang->line('characters'); ?>, <span class="textarea-word-count" w-id="9">0</span><?= $this->lang->line('words'); ?>
                                             </span>
                                         </div>
                                     </div>
@@ -375,17 +375,17 @@
                                             &nbsp;<span class="first_upper" style="cursor: pointer;">Ab</span>&nbsp;
                                             &nbsp;<span>&#8624;</span>&nbsp;
                                             &nbsp;<span>&#8625;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;Copy</span>&nbsp;
+                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;<?= $this->lang->line('copy'); ?></span>&nbsp;
                                         </div>
                                         <textarea class="textarea-listing-stuffer" e-id="9" maxlength="50"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px; padding: 0;">
                                     <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label">Subject Matter #5</label></div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label"><?= $this->lang->line('subject_matter'); ?> #5</label></div>
                                         <div class="col-md-6 col-sm-6 col-sx-6">
                                             <span style="font-size: 13px; float:right;">
-                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="10">0</span>/50 characters, <span class="textarea-word-count" w-id="10">0</span> words
+                                                <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="10">0</span>/50 <?= $this->lang->line('characters'); ?>, <span class="textarea-word-count" w-id="10">0</span><?= $this->lang->line('words'); ?>
                                             </span>
                                         </div>
                                     </div>
@@ -396,7 +396,7 @@
                                             &nbsp;<span class="first_upper" style="cursor: pointer;">Ab</span>&nbsp;
                                             &nbsp;<span>&#8624;</span>&nbsp;
                                             &nbsp;<span>&#8625;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;Copy</span>&nbsp;
+                                            &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;<?= $this->lang->line('copy'); ?></span>&nbsp;
                                         </div>
                                         <textarea class="textarea-listing-stuffer" e-id="10" maxlength="50"></textarea>
                                     </div>
@@ -405,10 +405,10 @@
                         </div>
                         <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px; padding: 0;">
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label">Description</label></div>
+                                <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label"><?= $this->lang->line('description'); ?></label></div>
                                 <div class="col-md-6 col-sm-6 col-sx-6">
                                     <span style="font-size: 13px; float:right;">
-                                        <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="11">0</span>/2000 characters, <span class="textarea-word-count" w-id="11">0</span> words
+                                        <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="11">0</span>/2000 <?= $this->lang->line('characters'); ?>, <span class="textarea-word-count" w-id="11">0</span><?= $this->lang->line('words'); ?>
                                     </span>
                                 </div>
                             </div>
@@ -419,17 +419,17 @@
                                     &nbsp;<span class="first_upper" style="cursor: pointer;">Ab</span>&nbsp;
                                     &nbsp;<span>&#8624;</span>&nbsp;
                                     &nbsp;<span>&#8625;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;Copy</span>&nbsp;
+                                    &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;<?= $this->lang->line('copy'); ?></span>&nbsp;
                                 </div>
                                 <textarea class="textarea-listing-stuffer" e-id="11" maxlength="2000"></textarea>
                             </div>
                         </div>
                         <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px; padding: 0;">
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label">Search Terms</label></div>
+                                <div class="col-md-6 col-sm-6 col-xs-6"><label class="control-label"><?= $this->lang->line('search_terms'); ?></label></div>
                                 <div class="col-md-6 col-sm-6 col-sx-6">
                                     <span style="font-size: 13px; float:right;">
-                                        <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="12">0</span>/250 characters, <span class="textarea-word-count" w-id="12">0</span> words
+                                        <i class="glyphicon glyphicon-pencil" style="color: #615dff;"></i>&nbsp;<span class="textarea-letter-count" l-id="12">0</span>/250 <?= $this->lang->line('characters'); ?>, <span class="textarea-word-count" w-id="12">0</span><?= $this->lang->line('words'); ?>
                                     </span>
                                 </div>
                             </div>
@@ -440,7 +440,7 @@
                                     &nbsp;<span class="first_upper" style="cursor: pointer;">Ab</span>&nbsp;
                                     &nbsp;<span>&#8624;</span>&nbsp;
                                     &nbsp;<span>&#8625;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;Copy</span>&nbsp;
+                                    &nbsp;<span class="copy_textarea" style="cursor: pointer;"><i class="fa fa-copy"></i>&nbsp;<?= $this->lang->line('copy'); ?></span>&nbsp;
                                 </div>
                                 <textarea class="textarea-listing-stuffer" e-id="12" maxlength="250"></textarea>
                             </div>
@@ -459,7 +459,7 @@
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content" style="width: 650px;">
             <div class="modal-header">
-                <h4 class="modal-title col-md-10 col-sm-10 col-xs-10" id="exampleModalLabel">Category History</h4>
+                <h4 class="modal-title col-md-10 col-sm-10 col-xs-10" id="exampleModalLabel">Category <?= $this->lang->line('history'); ?></h4>
                 <button type="button" class="close" data-dismiss="modal"  aria-label="Close" style="float:right;">
                     <span aria-hidden="true">&times;</span>
                 </button>

@@ -52,7 +52,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>&nbsp;&nbsp;&nbsp;Search Term Optimization</h3>
+                <h3>&nbsp;&nbsp;&nbsp;<?= $this->lang->line('search_term_optimization'); ?></h3>
             </div>
 
         </div>
@@ -75,7 +75,7 @@
                                     <div class="col-md-2 col-sm-2 col-xs-2">
                                     </div>
                                     <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <label class="col-md-12 col-sm-12 col-xs-10 letter"> •	Results generally will be available within 12 hours. (Fastest: 15 minutes).</label>
+                                        <label class="col-md-12 col-sm-12 col-xs-10 letter"> •	<?= $this->lang->line('magnet_text'); ?></label>
                                     </div>
                                 </div>
                             </div>
@@ -84,12 +84,12 @@
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-12">
                                     <center>
-                                        <button type="reset" class="btn btn-info">Tutorial & Learn</button>
+                                        <button type="reset" class="btn btn-info"><?= $this->lang->line('tutorial_learn'); ?></button>
                                     </center>
                                 </div>
                                 <div class="col-md-4 col-sm-4 col-xs-12">
                                     <center>
-                                        <button type="button" id="btn_key_optimization_history" data-toggle="modal" data-target="#modal_key_optimization_history" class="btn btn-primary">History</button>
+                                        <button type="button" id="btn_key_optimization_history" data-toggle="modal" data-target="#modal_key_optimization_history" class="btn btn-primary"><?= $this->lang->line('history'); ?></button>
                                     </center>
                                 </div>
                             </div>
@@ -101,7 +101,7 @@
                                         <div class="item form-group">
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px;">
                                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-                                                    <label class="control-label">Market Place</label>
+                                                    <label class="control-label"><?= $this->lang->line('marketplace'); ?></label>
                                                 </div>
                                                 <select class="form-control input-box" required="required" id="key_optimization_market_place">
                                                     <option value=""></option>
@@ -114,7 +114,7 @@
                                         <div class="item form-group">
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px;">
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <label class="control-label">Product Asin</label>
+                                                    <label class="control-label"><?= $this->lang->line('product_asin'); ?></label>
                                                 </div>
                                                 <input type="text" id="key_optimization_product_asin" class="input-category" required="required" >
                                             </div>
@@ -124,11 +124,11 @@
                                         <div class="item form-group">
                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-                                                    <label class="control-label">Keywords</label>
+                                                    <label class="control-label"><?= $this->lang->line('keywords'); ?></label>
                                                 </div>
-                                                <textarea id="key_optimization_textarea" required="required" maxlength="5000" placeholder="Please enter one keyword or key pharse per line..."></textarea>
+                                                <textarea id="key_optimization_textarea" required="required" maxlength="5000" placeholder="<?= $this->lang->line('area_txt'); ?>"></textarea>
                                                 <div>
-                                                    <div style="float:right;color: #000; font-weight: 500;">Enter up to 20 keywords (One Per Line)</div>
+                                                    <div style="float:right;color: #000; font-weight: 500;"><?= $this->lang->line('limit_20_lines'); ?></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -138,17 +138,17 @@
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin: 30px;">
                                     <div class="col-md-4 col-sm-4 col-xs-12">
                                         <center>
-                                            <button type="reset" class="btn btn-round btn-default">Clear</button>
+                                            <button type="reset" class="btn btn-round btn-default"><?= $this->lang->line('clear'); ?></button>
                                         </center>
                                     </div>
                                     <div class="col-md-4 col-sm-4 col-xs-12">
                                         <center>
-                                            <button type="submit" class="btn btn-round btn-primary" value="normal">Submit (50 Credit)</button>
+                                            <button type="submit" class="btn btn-round btn-primary" value="normal"><?= $this->lang->line('credit_50'); ?></button>
                                         </center>
                                     </div>
                                     <div class="col-md-4 col-sm-4 col-xs-12">
                                         <center>
-                                            <button type="submit" class="btn btn-round btn-primary" value="special">Have Amazon Experts Find the Keywords for Me (250 Credits)</button>
+                                            <button type="submit" class="btn btn-round btn-primary" value="special"><?= $this->lang->line('credit_250'); ?></button>
                                         </center>
                                     </div>
                                 </div>
@@ -167,7 +167,7 @@
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content" style="width: 650px;">
             <div class="modal-header">
-                <h4 class="modal-title col-md-10 col-sm-10 col-xs-10" id="exampleModalLabel">Category History</h4>
+                <h4 class="modal-title col-md-10 col-sm-10 col-xs-10" id="exampleModalLabel"><?= $this->lang->line('history'); ?></h4>
                 <button type="button" class="close" data-dismiss="modal"  aria-label="Close" style="float:right;">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -177,11 +177,11 @@
                     <table id="table_key_optimization_history" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                         <thead style="background-color: #000000; color: #dedee0">
                         <th width="%5">#</th>
-                        <th width="%35">Marketplace</th>
-                        <th>ASIN</th>
-                        <th>Date Searched</th>
-                        <th>Status</th>
-                        <th width="%10">Action</th>
+                        <th width="%35"><?= $this->lang->line('marketplace'); ?></th>
+                        <th><?= $this->lang->line('asin'); ?></th>
+                        <th><?= $this->lang->line('searched_date'); ?></th>
+                        <th><?= $this->lang->line('status'); ?></th>
+                        <th width="%10"><?= $this->lang->line('actions'); ?></th>
                         </thead>
                     </table>
                 </div>
@@ -189,7 +189,7 @@
             <div class="modal-footer" style="border-top: none;">
                 <div class="form-group" style="margin-right: 40px;">
                     <div class="col-md-col-md-12 col-sm-12 col-xs-12">
-                        <button type="reset"  class="btn btn-danger" data-dismiss="modal" style="float: right;">Close</button>
+                        <button type="reset"  class="btn btn-danger" data-dismiss="modal" style="float: right;"><?= $this->lang->line('close'); ?></button>
                     </div>
                 </div>
             </div>

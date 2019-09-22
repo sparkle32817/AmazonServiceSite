@@ -132,37 +132,37 @@ class Service_keyword_track_model extends CI_Model
                             LEFT JOIN (
                                 SELECT asin_id, COUNT(keyword) AS key_10, SUM(exact_search_volume) AS exact_10, SUM(broad_search_volume) AS broad_10 
                                 FROM tbl_view_asin_track 
-                                WHERE rank<11 AND rank IS NOT NULL AND date_last_updated BETWEEN \''.$str_today_start.'\' AND \''.$str_today_end.'\'
+                                WHERE rank<11 AND rank IS NOT NULL AND rank!=0 AND date_last_updated BETWEEN \''.$str_today_start.'\' AND \''.$str_today_end.'\'
                                 GROUP BY client_id, asin_id 
                             ) b ON b.asin_id = a.asin_id 
                             LEFT JOIN (
                                 SELECT asin_id, COUNT(keyword) AS key_50, SUM(exact_search_volume) AS exact_50, SUM(broad_search_volume) AS broad_50 
                                 FROM tbl_view_asin_track 
-                                WHERE rank<51 AND rank IS NOT NULL AND date_last_updated BETWEEN \''.$str_today_start.'\' AND \''.$str_today_end.'\'
+                                WHERE rank<51 AND rank IS NOT NULL AND rank!=0 AND date_last_updated BETWEEN \''.$str_today_start.'\' AND \''.$str_today_end.'\'
                                 GROUP BY client_id, asin_id 
                             ) c ON c.asin_id = a.asin_id
                         ) n
                         LEFT JOIN(
                             SELECT a.*, COALESCE(key_10, 0)  AS key_10, COALESCE(key_50, 0)  AS key_50
                             FROM (
-                                SELECT asin_id
+                                SELECT asin_num
                                 FROM tbl_view_asin_track
                                 WHERE (exist_status=1 OR exist_status=2) AND is_last=1 
-                                GROUP BY client_id, asin_id 
+                                GROUP BY client_id, asin_num 
                             ) a 
                             LEFT JOIN (
-                                SELECT asin_id, COUNT(keyword) AS key_10 
+                                SELECT asin_num, COUNT(keyword) AS key_10 
                                 FROM tbl_view_asin_track 
-                                WHERE rank<11 AND rank IS NOT NULL AND date_last_updated BETWEEN \''.$str_yester_start.'\' AND \''.$str_yester_end.'\'
-                                GROUP BY client_id, asin_id 
-                            ) b ON b.asin_id = a.asin_id 
+                                WHERE rank<11 AND rank IS NOT NULL AND rank!=0 AND date_last_updated BETWEEN \''.$str_yester_start.'\' AND \''.$str_yester_end.'\'
+                                GROUP BY client_id, asin_num 
+                            ) b ON b.asin_num = a.asin_num 
                             LEFT JOIN (
-                                SELECT asin_id, COUNT(keyword) AS key_50 
+                                SELECT asin_num, COUNT(keyword) AS key_50 
                                 FROM tbl_view_asin_track 
-                                WHERE rank<51 AND rank IS NOT NULL AND date_last_updated BETWEEN \''.$str_yester_start.'\' AND \''.$str_yester_end.'\'
-                                GROUP BY client_id, asin_id 
-                            ) c ON c.asin_id = a.asin_id
-                        ) o ON n.asin_id = o.asin_id
+                                WHERE rank<51 AND rank IS NOT NULL AND rank!=0 AND date_last_updated BETWEEN \''.$str_yester_start.'\' AND \''.$str_yester_end.'\'
+                                GROUP BY client_id, asin_num 
+                            ) c ON c.asin_num = a.asin_num
+                        ) o ON n.asin_num = o.asin_num
 						WHERE n.client_id = '.$client_id.'
                         ORDER BY n.asin_id ASC';
 
@@ -333,52 +333,21 @@ class Service_keyword_track_model extends CI_Model
             }
             else
             {
-                $this->db->select(array('asin_id'=>$asin_id, 'keyword'=>$result['keyword']));
+                $this->db->where(array('asin_id'=>$asin_id, 'keyword'=>$result['keyword']));
                 $this->db->update('tbl_service_tracking_detail', array('is_last'=>0, 'exist_status'=>-1));
             }
         }
-        array_diff($keywords, $arr_remove);
+        $keywords = array_diff($keywords, $arr_remove);
 
         return $this->addKeywords($client_id, array('asin_id'=>$asin_id, 'keywords'=>$keywords));
     }
 
     public function deleteKeyword($id)
     {
-//        $str_query = 'SELECT COUNT(id) as cnt, asin_id
-//                        FROM tbl_service_tracking_detail
-//                        WHERE (client_id, asin_id) IN
-//                            (SELECT client_id, asin_id
-//                            FROM tbl_service_tracking_detail
-//                            WHERE id = '.$id.')';
-//        $result = $this->db->query($str_query)->row_array();
-
         $this->db->where('id', $id);
         $this->db->update('tbl_service_tracking_detail', array('is_last'=>0, 'exist_status'=>-1));
-//        if ($this->db->delete('tbl_service_tracking_detail', array('id'=>$id)))
-//        {
-//            if ($result['cnt']==1)
-//            {
-//                $result = $result->row_array();
-//                $this->db->delete('tbl_service_tracking_asin', array('id'=>$result['asin_id']));
-//            }
 
         return 'success';
-//        }
-
-//        return 'fail';
-    }
-
-    public function getChartData($client_id, $asin_num, $start, $end)
-    {
-
-        $str_query = 'SELECT asin_id, COUNT(asin_id) AS cnt 
-						FROM tbl_view_asin_track
-						WHERE asin_num=\''.$asin_num.'\' AND rank<51 AND client_id='.$client_id.' AND date_last_updated BETWEEN \''.$start.'\' AND \''.$end.'\'
-						GROUP BY asin_id';
-
-        $result = $this->db->query($str_query);
-
-        return $result->row_array();
     }
 
     public function getTrackedKeywordPercentage($client_id, $asin_num)
@@ -393,7 +362,7 @@ class Service_keyword_track_model extends CI_Model
                         LEFT JOIN (
                             SELECT asin_id, COUNT(asin_id) AS cnt
                             FROM tbl_view_asin_track
-                            WHERE rank<51 AND is_last=1 AND (exist_status=1 OR exist_status=2)
+                            WHERE rank<51 AND rank!=0 AND is_last=1 AND (exist_status=1 OR exist_status=2)
                             GROUP BY asin_num, client_id
                         ) b ON a.asin_id = b.asin_id
                         WHERE asin_num=\''.$asin_num.'\' AND client_id='.$client_id;
@@ -404,6 +373,19 @@ class Service_keyword_track_model extends CI_Model
             return $result->result_array();
 
         return false;
+    }
+
+    public function getChartData($client_id, $asin_num, $start, $end)
+    {
+
+        $str_query = 'SELECT asin_id, COUNT(asin_id) AS cnt 
+						FROM tbl_view_asin_track
+						WHERE asin_num=\''.$asin_num.'\' AND rank<51 AND rank!=0 AND client_id='.$client_id.' AND date_last_updated BETWEEN \''.$start.'\' AND \''.$end.'\'
+						GROUP BY asin_id';
+
+        $result = $this->db->query($str_query);
+
+        return $result->row_array();
     }
 
     public function getHistoryChartData($client_id, $asin_id, $start, $end)
@@ -444,29 +426,19 @@ class Service_keyword_track_model extends CI_Model
         return false;
     }
 
-    public function getTodayTopAsinNum($client_id)
-    {
-        $start_today = date('Y-m-d 00:00:00');
-        $end_today = date('Y-m-d 23:59:59');
-        $str_query = 'SELECT asin_id, asin_num, COUNT(*) AS cnt
-                        FROM tbl_view_asin_track
-                        WHERE (exist_status=1 OR exist_status=2) AND is_last=1 AND client_id='.$client_id.' AND (date_last_updated BETWEEN \''.$start_today.'\' AND \''.$end_today.'\') 
-                        GROUP BY client_id, asin_num
-                        ORDER BY asin_id
-                        LIMIT 0, 5';
-
-        $result = $this->db->query($str_query);
-
-        return $result->result_array();
-
-    }
-
     public function getTrendData($id, $offset)
     {
         $start = date('Y-m-d 00:00:00', strtotime($offset.' days'));
         $end   = date('Y-m-d 23:59:59', strtotime($offset.' days'));
 
-        $str_query = 'SELECT rank FROM tbl_view_asin_track WHERE id = '.$id.' AND date_last_updated BETWEEN \''.$start.'\' AND \''.$end.'\' ORDER BY date_last_updated DESC LIMIT 1';
+        $str_query = 'SELECT rank 
+                        FROM tbl_view_asin_track 
+                        WHERE date_last_updated BETWEEN \''.$start.'\' AND \''.$end.'\' AND (keyword, asin_num) IN (
+                            SELECT keyword, asin_num
+                            FROM tbl_view_asin_track
+                            WHERE id='.$id.'
+                        )
+                        ORDER BY date_last_updated DESC LIMIT 1';
 
         $result =  $this->db->query($str_query);
         if ($result->num_rows()>0)
@@ -485,12 +457,43 @@ class Service_keyword_track_model extends CI_Model
         return $this->db->get('tbl_service')->row_array();
     }
 
+    public function getTodayTopAsinNum($client_id)
+    {
+        $start_today = date('Y-m-d 00:00:00');
+        $end_today = date('Y-m-d 23:59:59');
+        $str_query = 'SELECT asin_id, asin_num, COUNT(*) AS cnt
+                        FROM tbl_view_asin_track
+                        WHERE (exist_status=1 OR exist_status=2) AND is_last=1 AND client_id='.$client_id.' /*AND (date_last_updated BETWEEN \''.$start_today.'\' AND \''.$end_today.'\')*/ 
+                        GROUP BY client_id, asin_num
+                        ORDER BY asin_id
+                        LIMIT 0, 5';
+
+        $result = $this->db->query($str_query);
+
+        return $result->result_array();
+
+    }
+
     //Employee Side
     public function getAsinDataInfo($id)
     {
-        $this->db->from('tbl_service_tracking_asin');
-        $this->db->where('id', $id);
+        $this->db->select('a.*, b.name as market_url');
+        $this->db->from('tbl_service_tracking_asin a');
+        $this->db->join('tbl_market b', 'b.id=a.market_id');
+        $this->db->where('a.id', $id);
         return $this->db->get()->row_array();
+    }
+
+    public function checkExistingData($asin_id)
+    {
+        $this->db->where('id', $asin_id);
+        $this->db->where('exist_status', 1);
+        if ($this->db->get('tbl_service_tracking_asin')->num_rows()>0)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     public function checkContent($result)
@@ -518,15 +521,17 @@ class Service_keyword_track_model extends CI_Model
             return true;
 
         return false;
-
     }
 
-    public function checkKeyword($task_id, $asin_num, $keyword, $market){
-
-        $result = $this->db->get_where('tbl_view_asin_track', array('asin_id'=>$this->getRelatedTaskID($task_id), 'asin_num'=>$asin_num, 'keyword'=>$keyword, 'market_url'=>$market));
-
+    public function checkKeyword($task_id, $keyword)
+    {
+//        $this->db->where('asin_id');
+        $result = $this->db->get_where('tbl_view_asin_track', array('asin_id'=>$this->getRelatedTaskID($task_id), 'keyword'=>$keyword));
+//return $this->db->last_query();
         if ($result->num_rows()>0)
-            return true;
+        {
+            return $result->row_array();
+        }
 
         return false;
     }
@@ -552,7 +557,10 @@ class Service_keyword_track_model extends CI_Model
         $this->db->select('keyword');
         $this->db->from('tbl_service_tracking_detail');
         $this->db->where('asin_id', $id);
+        $this->db->group_start();
         $this->db->where('exist_status', 1);
+        $this->db->or_where('exist_status', 2);
+        $this->db->group_end();
         return $this->db->get()->result_array();
     }
 
@@ -644,7 +652,11 @@ class Service_keyword_track_model extends CI_Model
             $new_asin_id = $this->db->insert_id();
 
             //copy keywords to new
-            $this->db->where(array('asin_id'=>$result['id'], 'is_last'=>1, 'exist_status'=>1));
+            $this->db->where(array('asin_id'=>$result['id'], 'is_last'=>1));
+            $this->db->group_start();
+            $this->db->where('exist_status', 1);
+            $this->db->or_where('exist_status', 2);
+            $this->db->group_end();
             $result_keywords = $this->db->get('tbl_service_tracking_detail')->result_array();
             foreach ($result_keywords as $keyword)
             {
@@ -654,6 +666,7 @@ class Service_keyword_track_model extends CI_Model
 
                 $keyword = array_diff($keyword, array($keyword['id']));
                 $keyword['asin_id'] = $new_asin_id;
+                $keyword['exist_status'] = 1;
                 $this->db->insert('tbl_service_tracking_detail', $keyword);
             }
 

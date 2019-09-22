@@ -52,7 +52,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>&nbsp;&nbsp;&nbsp;AMZ Product Keyword Index Checker</h3>
+                <h3>&nbsp;&nbsp;&nbsp;<?= $this->lang->line('keyword_index_checker'); ?></h3>
             </div>
 
         </div>
@@ -75,7 +75,7 @@
 									<div class="col-md-2 col-sm-2 col-xs-2">
 									</div>
 									<div class="col-md-10 col-sm-10 col-xs-10">
-										<label class="col-md-12 col-sm-12 col-xs-10 letter"> •	Search research generally will be available within 12 hours. (Fastest: 15 minutes).</label>
+										<label class="col-md-12 col-sm-12 col-xs-10 letter"> •	<?= $this->lang->line('magnet_text'); ?></label>
 									</div>
 								</div>
 							</div>
@@ -84,12 +84,12 @@
 								</div>
 								<div class="col-md-4 col-sm-4 col-xs-12">
 									<center>
-										<button type="reset" class="btn btn-info">Tutorial & Learn</button>
+										<button type="reset" class="btn btn-info"><?= $this->lang->line('tutorial_learn'); ?></button>
 									</center>
 								</div>
 								<div class="col-md-4 col-sm-4 col-xs-12">
 									<center>
-										<button type="button" id="btn_key_checker_history" data-toggle="modal" data-target="#modal_key_checker_history" class="btn btn-primary">History</button>
+										<button type="button" id="btn_key_checker_history" data-toggle="modal" data-target="#modal_key_checker_history" class="btn btn-primary"><?= $this->lang->line('history'); ?></button>
 									</center>
 								</div>
 							</div>
@@ -101,7 +101,7 @@
 										<div class="item form-group">
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px;">
 												<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-													<label class="control-label">Market Place</label>
+													<label class="control-label"><?= $this->lang->line('marketplace'); ?></label>
 												</div>
 												<select class="form-control input-box" required="required" id="key_checker_market_place">
 													<option value=""></option>
@@ -114,7 +114,7 @@
 										<div class="item form-group">
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px;">
 												<div class="col-md-12 col-sm-12 col-xs-12">
-													<label class="control-label">Product Asin</label>
+													<label class="control-label"><?= $this->lang->line('product_asin'); ?></label>
 												</div>
 												<input type="text" id="key_checker_product_asin" class="input-category" required="required" >
 											</div>
@@ -122,7 +122,7 @@
 										<div class="item form-group">
 											<div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px; margin-bottom: 30px;">
 												<div class="col-md-12 col-sm-12 col-xs-12">
-													<label class="control-label">Seller ID</label>
+													<label class="control-label"><?= $this->lang->line('seller_id'); ?></label>
 												</div>
 												<input type="text" id="key_checker_seller_id" class="input-category" >
 											</div>
@@ -132,11 +132,11 @@
 										<div class="item form-group">
 											<div class="col-md-12 col-sm-12 col-xs-12">
 												<div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-													<label class="control-label">Keywords</label>
+													<label class="control-label"><?= $this->lang->line('keywords'); ?></label>
 												</div>
-												<textarea id="key_checker_textarea" required="required" maxlength="5000" placeholder="Please enter one keyword or key phrase per line..."></textarea>
+												<textarea id="key_checker_textarea" required="required" maxlength="5000" placeholder="<?= $this->lang->line('area_txt'); ?>"></textarea>
 												<div>
-													<div style="float:right;"><i id="remain_txt" style="color: #000; font-weight: 500;">5000</i><i style="color: #262626;"> characters remain.</i></div>
+													<div style="float:right;"><i id="remain_txt" style="color: #000; font-weight: 500;">5000</i><i style="color: #262626;"> <?= $this->lang->line('remain_x'); ?></i></div>
 												</div>
 												
 											</div>
@@ -147,12 +147,12 @@
 								<div class="col-md-12 col-sm-12 col-xs-12" style="margin: 30px;">
 									<div class="col-md-6 col-sm-6 col-xs-6">
 										<center>
-											<button type="reset" class="btn btn-round btn-default">Clear</button>
+											<button type="reset" class="btn btn-round btn-default"><?= $this->lang->line('clear'); ?></button>
 										</center>
 									</div>
 									<div class="col-md-6 col-sm-6 col-xs-6">
 										<center>
-											<button type="submit" id="btn_check_key" class="btn btn-round btn-primary">Check Keywords</button>
+											<button type="submit" id="btn_check_key" class="btn btn-round btn-primary"><?= $this->lang->line('check_keywords'); ?></button>
 										</center>
 									</div>
 								</div>
@@ -171,7 +171,7 @@
 	<div class="modal-dialog modal-md" role="document">
 		<div class="modal-content" style="width: 650px;">
 			<div class="modal-header">
-				<h4 class="modal-title col-md-10 col-sm-10 col-xs-10" id="exampleModalLabel">Category History</h4>
+				<h4 class="modal-title col-md-10 col-sm-10 col-xs-10" id="exampleModalLabel"> <?= $this->lang->line('history'); ?></h4>
 				<button type="button" class="close" data-dismiss="modal"  aria-label="Close" style="float:right;">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -181,11 +181,11 @@
 					<table id="table_key_checker_history" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
 						<thead style="background-color: #000000; color: #dedee0">
 							<th width="%5">#</th>
-							<th width="%35">Marketplace</th>
-							<th>ASIN</th>
-							<th>Date Searched</th>
-							<th>Status</th>
-							<th width="%10">Action</th>
+							<th width="%35"><?= $this->lang->line('marketplace'); ?></th>
+							<th><?= $this->lang->line('asin'); ?></th>
+							<th><?= $this->lang->line('searched_date'); ?></th>
+							<th><?= $this->lang->line('status'); ?></th>
+							<th width="%10"><?= $this->lang->line('actions'); ?></th>
 						</thead>
 					</table>
 				</div>
@@ -193,7 +193,7 @@
 			<div class="modal-footer" style="border-top: none;">
 				<div class="form-group" style="margin-right: 40px;">
 					<div class="col-md-col-md-12 col-sm-12 col-xs-12">
-						<button type="reset"  class="btn btn-danger" data-dismiss="modal" style="float: right;">Close</button>
+						<button type="reset"  class="btn btn-danger" data-dismiss="modal" style="float: right;"><?= $this->lang->line('close'); ?></button>
 					</div>
 				</div>
 			</div>

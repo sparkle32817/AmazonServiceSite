@@ -52,7 +52,7 @@
                                     <div class="item form-group">
                                         <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px;">
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-                                                <label class="control-label">Market Place</label>
+                                                <label class="control-label"><?= $this->lang->line('marketplace'); ?></label>
                                             </div>
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
                                                 <input type="text" class="input-optimization" value="<?= $input_result['market']; ?>" readonly>

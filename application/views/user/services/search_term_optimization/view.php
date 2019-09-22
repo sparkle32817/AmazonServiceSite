@@ -29,7 +29,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>&nbsp;&nbsp;&nbsp;Search Term Optimization(Result View)</h3>
+                <h3>&nbsp;&nbsp;&nbsp;<?= $this->lang->line('search_term_optimization'); ?>(<?= $this->lang->line('result_view'); ?>)</h3>
             </div>
 
         </div>
@@ -52,7 +52,7 @@
                                     <div class="item form-group">
                                         <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px;">
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-                                                <label class="control-label">Market Place</label>
+                                                <label class="control-label"><?= $this->lang->line('marketplace'); ?></label>
                                             </div>
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
                                                 <input type="text" class="input-optimization" value="<?= $input_result['market']; ?>" readonly>
@@ -62,7 +62,7 @@
                                     <div class="item form-group">
                                         <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px;">
                                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                                <label class="control-label">Product Asin</label>
+                                                <label class="control-label"><?= $this->lang->line('product_asin'); ?></label>
                                             </div>
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
                                                 <input type="text" class="input-optimization" value="<?= $input_result['asin']; ?>" readonly>
@@ -74,7 +74,7 @@
                                     <div class="item form-group">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-                                                <label class="control-label">Keywords</label>
+                                                <label class="control-label"><?= $this->lang->line('keywords'); ?></label>
                                             </div>
                                             <textarea id="key_checker_textarea" readonly><?php
                                                 $keywords = explode(",", $input_result['keywords']);
@@ -93,13 +93,13 @@
                         </div>
                         <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;">
                             <div style="margin-left: 30px; border-bottom: 2px solid #d2d8e0;">
-                                <p style="font-size: 24px; color: #000;">Our Suggestion:</p>
+                                <p style="font-size: 24px; color: #000;"><?= $this->lang->line('our_suggestion'); ?>:</p>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
                                 <div class="col-md-7 col-sm-12 col-xs-12">
                                     <div class="item form-group col-md-12 col-sm-12 col-xs-12" style="margin-top: 40px;">
                                         <div class="col-md-4 col-sm-4 col-xs-12" style="margin-top: 5px;">
-                                            <label class="control-label" for="name" style="float:right;">Search Term : </label>
+                                            <label class="control-label" for="name" style="float:right;"><?= $this->lang->line('search_term'); ?> : </label>
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-xs-12">
                                             <input type="text" class="input-optimization col-md-7 col-xs-12" value="<?= $searched_result['search_term']; ?>" readonly>
@@ -107,7 +107,7 @@
                                     </div>
                                     <div class="item form-group col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
                                         <div class="col-md-4 col-sm-4 col-xs-12" style="margin-top: 5px;">
-                                            <label class="control-label" for="name" style="float:right;">Subject Matter #1 : </label>
+                                            <label class="control-label" for="name" style="float:right;"><?= $this->lang->line('subject_matter'); ?> #1 : </label>
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-xs-12">
                                             <input type="text" class="input-optimization col-md-7 col-xs-12" value="<?= $searched_result['subject1']; ?>" readonly>
@@ -115,7 +115,7 @@
                                     </div>
                                     <div class="item form-group col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px;">
                                         <div class="col-md-4 col-sm-4 col-xs-12" style="margin-top: 5px;">
-                                            <label class="control-label" for="name" style="float:right;">Subject Matter #2 : </label>
+                                            <label class="control-label" for="name" style="float:right;"><?= $this->lang->line('subject_matter'); ?> #2 : </label>
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-xs-12">
                                             <input type="text" class="input-optimization col-md-7 col-xs-12" value="<?= $searched_result['subject2']; ?>" readonly>
@@ -123,7 +123,7 @@
                                     </div>
                                     <div class="item form-group col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px;">
                                         <div class="col-md-4 col-sm-4 col-xs-12" style="margin-top: 5px;">
-                                            <label class="control-label" for="name" style="float:right;">Subject Matter #3 : </label>
+                                            <label class="control-label" for="name" style="float:right;"><?= $this->lang->line('subject_matter'); ?> #3 : </label>
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-xs-12">
                                             <input type="text" class="input-optimization col-md-7 col-xs-12" value="<?= $searched_result['subject3']; ?>" readonly>
@@ -131,7 +131,7 @@
                                     </div>
                                     <div class="item form-group col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px;">
                                         <div class="col-md-4 col-sm-4 col-xs-12" style="margin-top: 5px;">
-                                            <label class="control-label" for="name" style="float:right;">Subject Matter #4 : </label>
+                                            <label class="control-label" for="name" style="float:right;"><?= $this->lang->line('subject_matter'); ?> #4 : </label>
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-xs-12">
                                             <input type="text" class="input-optimization col-md-7 col-xs-12" value="<?= $searched_result['subject4']; ?>" readonly>
@@ -139,7 +139,7 @@
                                     </div>
                                     <div class="item form-group col-md-12 col-sm-12 col-xs-12" style="margin-top: 10px;">
                                         <div class="col-md-4 col-sm-4 col-xs-12" style="margin-top: 5px;">
-                                            <label class="control-label" for="name" style="float:right;">Subject Matter #5 : </label>
+                                            <label class="control-label" for="name" style="float:right;"><?= $this->lang->line('subject_matter'); ?> #5 : </label>
                                         </div>
                                         <div class="col-md-8 col-sm-8 col-xs-12">
                                             <input type="text" class="input-optimization col-md-7 col-xs-12" value="<?= $searched_result['subject5']; ?>" readonly>
@@ -150,7 +150,7 @@
                                     <?php if ($searched_result['search_type'] == 2){ ?>
                                     <div class="item form-group col-md-12 col-sm-12 col-xs-12">
                                         <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-                                            <label class="control-label">Our Suggested Targeted Keywords</label>
+                                            <label class="control-label"><?= $this->lang->line('talented_keywords') ?></label>
                                         </div>
                                         <textarea id="key_checker_textarea" readonly><?php
                                             $keywords = explode(",", $searched_result['keywords']);

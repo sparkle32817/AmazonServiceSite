@@ -97,7 +97,7 @@ class Service_reserve_search_model extends CI_Model
     {
         $related_task_id = $this->getRelatedTaskID($id);
 
-        $str_query = 'SELECT a.asin, b.name as market
+        $str_query = 'SELECT a.asin, b.name as market, b.country_code as flag
 						FROM `tbl_service_reverse_search_data` a
 						JOIN tbl_market b ON a.market_id=b.id
 						WHERE a.id = '.$related_task_id;

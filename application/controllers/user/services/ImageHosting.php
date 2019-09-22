@@ -142,7 +142,21 @@ class ImageHosting extends CI_Controller
 
         $filename = $target_dir.$_POST['name'];
         if (file_exists($filename))
+        {
             unlink($filename);
+        }
+    }
+
+    public function renameUploadedFile()
+    {
+        $client_name = $this->session->userdata('client_logged_in');
+        $target_dir = './images/'.$client_name.'/temporary/';
+
+        $filename = $target_dir.$_POST['old_name'];
+        if (file_exists($filename))
+        {
+            rename($filename, $target_dir.$_POST['new_name']);
+        }
     }
 
     public function isExistSkuDirectory()

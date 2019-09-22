@@ -78,6 +78,11 @@ class Home extends CI_Controller
             }
             else if ($result['service'] == 'Keyword Rank Tracking')
             {
+                if (!$this->KeyTrack_model->checkExistingData($result['related_task_id']))
+                {
+                    continue;
+                }
+
                 $data['url'] = base_url('services/keyword_rank_tracking');
             }
             else if ($result['service'] == 'Reverse ASIN Search')

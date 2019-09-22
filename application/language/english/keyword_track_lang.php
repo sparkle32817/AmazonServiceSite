@@ -2,7 +2,10 @@
 $lang['add_new_product'] = 'Add New Product';
 $lang['currently_tracking_keywords'] = 'Currently Tracking Keywords';
 $lang['start'] = 'Start';
+$lang['add'] = 'Add';
 $lang['overview'] = 'OVERVIEW';
+
+$lang['exact_search_volume'] = 'Exact Search Volume';
 $lang['broad_search_volume'] = 'Broad Search Volume';
 $lang['trend'] = 'Trend';
 $lang['add_keyword'] = 'Add Keyword';
@@ -14,6 +17,5 @@ $lang['keyword_history'] = 'Keyword History';
 $lang['view_rank_graph'] = 'View Rank Graph';
 $lang['delete_keyword'] = 'Delete Keyword';
 $lang['open_link'] = 'Open Link';
-$lang['add'] = 'Add';
 $lang['add_keywords_text'] = 'Please enter the keywords or key phrases you\'d like to track(One per line)';
 $lang['tracked_keywords'] = 'Tracked Keywords';

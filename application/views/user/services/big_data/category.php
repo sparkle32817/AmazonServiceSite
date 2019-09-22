@@ -46,7 +46,7 @@
     <div class="">
         <div class="page-title">
             <div class="title_left">
-                <h3>&nbsp;&nbsp;&nbsp;Big Data – Category</h3>
+                <h3>&nbsp;&nbsp;&nbsp;<th><?= $this->lang->line('big_data'); ?></th> – <?= $this->lang->line('category'); ?></h3>
             </div>
 
         </div>
@@ -69,21 +69,21 @@
                                     <div class="col-md-2 col-sm-2 col-xs-2">
                                     </div>
                                     <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <label class="col-md-12 col-sm-12 col-xs-10 letter"> •  Search research generally will be available within 12 hours. (Fastest: 15 minutes).</label>
+                                        <label class="col-md-12 col-sm-12 col-xs-10 letter"> •  <?= $this->lang->line('magnet_text'); ?></label>
                                     </div>
                                 </div>
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                     <div class="col-md-2 col-sm-2 col-xs-2">
                                     </div>
                                     <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <label class="col-md-12 col-sm-12 col-xs-12 letter"> •	Notice: Entering Too many criteria may return 0 or very few results. </label>
+                                        <label class="col-md-12 col-sm-12 col-xs-12 letter"> •	<?= $this->lang->line('notice'); ?> </label>
                                     </div>
                                 </div>
                                 <div class="form-group col-md-12 col-sm-12 col-xs-12">
                                     <div class="col-md-2 col-sm-2 col-xs-2">
                                     </div>
                                     <div class="col-md-10 col-sm-10 col-xs-10">
-                                        <label class="col-md-12 col-sm-12 col-xs-12 letter"> •	Maximum of 200 Products will be shown. </label>
+                                        <label class="col-md-12 col-sm-12 col-xs-12 letter"> •	<?= $this->lang->line('max_200_products'); ?></label>
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +109,7 @@
                                         <div class="item form-group">
                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-                                                    <label class="control-label">Market Place</label>
+                                                    <label class="control-label"><?= $this->lang->line('marketplace'); ?></label>
                                                 </div>
                                                 <select name="category_market_place" class="form-control input-box" required="required" id="category_market_place">
                                                     <option value=""></option>
@@ -126,7 +126,7 @@
                                         <div class="item form-group">
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px;">
                                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-                                                    <label class="control-label">Category</label>
+                                                    <label class="control-label"><?= $this->lang->line('category'); ?></label>
                                                 </div>
                                                 <select name="category_market_category" class="form-control input-box" id="category_market_category">
                                                 </select>
@@ -137,7 +137,7 @@
                                         <div class="item form-group">
                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-                                                    <label class="control-label">Monthly Revenue</label>
+                                                    <label class="control-label"><?= $this->lang->line('monthly_revenue'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -153,7 +153,7 @@
                                             </div>
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <label class="control-label">Sales Year Over Year(%)</label>
+                                                    <label class="control-label"><?= $this->lang->line('sales_year'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -169,7 +169,7 @@
                                             </div>
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <label class="control-label">Monthly Sales(Units)</label>
+                                                    <label class="control-label"><?= $this->lang->line('monthly_sales'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -189,7 +189,7 @@
                                         <div class="item form-group">
                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-                                                    <label class="control-label">Price</label>
+                                                    <label class="control-label"><?= $this->lang->line('price'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -205,7 +205,7 @@
                                             </div>
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <label class="control-label">Price Change(%)</label>
+                                                    <label class="control-label"><?= $this->lang->line('price_change'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -221,7 +221,7 @@
                                             </div>
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <label class="control-label">Best Sales Rank(BSR)</label>
+                                                    <label class="control-label"><?= $this->lang->line('bsr'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -241,7 +241,7 @@
                                         <div class="item form-group">
                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-                                                    <label class="control-label">Review Count</label>
+                                                    <label class="control-label"><?= $this->lang->line('review_count'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -257,7 +257,7 @@
                                             </div>
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <label class="control-label">Sales Change(%)</label>
+                                                    <label class="control-label"><?= $this->lang->line('sales_change'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -273,7 +273,7 @@
                                             </div>
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <label class="control-label">Number of Sellers</label>
+                                                    <label class="control-label"><?= $this->lang->line('num_sellers'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -293,7 +293,7 @@
                                         <div class="item form-group">
                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom: 5px;">
-                                                    <label class="control-label">Review Rating</label>
+                                                    <label class="control-label"><?= $this->lang->line('review_rating'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -309,7 +309,7 @@
                                             </div>
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <label class="control-label">Best Sales Period</label>
+                                                    <label class="control-label"><?= $this->lang->line('best_sales'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <input type="text" id="daterange_category_best_period" class="input-category" value="" autocomplete="off" style="width: 100%; height: 34px; font-size: 20px;" readonly>
@@ -317,7 +317,7 @@
                                             </div>
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <label class="control-label">Weight(lb)</label>
+                                                    <label class="control-label"><?= $this->lang->line('weight'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -337,7 +337,7 @@
                                         <div class="item form-group">
                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <label class="control-label">Variation Count</label>
+                                                    <label class="control-label"><?= $this->lang->line('variation_count'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -353,7 +353,7 @@
                                             </div>
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <label class="control-label">Sales to Reviews</label>
+                                                    <label class="control-label"><?= $this->lang->line('sales_review'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -369,7 +369,7 @@
                                             </div>
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <label class="control-label">Number of Images</label>
+                                                    <label class="control-label"><?= $this->lang->line('num_images'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="col-md-5 col-sm-5 col-xs-12" style="padding: 0px;">
@@ -389,7 +389,7 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <label class="control-label">Include Keyword:</label>
+                                                    <label class="control-label"><?= $this->lang->line('include_keywords'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
@@ -401,7 +401,7 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <label class="control-label">Exclude Keyword:</label>
+                                                    <label class="control-label"><?= $this->lang->line('exclude_keywords'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
@@ -413,11 +413,11 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                                    <label class="control-label">Fulfillment</label>
+                                                    <label class="control-label"><?= $this->lang->line('fulfillment'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <select name="category_fulfillment" class="form-control input-box" id="category_fulfillment" multiple>
-                                                        <option value="Select All">Select All</option>
+                                                        <option value="<?= $this->lang->line('select_all'); ?>"><?= $this->lang->line('select_all'); ?></option>
                                                         <option value="FBA">FBA</option>
                                                         <option value="FBM">FBM</option>
                                                         <option value="Amazon">Amazon</option>
@@ -428,17 +428,17 @@
                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                             <div class="col-md-12 col-sm-12 col-xs-12">
                                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
-                                                    <label class="control-label">Shipping Size Tier</label>
+                                                    <label class="control-label"><?= $this->lang->line('size_tier'); ?></label>
                                                 </div>
                                                 <div class="col-md-12 col-sm-12 col-xs-12">
                                                     <select name="category_shipping_tier" class="form-control input-box" id="category_shipping_tier" multiple>
-                                                        <option value="Select All">Select All</option>
-                                                        <option value="Small Standard-Size">Small Standard-Size</option>
-                                                        <option value="Large Standard-Size">Large Standard-Size</option>
-                                                        <option value="Small Oversize">Small Oversize</option>
-                                                        <option value="Medium Oversize">Medium Oversize</option>
-                                                        <option value="Large Oversize">Large Oversize</option>
-                                                        <option value="Special Oversize">Special Oversize</option>
+                                                        <option value="<?= $this->lang->line('select_all'); ?>"><?= $this->lang->line('select_all'); ?></option>
+                                                        <option value="<?= $this->lang->line('small_standard'); ?>"><?= $this->lang->line('small_standard'); ?></option>
+                                                        <option value="<?= $this->lang->line('large_standard'); ?>"><?= $this->lang->line('large_standard'); ?></option>
+                                                        <option value="<?= $this->lang->line('small_oversize'); ?>"><?= $this->lang->line('small_oversize'); ?></option>
+                                                        <option value="<?= $this->lang->line('medium_oversize'); ?>"><?= $this->lang->line('medium_oversize'); ?></option>
+                                                        <option value="<?= $this->lang->line('large_oversize'); ?>"><?= $this->lang->line('large_oversize'); ?></option>
+                                                        <option value="<?= $this->lang->line('special_oversize'); ?>"><?= $this->lang->line('special_oversize'); ?></option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -448,12 +448,12 @@
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="margin: 30px;">
                                     <div class="col-md-6 col-sm-6 col-xs-6">
                                         <center>
-                                            <button type="reset" class="btn btn-round btn-default">Clear</button>
+                                            <button type="reset" class="btn btn-round btn-default"><?= $this->lang->line('clear'); ?></button>
                                         </center>
                                     </div>
                                     <div class="col-md-6 col-sm-6 col-xs-6">
                                         <center>
-                                            <button type="submit" class="btn btn-round btn-primary">Search</button>
+                                            <button type="submit" class="btn btn-round btn-primary"><?= $this->lang->line('search'); ?></button>
                                         </center>
                                     </div>
                                 </div>
@@ -472,7 +472,7 @@
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content" style="width: 650px;">
             <div class="modal-header">
-                <h4 class="modal-title col-md-10 col-sm-10 col-xs-10" id="exampleModalLabel">Category <?= $this->lang->line('history'); ?></h4>
+                <h4 class="modal-title col-md-10 col-sm-10 col-xs-10" id="exampleModalLabel"><?= $this->lang->line('category'); ?> <?= $this->lang->line('history'); ?></h4>
                 <button type="button" class="close" data-dismiss="modal"  aria-label="Close" style="float:right;">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -482,11 +482,11 @@
                     <table id="table_bigdata_category_history" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                         <thead style="background-color: #000000; color: #dedee0">
                         <th width="%5">#</th>
-                        <th width="%35">Marketplace</th>
-                        <th>Category</th>
-                        <th>Date<br/> Searched</th>
-                        <th>Status</th>
-                        <th width="%10">Action</th>
+                        <th width="%35"><?= $this->lang->line('marketplace'); ?></th>
+                        <th><?= $this->lang->line('category'); ?></th>
+                        <th><?= $this->lang->line('searched_date'); ?></th>
+                        <th><?= $this->lang->line('status'); ?></th>
+                        <th width="%10"><?= $this->lang->line('actions'); ?></th>
                         </thead>
                     </table>
                 </div>
@@ -494,7 +494,7 @@
             <div class="modal-footer" style="border-top: none;">
                 <div class="form-group" style="margin-right: 40px;">
                     <div class="col-md-col-md-12 col-sm-12 col-xs-12">
-                        <button type="reset"  class="btn btn-danger" data-dismiss="modal" style="float: right;">Close</button>
+                        <button type="reset"  class="btn btn-danger" data-dismiss="modal" style="float: right;"><?= $this->lang->line('close'); ?></button>
                     </div>
                 </div>
             </div>

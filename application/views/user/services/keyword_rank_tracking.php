@@ -144,7 +144,7 @@
                                 <table id="table_keyword_tracking" class="table table-striped table-bordered dt-responsive nowrap table_keyword_tracking" cellspacing="0" width="100%">
                                     <thead style="background-color: #000000; color: #dedee0">
                                     <th width="3%"></th>
-                                    <th width="50%"><?= $this->lang->line('product'); ?></th>
+                                    <th width="50%"><?= $this->lang->line('t_product'); ?></th>
                                     <th><?= $this->lang->line('overview'); ?></th>
                                     <th><?= $this->lang->line('actions'); ?></th>
                                     </thead>
@@ -401,3 +401,23 @@
     </div>
 </div>
 <!--end::Modal-->
+
+<input type="hidden" id="txt_tracking_tracked_keywords" value="<?= $this->lang->line('tracked_keywords'); ?>">
+<input type="hidden" id="txt_tracking_keywords" value="<?= $this->lang->line('keywords'); ?>">
+<input type="hidden" id="txt_tracking_exact_search" value="<?= $this->lang->line('exact_search_volume'); ?>">
+<input type="hidden" id="txt_tracking_broad_search" value="<?= $this->lang->line('broad_search_volume'); ?>">
+<input type="hidden" id="txt_tracking_trend" value="<?= $this->lang->line('trend'); ?>">
+<input type="hidden" id="txt_tracking_add_keywords" value="<?= $this->lang->line('add_keyword'); ?>">
+<input type="hidden" id="txt_tracking_copy_all" value="<?= $this->lang->line('copy_all_keyword'); ?>">
+<input type="hidden" id="txt_tracking_go_to" value="<?= $this->lang->line('go_to_page'); ?>">
+<input type="hidden" id="txt_tracking_edit_keywords" value="<?= $this->lang->line('edit_keywords_list'); ?>">
+<input type="hidden" id="txt_tracking_delete_history" value="<?= $this->lang->line('delete_history'); ?>">
+<input type="hidden" id="txt_tracking_keyword_history" value="<?= $this->lang->line('keyword_history'); ?>">
+
+<input type="hidden" id="txt_tracking_keyword" value="<?= $this->lang->line('t_keyword'); ?>">
+<input type="hidden" id="txt_tracking_competing_products" value="<?= $this->lang->line('competing_products'); ?>">
+<input type="hidden" id="txt_tracking_organic_rank" value="<?= $this->lang->line('organic_rank'); ?>">
+<input type="hidden" id="txt_tracking_actions" value="<?= $this->lang->line('actions'); ?>">
+<input type="hidden" id="txt_tracking_view_graph" value="<?= $this->lang->line('view_rank_graph'); ?>">
+<input type="hidden" id="txt_tracking_delete_keyword" value="<?= $this->lang->line('delete_keyword'); ?>">
+<input type="hidden" id="txt_tracking_open_link" value="<?= $this->lang->line('open_link'); ?>">

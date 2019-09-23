@@ -51,6 +51,7 @@ $lang['max_200_products'] = 'Maximum of 200 Products will be shown.';
 $lang['broad_search_score'] = 'Broad Search Score';
 $lang['competing_product'] = 'Competing Product';
 $lang['avg_seller_cnt'] = 'AVG Seller Count';
+$lang['keyword_phrase'] = 'Keyword Phrase';
 $lang['t_keyword_phrase'] = 'KEYWORD PHRASE';
 $lang['t_search_volume'] = 'SEARCH<br> VOLUME';
 

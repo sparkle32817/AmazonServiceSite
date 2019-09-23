@@ -746,9 +746,9 @@ $(document).ready(function () {
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_advertising_brand").val()+`: <small class="content" style="white-space: normal;">`+brand+`</small></label></div>
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_advertising_fulfillment").val()+`: <small class="content" style="white-space: normal;">`+fulfillment+`</small></label></div>
                                 <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_advertising_size_tier").val()+`: <small class="content" style="white-space: normal;">`+data['size_tier']+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_advertising_title").val()+`: <small class="content" style="white-space: normal;">`+data['num_image']+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_advertising_title").val()+`: <small class="content" style="white-space: normal;">`+data['variation_cnt']+`</small></label></div>
-                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_advertising_title").val()+`: <small class="content" style="white-space: normal;">`+str_weight+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_advertising_num_images").val()+`: <small class="content" style="white-space: normal;">`+data['num_image']+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_advertising_variation_count").val()+`: <small class="content" style="white-space: normal;">`+data['variation_cnt']+`</small></label></div>
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;"><label class="control-label">`+$("#txt_advertising_weight").val()+`: <small class="content" style="white-space: normal;">`+str_weight+`</small></label></div>
                             </div>
                             `;
 				}
@@ -2044,7 +2044,7 @@ $(document).ready(function () {
 					return `
                             <div style="text-align: left; margin-left: 20px; padding: 0px;">
 								<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
-									<label class="control-label">`+$("#txt_keyword_keyword_phrase").val()+`:  
+									<label class="control-label">`+$("#txt_keyword_phrase").val()+`:  
 										<small class="content" style="white-space: normal;">
 											<a href="http://www.`+data['market_url']+`/s?k=`+data['keyword']+`" class="row_asin_number"  target="_blank" style="text-decoration: underline;">`+data['keyword']+`</a>
 										</small>

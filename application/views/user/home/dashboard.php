@@ -182,7 +182,7 @@
                                 <?= $this->lang->line('top_rank_keywords'); ?>/<?= $this->lang->line('total_tracking_keyword'); ?>
                             </h5>
                         </div>
-                        <div class="col-md-5 col-sm-5 col-xs-5" style="padding: 0px;">
+                        <div class="col-md-5 col-sm-5 col-xs-5" style="padding: 0 10px;">
                             <div id="dashboard_legend" class="col-md-12 col-sm-12 col-xs-12 chart-legend" style="padding: 0px;"></div>
                         </div>
                         <div class="col-md-7 col-sm-7 col-xs-7" style="margin-top: 13px;padding: 0px;">

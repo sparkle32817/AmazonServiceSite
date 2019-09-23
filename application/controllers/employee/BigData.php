@@ -1639,7 +1639,7 @@ class BigData extends CI_Controller
 											<label class="control-label">Category</label>
 										</div>
 										<div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
-											<input type="text" class="input-category" value="'.$result['category'].'" readonly>
+											<input type="text" class="input-category" value="'.$this->getCategory($result['category_id']).'" readonly>
 										</div>
 									</div>
 								</div>
@@ -1901,7 +1901,7 @@ class BigData extends CI_Controller
 				while (($content = fgetcsv($file_data)) !== FALSE)
 				{
 					$arr = array(
-						'task_id' => $data_id,
+						'task_id' => $task_id,
 						'market_name' => $market_name,
 						'keyword' => $content[0],
 						'search_volume' => $content[1],
@@ -1983,6 +1983,18 @@ class BigData extends CI_Controller
 
 		return 'Success';
 	}
+
+    function getCategory($category_id)
+    {
+        $arr = array();
+
+        foreach (explode(",", $category_id) as $category)
+        {
+            array_push($arr, $this->BigData_model->getCategory($category));
+        }
+
+        return implode("; ", $arr);
+    }
 
 	//Common
     public function existSession()

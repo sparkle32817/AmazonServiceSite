@@ -162,7 +162,13 @@
                                 </div>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 20px;">
-                                <center><button id="btn_finish_optimization" type="submit" class="btn btn-round btn-primary">Completion</button></center>
+                                <div class="col-md-offset-4 col-md-2">
+                                    <button id="btn_finish_optimization" type="submit" class="btn btn-round btn-primary">Completion</button>
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="checkbox" id="check_no_data" style="" value="no_data">
+                                    <label class="control-label" for="check_no_data">&nbsp;&nbsp;No data</label>
+                                </div>
                             </div>
                         </form>
                     </div>

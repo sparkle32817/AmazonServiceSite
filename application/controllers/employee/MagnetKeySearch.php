@@ -263,7 +263,7 @@ class MagnetKeySearch extends CI_Controller
                                     <div class="item form-group">
                                         <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 50px;">
                                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                                <label class="control-label"><?= $this->lang->line('marketplace'); ?></label>
+                                                <label class="control-label">Marketplace</label>
                                             </div>
                                             <input type="text" id="magnet_keyword" class="input-category" value="'.$result['market'].'" readonly>
                                         </div>

@@ -384,7 +384,7 @@
 
 <!-- /page content -->
 
-<input type="hidden" id="txt_keyword_keyword_phrase" value="<?= $this->lang->line('keyword_phrase'); ?>">
+<input type="hidden" id="txt_keyword_phrase" value="<?= $this->lang->line('keyword_phrase'); ?>">
 <input type="hidden" id="txt_keyword_category" value="<?= $this->lang->line('category'); ?>">
 <input type="hidden" id="txt_keyword_fulfillment" value="<?= $this->lang->line('fulfillment'); ?>">
 <input type="hidden" id="txt_keyword_size_tier" value="<?= $this->lang->line('size_tier'); ?>">

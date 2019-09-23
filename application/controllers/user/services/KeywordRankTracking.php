@@ -28,7 +28,7 @@ class KeywordRankTracking extends CI_Controller
         $today_asin_num = $this->KeyTrack_model->getTodayTopAsinNum($client_id);
         foreach ($today_asin_num as $asin_num)
         {
-            $data['nums'][] = $this->KeyTrack_model->getTrackedKeywordPercentage($client_id, $asin_num['asin_num']);
+            $data['nums'][] = $this->KeyTrack_model->getTrackedKeywordPercentage($client_id, $asin_num['asin_num'], $asin_num['market_url']);
         }
 
         $this->load->view('user/common/header', $header_data);
@@ -95,8 +95,8 @@ class KeywordRankTracking extends CI_Controller
                 $res_overview['key_50_sub_color'] = 'red';
             }
 
-            $res_overview['exact_50'] = $res1['exact_50'];
-            $res_overview['broad_50'] = $res1['broad_50'];
+            $res_overview['exact_50'] = $this->makeComma($res1['exact_50']);
+            $res_overview['broad_50'] = $this->makeComma($res1['broad_50']);
 
             $arr = array('id'=>$res1['asin_id'], 'product'=>$res_product, 'overview'=>$res_overview);
 
@@ -255,13 +255,14 @@ class KeywordRankTracking extends CI_Controller
         $colors = array('#4dc9f6', '#f67019', '#f53794', '#537bc4', '#acc236', '#166a8f', '#00a950', '#58595b', '#8549ba');
         $result_asin_num = $this->KeyTrack_model->getTodayTopAsinNum($client_id);
 
-        $arr_asin_num = array();
+//        $arr_asin_num = array();
         $res_datas = array();
 
+        $i=0;
         foreach ($result_asin_num as $r)
         {
-            array_push($arr_asin_num, $r['asin_num']);
-            $res_datas[$r['asin_num']] = array();
+//            array_push($arr_asin_num, array('asin_num'=>$r['asin_num'], 'market_url'=>$r['market_url']));
+            $res_datas[$i] = array();
         }
 
         while($sub>=0)
@@ -272,18 +273,21 @@ class KeywordRankTracking extends CI_Controller
             if ($t_end>$end)
                 $t_end = $end;
 
-            foreach ($arr_asin_num as $asin_num)
+            $j = 0;
+            foreach ($result_asin_num as $r)
             {
-                $result = $this->KeyTrack_model->getChartData($client_id, $asin_num, $start->format('Y-m-d 00:00:00'), $t_end->format('Y-m-d 23:59:59'));
+                $result = $this->KeyTrack_model->getChartData($client_id, $r['asin_num'], $r['market_url'], $start->format('Y-m-d 00:00:00'), $t_end->format('Y-m-d 23:59:59'));
 
                 if (!empty($result))
                 {
-                    $res_datas[$asin_num][] = $result['cnt'];
+                    $res_datas[$j][] = $result['cnt'];
                 }
                 else
                 {
-                    $res_datas[$asin_num][] = 0;
+                    $res_datas[$j][] = 0;
                 }
+
+                $j++;
             }
 
             $start->add(new DateInterval('P'.$interval.'D'));
@@ -297,10 +301,10 @@ class KeywordRankTracking extends CI_Controller
         $productData = array();
 
         $i = 0;
-        foreach ($arr_asin_num as $asin_num)
+        foreach ($result_asin_num as $r)
         {
-            $str['data'] = $res_datas[$asin_num];
-            $str['label'] = $asin_num;
+            $str['data'] = $res_datas[$i];
+            $str['label'] = $r['asin_num'];
             $str['borderColor'] = $colors[$i%9];
             $str['fill'] = false;
 

@@ -202,9 +202,45 @@ $(document).ready(function () {
         });
     });
 
-    $('#form_task_completion_optimization').on('submit', function () {
+    $("#btn_finish_optimization").click(function (ev) {
+        ev.preventDefault() // cancel form submission
 
-		var task_id = $('#task_id_optimization').val().replace('Ticket', '');
+        var task_id = $('#task_id_optimization').val().replace('Ticket', '');
+
+        if ($('#check_no_data').is(':checked'))
+        {
+            if (!confirm('There is no searched data.'))
+                return false;
+
+            $.ajax({
+                type: 'POST',
+                url: base_url + 'employee/BigData/completeTaskWithoutData',
+                async: false,
+                dataType: 'text',
+                data: {task_id: task_id},
+                success:function(response) {
+                    console.log(response);
+
+                    if (response=='success')
+                    {
+                        $('#div_btn_complete_optimization').attr('style', 'display: none');
+
+                        table_pending_optimization.ajax.reload(null, false);
+                        table_complete_optimization.ajax.reload(null, false);
+
+                        make_task_content(task_id, 'complete');
+                        popUpToast('success', 'Task completed!\n But this task will be completed when admin approved.');
+                    }
+                    else
+                    {
+                        popUpToast('warning', 'You can\'t complete task now. Please try again.');
+                    }
+                }
+            });
+
+            return false;
+        }
+
 		var txt_search_term = $('#key_optimization_search_term').val();
 		var txt_subject1 = $('#key_optimization_subject1').val();
 		var txt_subject2 = $('#key_optimization_subject2').val();
@@ -220,11 +256,15 @@ $(document).ready(function () {
             || txt_subject4 == ''
             || txt_subject5 == '')
         {
+            $("#form_task_completion_optimization").submit();
+
             return ;
         }
 		
 		if ($('#key_optimization_textarea').prop('required') && txt_keywords == '')
         {
+            $("#form_task_completion_optimization").submit();
+
             return ;
         }
 

@@ -31,6 +31,7 @@ $lang['uses_text32'] = '  (The more purchases made by this link, the “lower”
 $lang['uses_text33'] = '2. Find top 5 Amazon Choice products Amazon thinks is best related to the keyword. (It also shows the keyword in the page)';
 $lang['uses_text34'] = '1. Must use google chrome.';
 $lang['uses_text35'] = '2. Not all keywords will generate Amazon’s Choice top 5.';
+$lang['note'] = 'Note';
 
 
 //Search Engine

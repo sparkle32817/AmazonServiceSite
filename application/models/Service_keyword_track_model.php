@@ -124,45 +124,45 @@ class Service_keyword_track_model extends CI_Model
                         FROM(
                             SELECT a.*, COALESCE(key_10, 0)  AS key_10 , COALESCE(exact_10, 0)  AS exact_10, COALESCE(broad_10, 0)  AS broad_10, COALESCE(key_50, 0)  AS key_50, COALESCE(exact_50, 0)  AS exact_50, COALESCE(broad_50, 0)  AS broad_50  
                             FROM (
-                                SELECT id, client_id, asin_id, asin_num, market_url, country_code, COUNT(id) AS cnt 
-                                FROM tbl_view_asin_track
-                                WHERE (exist_status=1 OR exist_status=2) AND is_last=1 
-                                GROUP BY client_id, asin_id 
+                            SELECT id, client_id, asin_id, asin_num, market_url, country_code, COUNT(id) AS cnt 
+                            FROM tbl_view_asin_track
+                            WHERE (exist_status=1 OR exist_status=2) AND is_last=1 
+                            GROUP BY client_id, asin_id 
                             ) a 
                             LEFT JOIN (
-                                SELECT asin_id, COUNT(keyword) AS key_10, SUM(exact_search_volume) AS exact_10, SUM(broad_search_volume) AS broad_10 
-                                FROM tbl_view_asin_track 
-                                WHERE rank<11 AND rank IS NOT NULL AND rank!=0 AND date_last_updated BETWEEN \''.$str_today_start.'\' AND \''.$str_today_end.'\'
-                                GROUP BY client_id, asin_id 
+                            SELECT asin_id, COUNT(keyword) AS key_10, SUM(exact_search_volume) AS exact_10, SUM(broad_search_volume) AS broad_10 
+                            FROM tbl_view_asin_track 
+                            WHERE rank<11 AND rank IS NOT NULL AND rank!=0 AND date_last_updated BETWEEN \'2019-09-24 00:00:00\' AND \'2019-09-24 23:59:59\'
+                            GROUP BY client_id, asin_id 
                             ) b ON b.asin_id = a.asin_id 
                             LEFT JOIN (
-                                SELECT asin_id, COUNT(keyword) AS key_50, SUM(exact_search_volume) AS exact_50, SUM(broad_search_volume) AS broad_50 
-                                FROM tbl_view_asin_track 
-                                WHERE rank<51 AND rank IS NOT NULL AND rank!=0 AND date_last_updated BETWEEN \''.$str_today_start.'\' AND \''.$str_today_end.'\'
-                                GROUP BY client_id, asin_id 
+                            SELECT asin_id, COUNT(keyword) AS key_50, SUM(exact_search_volume) AS exact_50, SUM(broad_search_volume) AS broad_50 
+                            FROM tbl_view_asin_track 
+                            WHERE rank<51 AND rank IS NOT NULL AND rank!=0 AND date_last_updated BETWEEN \'2019-09-24 00:00:00\' AND \'2019-09-24 23:59:59\'
+                            GROUP BY client_id, asin_id 
                             ) c ON c.asin_id = a.asin_id
                         ) n
                         LEFT JOIN(
                             SELECT a.*, COALESCE(key_10, 0)  AS key_10, COALESCE(key_50, 0)  AS key_50
                             FROM (
-                                SELECT asin_num
-                                FROM tbl_view_asin_track
-                                WHERE (exist_status=1 OR exist_status=2) AND is_last=1 
-                                GROUP BY client_id, asin_num 
+                            SELECT asin_id, asin_num, market_url
+                            FROM tbl_view_asin_track
+                            WHERE (exist_status=1 OR exist_status=2) AND is_last!=1 
+                            GROUP BY client_id, asin_id 
                             ) a 
                             LEFT JOIN (
-                                SELECT asin_num, COUNT(keyword) AS key_10 
-                                FROM tbl_view_asin_track 
-                                WHERE rank<11 AND rank IS NOT NULL AND rank!=0 AND date_last_updated BETWEEN \''.$str_yester_start.'\' AND \''.$str_yester_end.'\'
-                                GROUP BY client_id, asin_num 
-                            ) b ON b.asin_num = a.asin_num 
+                            SELECT asin_id, COUNT(keyword) AS key_10 
+                            FROM tbl_view_asin_track 
+                            WHERE rank<11 AND rank IS NOT NULL AND rank!=0 AND date_last_updated BETWEEN \'2019-09-23 00:00:00\' AND \'2019-09-23 23:59:59\'
+                            GROUP BY client_id, asin_id 
+                            ) b ON b.asin_id = a.asin_id 
                             LEFT JOIN (
-                                SELECT asin_num, COUNT(keyword) AS key_50 
-                                FROM tbl_view_asin_track 
-                                WHERE rank<51 AND rank IS NOT NULL AND rank!=0 AND date_last_updated BETWEEN \''.$str_yester_start.'\' AND \''.$str_yester_end.'\'
-                                GROUP BY client_id, asin_num 
-                            ) c ON c.asin_num = a.asin_num
-                        ) o ON n.asin_num = o.asin_num
+                            SELECT asin_id, COUNT(keyword) AS key_50 
+                            FROM tbl_view_asin_track 
+                            WHERE rank<51 AND rank IS NOT NULL AND rank!=0 AND date_last_updated BETWEEN \'2019-09-23 00:00:00\' AND \'2019-09-23 23:59:59\'
+                            GROUP BY client_id, asin_id 
+                            ) c ON c.asin_id = a.asin_id
+                        ) o ON n.asin_num = o.asin_num AND o.market_url = n.market_url
 						WHERE n.client_id = '.$client_id.'
                         ORDER BY n.asin_id ASC';
 
@@ -350,22 +350,22 @@ class Service_keyword_track_model extends CI_Model
         return 'success';
     }
 
-    public function getTrackedKeywordPercentage($client_id, $asin_num)
+    public function getTrackedKeywordPercentage($client_id, $asin_num, $market_url)
     {
         $str_query = 'SELECT asin_num, client_id, COALESCE(cnt, 0) AS cnt, COALESCE(total_cnt, 0) AS total_cnt
                         FROM(
-                            SELECT asin_id, client_id, asin_num, COUNT(*) AS total_cnt
+                            SELECT asin_id, client_id, asin_num, market_url, COUNT(*) AS total_cnt
                             FROM tbl_view_asin_track
                             WHERE is_last=1 AND (exist_status=1 OR exist_status=2)
-                            GROUP BY asin_num, client_id
+                            GROUP BY asin_num, client_id, market_url
                         ) a
                         LEFT JOIN (
                             SELECT asin_id, COUNT(asin_id) AS cnt
                             FROM tbl_view_asin_track
                             WHERE rank<51 AND rank!=0 AND is_last=1 AND (exist_status=1 OR exist_status=2)
-                            GROUP BY asin_num, client_id
+                            GROUP BY asin_num, client_id, market_url
                         ) b ON a.asin_id = b.asin_id
-                        WHERE asin_num=\''.$asin_num.'\' AND client_id='.$client_id;
+                        WHERE asin_num=\''.$asin_num.'\' AND market_url=\''.$market_url.'\' AND client_id='.$client_id ;
 
         $result = $this->db->query($str_query);
 
@@ -375,32 +375,33 @@ class Service_keyword_track_model extends CI_Model
         return false;
     }
 
-    public function getChartData($client_id, $asin_num, $start, $end)
+    public function getChartData($client_id, $asin_num, $market_url, $start, $end)
     {
 
         $str_query = 'SELECT asin_id, COUNT(asin_id) AS cnt 
 						FROM tbl_view_asin_track
-						WHERE asin_num=\''.$asin_num.'\' AND rank<51 AND rank!=0 AND client_id='.$client_id.' AND date_last_updated BETWEEN \''.$start.'\' AND \''.$end.'\'
-						GROUP BY asin_id';
+						WHERE asin_num=\''.$asin_num.'\' AND market_url=\''.$market_url.'\' AND rank<51 AND rank!=0 AND client_id='.$client_id.' AND date_last_updated BETWEEN \''.$start.'\' AND \''.$end.'\'
+						GROUP BY client_id, asin_num, market_url';
 
         $result = $this->db->query($str_query);
-
+//return $this->db->last_query();
         return $result->row_array();
     }
 
     public function getHistoryChartData($client_id, $asin_id, $start, $end)
     {
+        $result = $this->db->where('asin_id', $asin_id)->get('tbl_view_asin_track')->row_array();
 
         $str_query = 'SELECT a.asin_id, COALESCE(b.top_10,0) AS top_10, a.top_50
 						FROM(
 							SELECT COUNT(*) AS top_50, asin_id
 							FROM tbl_view_asin_track
-							WHERE asin_id='.$asin_id.' AND rank<51 AND date_last_updated BETWEEN \''.$start.'\' AND \''.$end.'\'
+							WHERE asin_num = '.$result['asin_num'].' AND market_url = \''.$result['market_url'].'\' AND rank<51 AND rank!=0 AND date_last_updated BETWEEN \''.$start.'\' AND \''.$end.'\'
 							) a
 						LEFT JOIN (
 							SELECT COUNT(*) AS top_10, asin_id
 							FROM tbl_view_asin_track
-							WHERE asin_id='.$asin_id.' AND rank<11 AND date_last_updated BETWEEN \''.$start.'\' AND \''.$end.'\'
+							WHERE asin_num = '.$result['asin_num'].' AND market_url = \''.$result['market_url'].'\' AND rank<11 AND rank!=0 AND date_last_updated BETWEEN \''.$start.'\' AND \''.$end.'\'
 							) b
 						ON a.asin_id = b.asin_id';
 
@@ -414,9 +415,11 @@ class Service_keyword_track_model extends CI_Model
 
     public function getKeyHistoryChartData($keyword, $asin_id, $start, $end)
     {
+        $result = $this->db->where('asin_id', $asin_id)->get('tbl_view_asin_track')->row_array();
+
         $str_query = 'SELECT AVG(rank) AS rank 
 						FROM tbl_view_asin_track
-						WHERE asin_id = '.$asin_id.' AND keyword = \''.$keyword.'\' AND date_last_updated BETWEEN \''.$start.'\' AND \''.$end.'\'';
+						WHERE asin_num = '.$result['asin_num'].' AND market_url = \''.$result['market_url'].'\' AND keyword = \''.$keyword.'\' AND date_last_updated BETWEEN \''.$start.'\' AND \''.$end.'\'';
 
         $result = $this->db->query($str_query);
 
@@ -461,10 +464,10 @@ class Service_keyword_track_model extends CI_Model
     {
         $start_today = date('Y-m-d 00:00:00');
         $end_today = date('Y-m-d 23:59:59');
-        $str_query = 'SELECT asin_id, asin_num, COUNT(*) AS cnt
+        $str_query = 'SELECT asin_id, asin_num, market_url, COUNT(*) AS cnt
                         FROM tbl_view_asin_track
                         WHERE (exist_status=1 OR exist_status=2) AND is_last=1 AND client_id='.$client_id.' /*AND (date_last_updated BETWEEN \''.$start_today.'\' AND \''.$end_today.'\')*/ 
-                        GROUP BY client_id, asin_num
+                        GROUP BY client_id, asin_num, market_url
                         ORDER BY asin_id
                         LIMIT 0, 5';
 
@@ -667,6 +670,7 @@ class Service_keyword_track_model extends CI_Model
                 $keyword = array_diff($keyword, array($keyword['id']));
                 $keyword['asin_id'] = $new_asin_id;
                 $keyword['exist_status'] = 1;
+                $keyword['date_last_updated'] = date('Y-m-d H:i:s');
                 $this->db->insert('tbl_service_tracking_detail', $keyword);
             }
 

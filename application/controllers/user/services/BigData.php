@@ -108,7 +108,7 @@ class BigData extends CI_Controller
             $data['reviews']['count'] = $this->makeComma($result['review_cnt']);
 			$data['reviews']['rating'] = $result['review_rating'];
 
-			$data['others']['last_year_sales'] = $this->makeComma($result['review_cnt']);
+			$data['others']['last_year_sales'] = $this->makeComma($result['last_year_sales']);
 			$data['others']['sales_year'] = $this->makeComma($result['sales_year']);
 			$data['others']['sales_trend'] = $this->makeComma($result['sales_trend']);
 			$data['others']['price_trend'] = $this->makeComma($result['price_trend']);
@@ -288,7 +288,7 @@ class BigData extends CI_Controller
             $data['reviews']['count'] = $this->makeComma($result['review_cnt']);
             $data['reviews']['rating'] = $result['review_rating'];
 
-            $data['others']['last_year_sales'] = $this->makeComma($result['review_cnt']);
+            $data['others']['last_year_sales'] = $this->makeComma($result['last_year_sales']);
             $data['others']['sales_year'] = $this->makeComma($result['sales_year']);
             $data['others']['sales_trend'] = $this->makeComma($result['sales_trend']);
             $data['others']['price_trend'] = $this->makeComma($result['price_trend']);
@@ -454,7 +454,7 @@ class BigData extends CI_Controller
             $data['reviews']['count'] = $this->makeComma($result['review_cnt']);
             $data['reviews']['rating'] = $result['review_rating'];
 
-            $data['others']['last_year_sales'] = $this->makeComma($result['review_cnt']);
+            $data['others']['last_year_sales'] = $this->makeComma($result['last_year_sales']);
             $data['others']['sales_year'] = $this->makeComma($result['sales_year']);
             $data['others']['sales_trend'] = $this->makeComma($result['sales_trend']);
             $data['others']['price_trend'] = $this->makeComma($result['price_trend']);
@@ -620,7 +620,7 @@ class BigData extends CI_Controller
             $data['reviews']['count'] = $this->makeComma($result['review_cnt']);
             $data['reviews']['rating'] = $result['review_rating'];
 
-            $data['others']['last_year_sales'] = $this->makeComma($result['review_cnt']);
+            $data['others']['last_year_sales'] = $this->makeComma($result['last_year_sales']);
             $data['others']['sales_year'] = $this->makeComma($result['sales_year']);
             $data['others']['sales_trend'] = $this->makeComma($result['sales_trend']);
             $data['others']['price_trend'] = $this->makeComma($result['price_trend']);

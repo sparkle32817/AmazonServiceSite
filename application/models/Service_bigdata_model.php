@@ -195,13 +195,15 @@ class Service_bigdata_model extends CI_Model
 
         $arr = array();
 
-        foreach (explode(",", $result['category_id']) as $category)
+        foreach (explode(",", $result['category_id']) as $category1)
         {
-            array_push($arr, $this->getCategory($category));
+            array_push($arr, $this->getCategory($category1));
         }
 
         if (in_array($category, $arr))
+        {
             return true;
+        }
 
         return false;
     }
